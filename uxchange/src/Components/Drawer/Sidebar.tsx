@@ -31,7 +31,7 @@ export const Sidebar = () => {
     <div className={classes.list}>
 
       <List>
-        <ListItem button href="/home" component={Link}>
+        <ListItem button href="/Home" component={Link}>
           <ListItemIcon><HomeIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="Home" />
         </ListItem>

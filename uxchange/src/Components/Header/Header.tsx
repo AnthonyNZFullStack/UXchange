@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
     },
+    headerColor: {
+    background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
+    }
   })
 );
 
@@ -33,7 +36,7 @@ function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.headerColor} position="relative">
         <Toolbar>
         <IconButton className={classes.menuButton} edge="start" color="inherit" aria-label="menu"
                         onClick={toggleSideBar}>
