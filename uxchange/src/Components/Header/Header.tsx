@@ -40,7 +40,7 @@ function Header() {
         <Toolbar>
         <IconButton className={classes.menuButton} edge="start" color="inherit" aria-label="menu"
                         onClick={toggleSideBar}>
-            <MenuIcon />
+            <MenuIcon/>
             <Drawer anchor="left" open={sideBar} onClose={toggleSideBar}>
             <Sidebar />
             </Drawer>

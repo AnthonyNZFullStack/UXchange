@@ -9,8 +9,10 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import AddBoxIcon from "@material-ui/icons/AddBox";
+import InfoIcon from '@material-ui/icons/Info';
+import ViewListIcon from '@material-ui/icons/ViewList';
+import LockIcon from '@material-ui/icons/Lock';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 
 const useStyles = makeStyles({
   list: {
@@ -36,22 +38,22 @@ export const Sidebar = () => {
           <ListItemText className={classes.listText} primary="Home" />
         </ListItem>
         <ListItem button href="/Operations" component={Link}>
-          <ListItemIcon><ArrowUpwardIcon /></ListItemIcon>
+          <ListItemIcon><InfoIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="Operations" />
         </ListItem>
         <ListItem button href="/My items" component={Link}>
-          <ListItemIcon><ArrowUpwardIcon /></ListItemIcon>
+          <ListItemIcon><ViewListIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="My items" />
         </ListItem>
         <ListItem button href="/Market place" component={Link}>
-          <ListItemIcon><ArrowUpwardIcon /></ListItemIcon>
+          <ListItemIcon><StorefrontIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="Market place" />
         </ListItem>
       </List>
       <Divider />
       <List>
         <ListItem button href="/login" component={Link}>
-          <ListItemIcon><AddBoxIcon /></ListItemIcon>
+          <ListItemIcon><LockIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="Login" />
         </ListItem>
       </List>
