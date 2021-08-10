@@ -98,7 +98,7 @@ function Operations() {
 
         <Container className={classes.boxOne}>
           <Typography className={classes.paragraphTwo} variant="body2" align="left" >
-            You first go to <StorefrontIcon className={classes.iconStyling} /> ‘My store’ and add your unwanted items onto the market place. You have the option to
+            You first go to <StorefrontIcon className={classes.iconStyling} /> ‘My store’ and post your item(s) onto the market place. You have the option to
             either sell or trade your item (incase your item doesn’t sell, you can update it to trade). This means that
             someone who is interested in your item may wish to trade for something that they have that you might
             want. It allows an opportunity to negotiate an exchange with your unwanted items and experience
@@ -116,14 +116,14 @@ function Operations() {
         <Container className={classes.boxOne}>
           <Typography className={classes.paragraphTwo} variant="body2" align="center" >
             You can simply click the <DeleteIcon className={classes.iconStyling} /> delete icon, if you change your mind after posting your item online or if you have already made a transaction.
-            Make sure you are deleting the right one because once you delete item, it is gone permanently.
+            Make sure you are deleting the right one because once you delete the item, it is gone permanently.
           </Typography>
         </Container>
 
         <Container className={classes.boxOne}>
           <Typography className={classes.paragraphTwo} variant="body2" align="center" >
             You will need to <PhonelinkRingIcon style={{ color: '#FFCC00', fontSize: '1.5em', marginTop: '0.3em', marginLeft: '0.3em' }} /> contact the owners through email or contact number
-            provided on their personal information section, to sell or trade your/the items.
+            provided on their personal information section, to sell or trade your/their item(s).
           </Typography>
         </Container>
 

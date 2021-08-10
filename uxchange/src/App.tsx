@@ -3,10 +3,11 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { Route, Switch } from 'react-router';
-import { HomePage } from './Pages/HomePage/HomePage';
+import HomePage from './Pages/HomePage/HomePage';
 import Operations from './Pages/Operations/Operations';
-import { MyItems } from './Pages/MyItems/MyItems';
 import { MarketPlace } from './Pages/MarketPlace/MarketPlace';
+import { MyItems } from "./Pages/MyItems/MyItems";
+import SignUp from "./Pages/SignUp/SignUp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Operations" component={Operations} />
         <Route path="/My items" component={MyItems} />
         <Route path="/Market place" component={MarketPlace} />
+        <Route path="/Sign up" component={SignUp} />
       </Switch>
       <Footer />
     </div>
