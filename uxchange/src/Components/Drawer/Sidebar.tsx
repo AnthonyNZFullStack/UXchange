@@ -53,7 +53,7 @@ export const Sidebar = () => {
       </List>
       <Divider />
       <List>
-        <ListItem button href="/login" component={Link}>
+        <ListItem button href="/Login" component={Link}>
           <ListItemIcon><LockIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="Login" />
         </ListItem>

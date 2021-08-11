@@ -8,6 +8,7 @@ import Operations from './Pages/Operations/Operations';
 import { MarketPlace } from './Pages/MarketPlace/MarketPlace';
 import { MyItems } from "./Pages/MyItems/MyItems";
 import SignUp from "./Pages/SignUp/SignUp";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/Operations" component={Operations} />
         <Route path="/My items" component={MyItems} />
         <Route path="/Market place" component={MarketPlace} />
+        <Route path="/Login" component={Login} />
         <Route path="/Sign up" component={SignUp} />
       </Switch>
       <Footer />
