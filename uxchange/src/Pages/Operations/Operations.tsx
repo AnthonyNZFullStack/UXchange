@@ -10,6 +10,8 @@ import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 import DeleteIcon from '@material-ui/icons/Delete';
 import PhonelinkRingIcon from '@material-ui/icons/PhonelinkRing';
 import { Link } from 'react-router-dom';
+import OperationsButtonOne from "../../Components/Buttons/OperationsButtonOne";
+import OperationsButtonTwo from "../../Components/Buttons/OperationsButtonTwo";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
       marginTop: '6em',
       marginBottom: '10em',
-      minHeight: '100vh',
+      minHeight: '120vh',
       borderRadius: '3em',
       padding: '3em',
       color: 'white',
@@ -55,25 +57,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#FFCC00',
       fontSize: '1.5em',
       marginTop: '0.3em'
-    },
-    buttonBox: {
-      [theme.breakpoints.up('md')]: {
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        padding: '2em 5em',
-        width: '75%'
-      },
-      [theme.breakpoints.down('sm')]: {
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        padding: '2em 5em'
-      },
-      [theme.breakpoints.only('xs')]: {
-        display: 'block',
-        fontSize: '0.3rem',
-        padding: '0 0',
-        maxWidth: '100%'
-      }
     },
   })
 );
@@ -131,17 +114,8 @@ function Operations() {
           Ready to start your exchange?
         </Typography>
 
-        <Container className={classes.buttonBox}>
-          <Button
-            component={Link} to="/My items"
-            style={{ borderRadius: '1em', marginTop: '3em', backgroundColor: '#FFCC00', fontWeight: 'bold' }}
-            variant='contained' size='large' type="submit">
-            Post my item</Button>
-          <Button style={{ borderRadius: '1em', marginTop: '3em', backgroundColor: '#FFCC00', fontWeight: 'bold' }}
-            component={Link} to="/Market place"
-            variant='contained' size='large'>
-            Market place</Button>
-        </Container>
+        <OperationsButtonOne />
+        <OperationsButtonTwo />
 
       </Container>
     </React.Fragment >

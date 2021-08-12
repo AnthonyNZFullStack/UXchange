@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-function SignUpForm() {
+function LoginForm() {
     const classes = useStyles();
 
     return (
@@ -42,23 +42,19 @@ function SignUpForm() {
 
                 <Typography variant='h4' gutterBottom
                 style={{margin: '1.5em 0'}}
-                > Create account</Typography>
+                > Sign in</Typography>
 
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={12}>
                         <TextField
                             variant="outlined"
-                            label="Full name"
-                            id="fullName"
-                            name="fullName"
-                            type="fullName" />
+                            label="Username"
+                            id="Username"
+                            name="Username"
+                            type="Username" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="outlined" label="E-mail" />
-                    </Grid>
-
-                    <Grid item xs={12} md={12} >
                         <TextField variant="outlined" label="Password" />
                     </Grid>
 
@@ -70,4 +66,4 @@ function SignUpForm() {
     );
 };
 
-export default SignUpForm;
+export default LoginForm;

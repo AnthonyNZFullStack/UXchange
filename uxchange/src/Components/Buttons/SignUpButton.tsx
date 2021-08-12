@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-function Buttons() {
+function SignUpButton() {
     const classes = useStyles();
 
     return (
@@ -44,4 +44,4 @@ function Buttons() {
     );
 };
 
-export default Buttons;
+export default SignUpButton;

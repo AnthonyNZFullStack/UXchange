@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Paper, Typography } from '@material-ui/core'
 import SignUpForm from "../../Components/SignUpForm/SignUpForm";
-import Buttons from "../../Components/Buttons/Buttons";
+import Buttons from "../../Components/Buttons/SignUpButton";
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -13,6 +13,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import { Grid, Button } from '@material-ui/core'
 import { Link } from 'react-router-dom';
+import SignUpButton from "../../Components/Buttons/SignUpButton";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -57,15 +58,17 @@ function SignUp() {
                 <SignUpForm />
 
                 <Grid className={classes.rootRadial}>
-                        <FormControl component="fieldset">
-                            <FormLabel component="legend"></FormLabel>
-                            <RadioGroup aria-label="position" name="position" defaultValue="top">
-                                <FormControlLabel value="end" control={<Radio color="primary" />} label={<Typography variant="body2" color="textSecondary"> Terms and Conditions apply</Typography>} />
-                            </RadioGroup>
-                        </FormControl>
+                    <FormControl component="fieldset">
+                        <FormLabel component="legend"></FormLabel>
+                        <RadioGroup aria-label="position" name="position" defaultValue="top">
+                            <FormControlLabel value="end" control={<Radio color="primary" />}
+                                label={<Typography variant="body2" color="textSecondary">
+                                    Terms and Conditions apply</Typography>} />
+                        </RadioGroup>
+                    </FormControl>
                 </Grid>
 
-                <Buttons />
+                <SignUpButton />
 
                 <Grid >
                     <Typography variant='body2'> Already have an account?
