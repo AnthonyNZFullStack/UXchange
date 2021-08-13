@@ -1,5 +1,7 @@
 {
   "name": "uxchange",
+  "author": "Anthony Hong",
+  "homepage": "http://localhost:3000/Home/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,5 +46,6 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8"
-  }
+  },
+  "description": "Phase 2 project with React and Typscript"
 }

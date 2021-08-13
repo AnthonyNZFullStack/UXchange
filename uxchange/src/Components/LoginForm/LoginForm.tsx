@@ -42,7 +42,7 @@ function LoginForm() {
 
                 <Typography variant='h4' gutterBottom
                 style={{margin: '1.5em 0'}}
-                > Sign in</Typography>
+                > Login</Typography>
 
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={12}>
