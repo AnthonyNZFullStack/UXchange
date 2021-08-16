@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme: Theme) =>
             [theme.breakpoints.down('xs')]: {
                 padding: '0.5em 5em',
             },
+            '&:hover': {
+                background: '#FFCC00',
+                color: 'rgba(0,1,36,1)',
+                fontWeight: 'bold'
+            }
         },
 
     })

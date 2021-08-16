@@ -6,6 +6,7 @@ import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Sidebar } from "../Drawer/Sidebar";
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,9 +47,11 @@ function Header() {
             </Drawer>
           </IconButton>
           <Typography className={classes.title} variant="h6" align="center">
-            UXchange
+          <Button color="inherit"
+          component={Link} to="/Home">UXchange</Button>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit"
+          component={Link} to="/Login">Login</Button>
         </Toolbar>
       </AppBar>
     </div>

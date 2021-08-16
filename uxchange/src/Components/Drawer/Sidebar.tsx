@@ -13,7 +13,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import LockIcon from '@material-ui/icons/Lock';
 import StorefrontIcon from '@material-ui/icons/Storefront';
-import CreateIcon from '@material-ui/icons/Create';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 const useStyles = makeStyles({
   list: {
@@ -58,7 +58,7 @@ export const Sidebar = () => {
           <ListItemText className={classes.listText} primary="Login" />
         </ListItem>
         <ListItem button href="/Sign up" component={Link}>
-          <ListItemIcon><CreateIcon /></ListItemIcon>
+          <ListItemIcon><AccountCircleIcon /></ListItemIcon>
           <ListItemText className={classes.listText} primary="Sign up" />
         </ListItem>
       </List>

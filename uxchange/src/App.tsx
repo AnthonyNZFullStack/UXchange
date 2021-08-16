@@ -5,8 +5,8 @@ import Footer from "./Components/Footer/Footer";
 import { Route, Switch } from 'react-router';
 import HomePage from './Pages/HomePage/HomePage';
 import Operations from './Pages/Operations/Operations';
-import { MarketPlace } from './Pages/MarketPlace/MarketPlace';
-import { MyItems } from "./Pages/MyItems/MyItems";
+import MarketPlace from './Pages/MarketPlace/MarketPlace';
+import MyItems from "./Pages/MyItems/MyItems";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 

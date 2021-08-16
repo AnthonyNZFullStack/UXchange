@@ -58,6 +58,10 @@ function SignUpForm() {
                         <TextField variant="outlined" label="E-mail" />
                     </Grid>
 
+                    <Grid item xs={12} md={12}>
+                        <TextField variant="outlined" label="Username" />
+                    </Grid>
+
                     <Grid item xs={12} md={12} >
                         <TextField variant="outlined" label="Password" />
                     </Grid>

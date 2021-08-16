@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 60,
       textAlign: "center",
       fontSize: "12px",
-      background: "#3c3c41",
       color: "white",
+      background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -45,7 +45,7 @@ const Footer = () => {
       >
         <Grid item xs={4}>
           <SocialIcon {...MICROSOFT_LOGO} />
-          {`Copyright © Microsoft Student Accelerator, 2021. All rights reserved`}
+          {`UXchange, 2021. Copyright © All rights reserved`}
         </Grid>
         <Grid item xs={6}>
           {SOCIAL_MEDIA.map((icon: SocialIconProps) => {
