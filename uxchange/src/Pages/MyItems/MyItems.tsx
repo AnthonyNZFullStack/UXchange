@@ -114,7 +114,7 @@ function MyItems() {
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph
               style={{ paddingBottom: '2em' }}>
-              Create your post, update & delete
+              Create your post, update and delete
             </Typography>
             <div className={classes.buttons}>
               <Grid container spacing={2} justify="center">

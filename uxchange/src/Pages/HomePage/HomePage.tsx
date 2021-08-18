@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       margin: '15em',
-      background: '#E0F4FF'
+      background: '#E0F4FF',
     },
     market: {
       color: 'rgba(0,1,36,1)',

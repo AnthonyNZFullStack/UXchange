@@ -20,8 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
       marginTop: '6em',
-      marginBottom: '10em',
-      minHeight: '100vh',
+      minHeight: '90vh',
       borderRadius: '3em',
       padding: '3em',
       color: 'white',
@@ -67,7 +66,7 @@ function Operations() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container className={classes.root} maxWidth="lg" >
+      <Container className={classes.root} >
 
         <Typography style={{ marginTop: '1em' }} variant="h3" gutterBottom>
           How it works?
@@ -114,8 +113,8 @@ function Operations() {
           Ready to start your exchange?
         </Typography>
 
-        <OperationsButtonOne />
-        <OperationsButtonTwo />
+          <OperationsButtonOne />
+          <OperationsButtonTwo />
 
       </Container>
     </React.Fragment >
