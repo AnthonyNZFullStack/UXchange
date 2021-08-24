@@ -6,6 +6,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import DeleteIcon from '@material-ui/icons/Delete';
 import CreateIcon from '@material-ui/icons/Create';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 
@@ -23,10 +27,6 @@ const useStyles = makeStyles((theme: Theme) =>
             heigh: '0',
             paddingTop: '56.25%'
         },
-        cardContent: {
-            flexGrow: 1,
-        },
-
     })
 );
 
@@ -46,32 +46,63 @@ function MyItemCard({ image, title, description }: Props) {
             <CssBaseline />
 
             <Container className={classes.cardGrid} maxWidth="sm">
-                    <Grid>
-                        <Card className={classes.card}>
-                            <CardMedia
-                                className={classes.cardMedia}
-                                image={image}
-                                title={title}
-                            />
-                            <CardContent className={classes.cardContent}>
-                                <Typography gutterBottom variant="h5">
-                                    {title}
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    {description}
-                                </Typography>
-                            </CardContent>
-                            <CardActions style={{ textAlign: 'right' }}>
-                                <Button size="small" color="primary">
-                                    <Typography> <CreateIcon />edit </Typography>
-                                </Button>
-                                <Button size="small" color="primary">
-                                    <DeleteIcon />
-                                    delete
-                                </Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                <Grid>
+
+                    <Card className={classes.card}>
+
+                        <CardMedia
+                            className={classes.cardMedia}
+                            image={image}
+                            title={title}
+                        />
+
+                        <CardContent>
+
+                            <Typography
+                                style={{ textAlign: 'left' }}
+                                gutterBottom variant="h6">
+                                {title}
+                            </Typography>
+
+                            <Typography
+                                style={{ textAlign: 'left' }}
+                                variant="body2" component="p">
+                                {description}
+                            </Typography>
+
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography>Description</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography
+                                    variant="body2" component="p">
+                                    {description}{""}
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+
+                        </CardContent>
+
+                        <CardActions style={{ textAlign: 'right' }}>
+
+                            <Button size="small" color="primary">
+                                <Typography> <CreateIcon />edit </Typography>
+                            </Button>
+
+                            <Button size="small" color="primary">
+                                <DeleteIcon />
+                                delete
+                            </Button>
+
+                        </CardActions>
+
+                    </Card>
+                </Grid>
 
 
             </Container>

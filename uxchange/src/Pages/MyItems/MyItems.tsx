@@ -34,9 +34,6 @@ const useStyles = makeStyles((theme: Theme) =>
     cardMedia: {
       paddingTop: '56.25%'
     },
-    cardContent: {
-      flexGrow: 1,
-    },
 
   })
 );
@@ -51,7 +48,7 @@ const myItemCard = [
   {
     image: 'https://cdn.shopify.com/s/files/1/2647/0684/files/kaabo-mantis-dual-full__91784.1588047382.1280.1280_large.jpg?v=1596175027',
     title: '2) E-Scooter',
-    description: 'The best bike there is Lorem Ipsum is simply dummy e industryy kjbjkkjhldffddffdgfddf',
+    description: 'The best bike there is Lorem Ipsum is simply dummyI thnk that this box needs to be decoreated and made better with widt h and gheight and my spelling mistakes are huge. this is a test to see how much it can go down ',
   },
 
   {
@@ -105,37 +102,47 @@ function MyItems() {
     < React.Fragment >
       <CssBaseline />
 
-      <main>
         <div className={classes.container}>
           <Container maxWidth="xl">
+
             <Typography
               variant="h2" align="center" color="textPrimary" gutterBottom>
               My Item List
             </Typography>
+
             <Typography variant="h5" align="center" color="textSecondary" paragraph
               style={{ paddingBottom: '2em' }}>
               Create your post, update and delete
             </Typography>
+
             <div className={classes.buttons}>
+
               <Grid container spacing={2} justify="center">
                 <Grid item>
+
                   <Button variant="outlined" color="primary"
                     component={Link} to="/Market Place">
                     Market items
                   </Button>
                 </Grid>
+
                 <Grid item>
                   <Button variant="contained" color="primary">
                     See my item list
                   </Button>
                 </Grid>
+
                 <Grid item>
-                  <Button variant="outlined" color="primary">
+                  <Button variant="outlined" color="primary"
+                    component={Link} to="/Create Ipost">
                     <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
                   </Button>
                 </Grid>
+
               </Grid>
+
             </div>
+
           </Container>
 
           <Box p={5} m={5}>
@@ -151,7 +158,6 @@ function MyItems() {
           </Box>
 
         </div>
-      </main>
 
 
 
