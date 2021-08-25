@@ -16,7 +16,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         cardGrid: {
-            padding: '20px 0'
+            padding: '20px 0',
         },
         card: {
             height: '100%',
@@ -65,12 +65,12 @@ function MyItemCard({ image, title, description }: Props) {
                             </Typography>
 
                             <Typography
-                                style={{ textAlign: 'left' }}
+                                style={{ textAlign: 'justify', padding: '0.5em' }}
                                 variant="body2" component="p">
                                 {description}
                             </Typography>
 
-                            <Accordion>
+                            <Accordion style={{marginTop: '2em'}}>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1a-content"
@@ -80,6 +80,7 @@ function MyItemCard({ image, title, description }: Props) {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography
+                                    style={{ textAlign: 'justify', padding: '0.5em'}}
                                     variant="body2" component="p">
                                     {description}{""}
                                     </Typography>

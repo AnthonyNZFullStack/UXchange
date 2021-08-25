@@ -34,7 +34,10 @@ const useStyles = makeStyles((theme: Theme) =>
     cardMedia: {
       paddingTop: '56.25%'
     },
-
+    buttonOption: {
+      borderRadius: '3em', 
+      padding: '0.5em 3em'
+    },
   })
 );
 
@@ -102,62 +105,69 @@ function MyItems() {
     < React.Fragment >
       <CssBaseline />
 
-        <div className={classes.container}>
-          <Container maxWidth="xl">
+      <div className={classes.container}>
+        <Container maxWidth="xl">
 
-            <Typography
-              variant="h2" align="center" color="textPrimary" gutterBottom>
-              My Item List
-            </Typography>
+          <Typography
+            variant="h2" align="center" color="textPrimary" gutterBottom>
+            My Item List
+          </Typography>
 
-            <Typography variant="h5" align="center" color="textSecondary" paragraph
-              style={{ paddingBottom: '2em' }}>
-              Create your post, update and delete
-            </Typography>
+          <Typography variant="h5" align="center" color="textSecondary" paragraph
+            style={{ paddingBottom: '2em' }}>
+            Create your post, update and delete
+          </Typography>
 
-            <div className={classes.buttons}>
+          <div className={classes.buttons}>
 
-              <Grid container spacing={2} justify="center">
-                <Grid item>
+            <Grid container spacing={2} justify="center">
+              <Grid item>
 
-                  <Button variant="outlined" color="primary"
-                    component={Link} to="/Market Place">
-                    Market items
-                  </Button>
-                </Grid>
-
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    See my item list
-                  </Button>
-                </Grid>
-
-                <Grid item>
-                  <Button variant="outlined" color="primary"
-                    component={Link} to="/Create Ipost">
-                    <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
-                  </Button>
-                </Grid>
-
+                <Button variant="outlined" color="primary"
+                className={classes.buttonOption}
+                  style={{  }}
+                  component={Link} to="/Market Place">
+                  Market items
+                </Button>
               </Grid>
 
-            </div>
+              <Grid item>
+                <Button variant="contained" color="primary"
+                className={classes.buttonOption}
+                  style={{ background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
+                  color: '#FFCC00', }}>
+                  See my item list
+                </Button>
+              </Grid>
 
-          </Container>
+              <Grid item>
+                <Button variant="outlined" color="primary"
+                className={classes.buttonOption}
+                  style={{  }}
+                  component={Link} to="/Create Ipost">
+                  <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
+                </Button>
+              </Grid>
 
-          <Box p={5} m={5}>
-            <Grid container spacing={10}>
-              {myItemCard.map((myItemCard, i) => {
-                return (
-                  <Grid key={i} item xs={12} sm={6} md={4} xl={3}>
-                    <MyItemCard {...myItemCard} />
-                  </Grid>
-                );
-              })}
             </Grid>
-          </Box>
 
-        </div>
+          </div>
+
+        </Container>
+
+        <Box p={5} m={5}>
+          <Grid container spacing={10}>
+            {myItemCard.map((myItemCard, i) => {
+              return (
+                <Grid key={i} item xs={12} sm={6} md={4} xl={3}>
+                  <MyItemCard {...myItemCard} />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
+
+      </div>
 
 
 

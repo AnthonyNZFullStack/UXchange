@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 backgroundColor: 'white',
 
                 [theme.breakpoints.down('xl')]: {
-                    width: '30%'
+                    width: '30%',
                 },
                 [theme.breakpoints.only('md')]: {
                     width: '40%'
@@ -35,8 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function IpostForm() {
     const classes = useStyles();
-    
-    const[textField, settextField] = useState('')
+
 
     return (
         <React.Fragment>

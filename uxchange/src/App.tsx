@@ -9,7 +9,7 @@ import MarketPlace from './Pages/MarketPlace/MarketPlace';
 import MyItems from "./Pages/MyItems/MyItems";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
-import IpostForm from "./Components/IPostForm/IpostForm";
+import CreateIpost from "./Pages/CreateIpost/CreateIpost";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/Home" component={HomePage} />
         <Route path="/Operations" component={Operations} />
         <Route path="/My items" component={MyItems} />
-        <Route path="/Create Ipost" component={IpostForm} />
+        <Route path="/Create Ipost" component={CreateIpost} />
         <Route path="/Market place" component={MarketPlace} />
         <Route path="/Login" component={Login} />
         <Route path="/Sign up" component={SignUp} />

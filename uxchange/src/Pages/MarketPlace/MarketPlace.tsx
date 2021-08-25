@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import MarketItemCard from "../../Components/ItemCard/MarketItemCard";
 import { Link } from 'react-router-dom';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 
 
@@ -34,7 +35,10 @@ const useStyles = makeStyles((theme: Theme) =>
     cardContent: {
       flexGrow: 1,
     },
-
+    buttonOption: {
+      borderRadius: '3em', 
+      padding: '0.5em 3em'
+    },
   })
 );
 
@@ -48,36 +52,63 @@ function MarketPlace() {
     <React.Fragment>
       <CssBaseline />
 
-      <main>
-        <div className={classes.container}>
-          <Container maxWidth="xl">
-            <Typography
-              variant="h2" align="center" color="textPrimary" gutterBottom>
-              Welcome to the market place
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph
-            style={{paddingBottom: '2em'}}>
-              Exchange your Experience
-            </Typography>
-            <div className={classes.buttons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Market items
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary"
-                  component={Link} to="/My Items">
-                    See my item list
-                  </Button>
-                </Grid>
+      <div className={classes.container}>
+
+        <Container maxWidth="xl">
+
+          <Typography
+            variant="h2" align="center" color="textPrimary" gutterBottom>
+            Welcome to the market place
+          </Typography>
+
+          <Typography variant="h5" align="center" color="textSecondary" paragraph
+            style={{ paddingBottom: '2em' }}>
+            Exchange your Experience
+          </Typography>
+
+          <div className={classes.buttons}>
+
+            <Grid container spacing={2} justify="center">
+              <Grid item>
+
+                <Button
+                className={classes.buttonOption}
+                style={{ background: '#FFCC00',
+                color: 'rgba(0,1,36,1)', fontWeight: 'bold' }}
+                  variant="contained" color="primary">
+                  Market items
+                </Button>
+
               </Grid>
-            </div>
-          </Container>
-          <MarketItemCard />
-        </div>
-      </main>
+              <Grid item>
+
+                <Button
+                className={classes.buttonOption}
+                  style={{  }}
+                  variant="outlined" color="primary"
+                  component={Link} to="/My Items">
+                  See my item list
+                </Button>
+
+              </Grid>
+
+              <Grid item>
+                <Button variant="outlined" color="primary"
+                className={classes.buttonOption}
+                  style={{  }}
+                  component={Link} to="/Create Ipost">
+                  <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
+                </Button>
+              </Grid>
+
+            </Grid>
+          </div>
+
+        </Container>
+
+        <MarketItemCard />
+
+      </div>
 
 
 
