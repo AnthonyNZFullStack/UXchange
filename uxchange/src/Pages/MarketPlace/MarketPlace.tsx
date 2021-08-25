@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: '20px',
     },
     buttons: {
-      marginTop: '40px'
+      marginTop: '40px',
+      marginBottom: '40px'
     },
     cardGrid: {
       padding: '20px 0'
@@ -37,7 +38,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     buttonOption: {
       borderRadius: '3em', 
-      padding: '0.5em 3em'
+      padding: '0.5em 3em',
+      '&:hover': {
+        background: '#FFCC00',
+        color: 'rgba(9,75,121,1)',
+      },
     },
   })
 );
@@ -74,8 +79,8 @@ function MarketPlace() {
                 <Button
                 className={classes.buttonOption}
                 style={{ background: '#FFCC00',
-                color: 'rgba(0,1,36,1)', fontWeight: 'bold' }}
-                  variant="contained" color="primary">
+                color: 'black', fontWeight: 'bold' }}
+                  variant="outlined" color="primary">
                   Market items
                 </Button>
 
@@ -84,7 +89,7 @@ function MarketPlace() {
 
                 <Button
                 className={classes.buttonOption}
-                  style={{  }}
+                  style={{ fontWeight: 'bold', color: 'black' }}
                   variant="outlined" color="primary"
                   component={Link} to="/My Items">
                   See my item list
@@ -95,7 +100,7 @@ function MarketPlace() {
               <Grid item>
                 <Button variant="outlined" color="primary"
                 className={classes.buttonOption}
-                  style={{  }}
+                  style={{ fontWeight: 'bold', color: 'black' }}
                   component={Link} to="/Create Ipost">
                   <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
                 </Button>

@@ -35,8 +35,12 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: '56.25%'
     },
     buttonOption: {
-      borderRadius: '3em', 
-      padding: '0.5em 3em'
+      borderRadius: '3em',
+      padding: '0.5em 3em',
+      // border: '0.01em solid rgba(0,1,36,1)',
+      '&:hover': {
+        background: '#FFCC00',
+      },
     },
   })
 );
@@ -124,28 +128,28 @@ function MyItems() {
               <Grid item>
 
                 <Button variant="outlined" color="primary"
-                className={classes.buttonOption}
-                  style={{  }}
+                  className={classes.buttonOption}
+                  style={{ fontWeight: 'bold', color: 'black' }}
                   component={Link} to="/Market Place">
                   Market items
                 </Button>
               </Grid>
 
               <Grid item>
-                <Button variant="contained" color="primary"
-                className={classes.buttonOption}
-                  style={{ background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
-                  color: '#FFCC00', }}>
+                <Button variant="outlined" color="primary"
+                  className={classes.buttonOption}
+                  style={{
+                    background: '#FFCC00', color: 'black', fontWeight: 'bold'}}>
                   See my item list
                 </Button>
               </Grid>
 
               <Grid item>
                 <Button variant="outlined" color="primary"
-                className={classes.buttonOption}
-                  style={{  }}
+                  className={classes.buttonOption}
+                  style={{ fontWeight: 'bold', color: 'black' }}
                   component={Link} to="/Create Ipost">
-                  <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
+                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold', color: 'black' }}></AddCircleIcon> Create I-post
                 </Button>
               </Grid>
 
