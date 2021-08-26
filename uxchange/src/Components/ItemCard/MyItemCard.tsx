@@ -10,21 +10,21 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Paper } from "@material-ui/core";
 
 
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         cardGrid: {
-            padding: '20px 0',
+            padding: '0 0',
         },
         card: {
-            height: '100%',
             display: 'flex',
             flexDirection: 'column'
         },
         cardMedia: {
-            heigh: '0',
+            height: '0',
             paddingTop: '56.25%'
         },
     })
@@ -34,18 +34,20 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     image: string;
     title: string;
+    exchange: string;
+    contacts: string;
     description: string;
 }
 
 
-function MyItemCard({ image, title, description }: Props) {
+function MyItemCard({ image, title, exchange, contacts, description }: Props) {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
 
-            <Container className={classes.cardGrid} maxWidth="sm">
+            <Container className={classes.cardGrid} maxWidth="md">
                 <Grid>
 
                     <Card className={classes.card}>
@@ -53,54 +55,74 @@ function MyItemCard({ image, title, description }: Props) {
                         <CardMedia
                             className={classes.cardMedia}
                             image={image}
-                            title={title}
                         />
+
+
 
                         <CardContent>
 
-                            <Typography
-                                style={{ textAlign: 'left' }}
-                                gutterBottom variant="h6">
-                                {title}
-                            </Typography>
+                            <Grid container>
 
-                            <Typography
-                                style={{ textAlign: 'justify', padding: '0.5em' }}
-                                variant="body2" component="p">
-                                {description}
-                            </Typography>
+                                <Typography
+                                    style={{ textAlign: 'justify', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold',  }}
+                                    variant="body2" component="p" color="textSecondary">
+                                    {exchange}
+                                </Typography>
 
-                            <Accordion style={{marginTop: '2em'}}>
+                                <Typography
+                                    style={{ textAlign: 'justify', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', marginLeft: '1em', borderRadius: '1em', fontWeight: 'bold', border: '0.01em #3f51b5 solid' }}
+                                    variant="body2" component="p" >
+                                    {contacts}
+                                </Typography>
+
+                            </Grid>
+
+
+                            <Accordion style={{ marginTop: '1em', fontWeight: 'bold' }}>
+
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <Typography>Description</Typography>
-                                </AccordionSummary>
-                                <AccordionDetails>
+                                    id="panel1a-header">
+
                                     <Typography
-                                    style={{ textAlign: 'justify', padding: '0.5em'}}
-                                    variant="body2" component="p">
-                                    {description}{""}
+                                        style={{ textAlign: 'left', padding: '0.5em', fontWeight: 'bold', }}
+                                        gutterBottom variant="h6" >
+                                        {title}
                                     </Typography>
+
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+
+                                    <Typography
+                                        style={{ textAlign: 'justify', padding: '0.5em' }}
+                                        variant="body2" component="p" color="textSecondary">
+                                        {description}
+                                    </Typography>
+
                                 </AccordionDetails>
+
                             </Accordion>
 
+                            <Grid container 
+                            style={{ paddingTop: '1em', display:'flex', justifyContent:'flex-end' }}>
+
+                                <Button
+                                    style={{ textAlign: 'left', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold', textTransform:'capitalize', }}
+                                    size="small" color="primary">
+                                    <Typography>Edit</Typography>
+                                </Button>
+
+                                <Button
+                                    style={{ textAlign: 'left', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold', textTransform:'capitalize', }}
+                                    size="small" color="primary">
+                                    <Typography>Delete</Typography>
+                                </Button>
+
+                            </Grid>
+
                         </CardContent>
-
-                        <CardActions style={{ textAlign: 'right' }}>
-
-                            <Button size="small" color="primary">
-                                <Typography> <CreateIcon />edit </Typography>
-                            </Button>
-
-                            <Button size="small" color="primary">
-                                <DeleteIcon />
-                                delete
-                            </Button>
-
-                        </CardActions>
 
                     </Card>
                 </Grid>

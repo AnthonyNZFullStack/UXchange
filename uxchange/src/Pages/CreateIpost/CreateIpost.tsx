@@ -4,18 +4,13 @@ import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Paper, Typography } from '@material-ui/core'
-import SignUpForm from "../../Components/SignUpForm/SignUpForm";
-import Buttons from "../../Components/Buttons/SignUpButton";
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 import { Grid, Button } from '@material-ui/core'
 import { Link } from 'react-router-dom';
 import SignUpButton from "../../Components/Buttons/SignUpButton";
 import IpostForm from "../../Components/IPostForm/IpostForm";
 import DoneButton from "../../Components/Buttons/DoneButton";
+import BackButton from "../../Components/Buttons/BackButtonMarket";
+import BackButtonMyItem from "../../Components/Buttons/BackButtonMyItem";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -23,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
             margin: theme.spacing(5),
             padding: theme.spacing(3),
             backgroundColor: 'white',
-            height: '75vh',
+            height: '85vh',
             [theme.breakpoints.down('xl')]: {
                 width: '60%',
                 margin: 'auto',
@@ -33,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 width: '100%',
                 margin: 'auto',
                 marginTop: '5em',
-                height: '110vh'
+                height: '130vh'
             },
         },
 
@@ -50,6 +45,8 @@ function CreateIpost() {
 
                 <IpostForm />
                 <DoneButton />
+                <BackButton />
+                <BackButtonMyItem />
 
             </Paper>
 

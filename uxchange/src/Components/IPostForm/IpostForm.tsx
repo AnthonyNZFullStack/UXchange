@@ -62,19 +62,19 @@ function IpostForm() {
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="outlined" label="Item title" />
+                        <TextField variant="outlined" label="Title" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Trade/Sell(with price)" />
+                        <TextField variant="outlined" label="Trade/Sell(price)" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Email/Contact details" />
+                        <TextField variant="outlined" label="Contacts" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Item description/Trade wants" />
+                        <TextField variant="outlined" label="Item description" />
                     </Grid>
 
                 </Grid>

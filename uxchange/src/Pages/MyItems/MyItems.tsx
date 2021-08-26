@@ -14,7 +14,7 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
-      padding: theme.spacing(12, 0, 6),
+      padding: theme.spacing(12, 0),
       background: '#E0F4FF'
     },
     icon: {
@@ -48,55 +48,73 @@ const useStyles = makeStyles((theme: Theme) =>
 const myItemCard = [
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '1) Second hand bike',
+    title: 'Second hand bike',
+    exchange: 'Trade',
+    contacts: '02234554389',
     description: 'The best bike there is',
   },
 
   {
     image: 'https://cdn.shopify.com/s/files/1/2647/0684/files/kaabo-mantis-dual-full__91784.1588047382.1280.1280_large.jpg?v=1596175027',
-    title: '2) E-Scooter',
+    title: 'E-Scooter',
+    exchange: '$500',
+    contacts: '02234554389',
     description: 'The best bike there is Lorem Ipsum is simply dummyI thnk that this box needs to be decoreated and made better with widt h and gheight and my spelling mistakes are huge. this is a test to see how much it can go down ',
   },
 
   {
     image: 'https://img3.exportersindia.com/product_images/bc-full/2019/2/6148197/apple-iphone-xs-max-512gb-1549643543-4706321.jpeg',
-    title: '3) Iphone XS',
+    title: 'Iphone XS',
+    exchange: '$800',
+    contacts: '02234554389',
     description: 'Brand new Iphone for sale',
   },
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '4) Second hand bike',
+    title: 'Second hand bike',
+    exchange: 'Trade',
+    contacts: '022345543',
     description: 'Testing Testing testing',
   },
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
     title: '5) Second hand bike',
+    exchange: 'Trade',
+    contacts: '022345543',
     description: 'Testing Testing testing',
   },
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
     title: '6) Second hand bike',
+    exchange: 'Trade',
+    contacts: '022345543',
     description: 'Testing Testing testing',
   },
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
     title: '7) Second hand bike',
+    exchange: 'Trade',
+    contacts: '022345543',
     description: 'Testing Testing testing',
   },
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
     title: '8) Second hand bike',
+    exchange: 'Trade',
+    contacts: '022345543',
     description: 'Testing Testing testing',
   },
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
     title: '9) Second hand bike',
+    exchange: 'Trade',
+    contacts: '022345543',
     description: 'Testing Testing testing',
   },
 ];
@@ -159,11 +177,11 @@ function MyItems() {
 
         </Container>
 
-        <Box p={5} m={5}>
+        <Box p={5} m={0}>
           <Grid container spacing={10}>
             {myItemCard.map((myItemCard, i) => {
               return (
-                <Grid key={i} item xs={12} sm={6} md={4} xl={3}>
+                <Grid key={i} item xs={12} sm={6} md={4}>
                   <MyItemCard {...myItemCard} />
                 </Grid>
               );

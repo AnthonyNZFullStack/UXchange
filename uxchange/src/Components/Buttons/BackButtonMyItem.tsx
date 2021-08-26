@@ -4,7 +4,9 @@ import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Button } from '@material-ui/core'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Grid } from "@material-ui/core";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -12,10 +14,11 @@ const useStyles = makeStyles((theme: Theme) =>
             color: '#FFCC00',
             background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
             borderRadius: '1em',
-            marginTop: '2em',
-            padding: '0.5em 8em',
+            marginTop: '1em',
+            marginBottom: '1em',
+            padding: '0.5em 4.6em',
             [theme.breakpoints.down('xs')]: {
-                padding: '0.5em 6em',
+                padding: '0.5em 2.55em',
             },
             '&:hover': {
                 background: '#FFCC00',
@@ -23,25 +26,32 @@ const useStyles = makeStyles((theme: Theme) =>
                 fontWeight: 'bold'
             }
         },
+        iconstyle: {
+            position: 'absolute',
+            left: '0.5em',
+        },
 
     })
 );
 
 
 
-function LoginButton() {
+function BackButtonMyItem() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
+            <Grid>
             <Button className={classes.root}
-                variant='contained' size='large' type="submit">
-                Done
+                variant='contained' size='large' type="submit"
+                component={Link} to="/My Items">
+                Back to My Items<ArrowBackIcon className={classes.iconstyle}></ArrowBackIcon>
             </Button>
+            </Grid>
 
         </React.Fragment >
     );
 };
 
-export default LoginButton;
+export default BackButtonMyItem;
