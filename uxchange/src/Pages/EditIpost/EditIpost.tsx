@@ -11,11 +11,12 @@ import IpostForm from "../../Components/IPostForm/IpostForm";
 import DoneButton from "../../Components/Buttons/DoneButton";
 import BackButton from "../../Components/Buttons/BackButtonMarket";
 import BackButtonMyItem from "../../Components/Buttons/BackButtonMyItem";
+import EditPostForm from "../../Components/IPostForm/EditIpostForm";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         pageContent: {
-            margin: theme.spacing(5),
+            margin: theme.spacing(10),
             padding: theme.spacing(3),
             backgroundColor: 'white',
             height: '85vh',
@@ -35,15 +36,17 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-function CreateIpost() {
+
+function EditIpost() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
-            <Paper className={classes.pageContent}>
+            <Paper
+            className={classes.pageContent}>
 
-                <IpostForm />
+                <EditPostForm />
                 <DoneButton />
                 <BackButton />
                 <BackButtonMyItem />
@@ -55,4 +58,4 @@ function CreateIpost() {
     );
 };
 
-export default CreateIpost;
+export default EditIpost;

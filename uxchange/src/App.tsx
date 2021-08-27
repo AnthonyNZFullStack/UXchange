@@ -10,6 +10,7 @@ import MyItems from "./Pages/MyItems/MyItems";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 import CreateIpost from "./Pages/CreateIpost/CreateIpost";
+import EditIpost from "./Pages/EditIpost/EditIpost";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Operations" component={Operations} />
         <Route path="/My items" component={MyItems} />
         <Route path="/Create Ipost" component={CreateIpost} />
+        <Route path="/Edit Ipost" component={EditIpost} />
         <Route path="/Market place" component={MarketPlace} />
         <Route path="/Login" component={Login} />
         <Route path="/Sign up" component={SignUp} />

@@ -11,6 +11,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Paper } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 
 
@@ -64,13 +65,13 @@ function MyItemCard({ image, title, exchange, contacts, description }: Props) {
                             <Grid container>
 
                                 <Typography
-                                    style={{ textAlign: 'justify', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold',  }}
+                                    style={{ textAlign: 'justify', padding: '0.5em 1em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold', border: '0.01em #3f51b5 solid' }}
                                     variant="body2" component="p" color="textSecondary">
                                     {exchange}
                                 </Typography>
 
                                 <Typography
-                                    style={{ textAlign: 'justify', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', marginLeft: '1em', borderRadius: '1em', fontWeight: 'bold', border: '0.01em #3f51b5 solid' }}
+                                    style={{ textAlign: 'justify', padding: '0.5em 1em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', marginLeft: '1em', borderRadius: '1em', fontWeight: 'bold', border: '0.01em #3f51b5 solid' }}
                                     variant="body2" component="p" >
                                     {contacts}
                                 </Typography>
@@ -105,19 +106,25 @@ function MyItemCard({ image, title, exchange, contacts, description }: Props) {
 
                             </Accordion>
 
-                            <Grid container 
-                            style={{ paddingTop: '1em', display:'flex', justifyContent:'flex-end' }}>
+                            <Grid container style={{ paddingTop: '1em', display: 'flex', justifyContent: 'flex-end' }}>
 
                                 <Button
-                                    style={{ textAlign: 'left', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold', textTransform:'capitalize', }}
-                                    size="small" color="primary">
-                                    <Typography>Edit</Typography>
+                                    style={{ textAlign: 'left', padding: '0.3em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', textTransform: 'capitalize', marginRight: '1em', border: '0.01em #3f51b5 solid' }}
+                                    component={Link} to="/Edit Ipost"
+                                    color="primary">
+                                    <Typography
+                                        style={{ fontWeight: 'bold' }}>
+                                        Edit
+                                    </Typography>
                                 </Button>
 
                                 <Button
-                                    style={{ textAlign: 'left', padding: '0.5em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', fontWeight: 'bold', textTransform:'capitalize', }}
-                                    size="small" color="primary">
-                                    <Typography>Delete</Typography>
+                                    style={{ textAlign: 'left', padding: '0.3em 1.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '1em', textTransform: 'capitalize', border: '0.01em #3f51b5 solid' }}
+                                    color="primary">
+                                    <Typography
+                                        style={{ fontWeight: 'bold' }}>
+                                        Delete
+                                    </Typography>
                                 </Button>
 
                             </Grid>

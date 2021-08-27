@@ -137,7 +137,7 @@ function MyItems() {
 
           <Typography variant="h5" align="center" color="textSecondary" paragraph
             style={{ paddingBottom: '2em' }}>
-            Create your post, update and delete
+            Create your Ipost, update and delete
           </Typography>
 
           <div className={classes.buttons}>

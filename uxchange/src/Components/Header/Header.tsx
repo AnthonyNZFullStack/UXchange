@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      margin:'0 0',
+      padding: '0 0'
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -37,7 +39,7 @@ function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.headerColor} position="relative">
+      <AppBar className={classes.headerColor} position="fixed">
         <Toolbar>
         <IconButton className={classes.menuButton} edge="start" color="inherit" aria-label="menu"
                         onClick={toggleSideBar}>

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
-      marginTop: '6em',
+      marginTop: '7em',
       minHeight: '90vh',
       borderRadius: '3em',
       padding: '3em',
