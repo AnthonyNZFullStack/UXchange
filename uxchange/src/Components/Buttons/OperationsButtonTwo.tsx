@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
             fontWeight: 'bold',
             [theme.breakpoints.between('xs', 'sm')]: {
                 padding: '0.5em 3em',
-                display: 'block'
+                display: 'block',
             },
             [theme.breakpoints.between('sm', 'md')]: {
                 padding: '1em 3em',

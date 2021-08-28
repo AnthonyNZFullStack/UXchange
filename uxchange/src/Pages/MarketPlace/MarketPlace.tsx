@@ -124,3 +124,7 @@ function MarketPlace() {
 
 export default MarketPlace;
 
+function componentDidMount() {
+  throw new Error("Function not implemented.");
+}
+

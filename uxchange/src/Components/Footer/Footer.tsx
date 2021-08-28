@@ -45,7 +45,7 @@ const Footer = () => {
       >
         <Grid item xs={4}>
           <SocialIcon {...MICROSOFT_LOGO} />
-          {`UXchange, 2021. Copyright © All rights reserved`}
+          {`UXCHANGE, 2021. Copyright © All rights reserved`}
         </Grid>
         <Grid item xs={6}>
           {SOCIAL_MEDIA.map((icon: SocialIconProps) => {
