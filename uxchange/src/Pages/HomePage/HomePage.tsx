@@ -21,18 +21,18 @@ const useStyles = makeStyles((theme: Theme) =>
       left: '0em',
       [theme.breakpoints.only('sm')]: {
         position: 'absolute',
-        top: '17em',
+        top: '0',
         left: '0',
-        height: '50em',
-        width: '30em',
+        height: '65em',
+        width: '100%',
       },
       [theme.breakpoints.only('xs')]: {
         position: 'absolute',
         top: '0em',
         left: '0',
-        height: '30em',
+        height: '70em',
         width: '100%',
-        marginTop: '4em'
+        marginTop: '1em'
       },
     },
     market: {
@@ -52,6 +52,29 @@ const useStyles = makeStyles((theme: Theme) =>
 
     fontWhite: {
       color: 'white',
+    },
+
+    rootTwo: {
+      background: '#E0F4FF',
+      height: '60em',
+      width: '50%',
+      position: 'absolute',
+      top: '3em',
+      right: '0em',
+      [theme.breakpoints.only('sm')]: {
+        height: '65em',
+        width: '100%',
+        position: 'absolute',
+        top: '60em',
+        left: '0em'
+      },
+      [theme.breakpoints.only('xs')]: {
+        position: 'absolute',
+        top: '60em',
+        left: '0',
+        height: '50em',
+        width: '100%',
+      },
     }
 
   })
@@ -104,6 +127,12 @@ function HomePage() {
           <DoneButton />
         </Grid>
 
+      </div>
+
+      <div className={classes.rootTwo}>
+        <Typography variant="h6"
+          style={{ color: 'black', marginTop: '10em' }}>
+          Testing right side</Typography>
       </div>
 
 
