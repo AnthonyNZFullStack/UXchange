@@ -11,6 +11,7 @@ import { Grid } from "@material-ui/core";
 import "./HomePage.css";
 import UxchangeLogo from "../Logo/UxchangeLogo";
 import JBL from "../Images/JBL.png";
+import nzonedollar from "../Images/nzonedollar.png";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
 
     rootTwo: {
-      background: 'rgba((0,1,36,1) 50%)',
+      background: 'rgba(0,1,36,1)',
       height: '60em',
       width: '50%',
       position: 'absolute',
@@ -85,7 +86,7 @@ const useStyles = makeStyles((theme: Theme) =>
         marginLeft: '40em'
       },
       [theme.breakpoints.between('sm', 'md')]: {
-        marginLeft: '20em'
+        marginLeft: '30em'
       },
 
       [theme.breakpoints.between('xs', 'sm')]: {
@@ -100,7 +101,14 @@ const useStyles = makeStyles((theme: Theme) =>
       float: 'left',
       marginTop: '5em',
       filter: 'drop-shadow(10px 18px 10px #240202)',
-    }
+    },
+
+    nzonedollar: {
+      float: 'left',
+      marginLeft:'4em',
+      marginTop: '3em',
+      filter: 'drop-shadow(-12px 10px 10px #240202)',
+    },
 
   })
 );
@@ -165,21 +173,27 @@ function HomePage() {
 
       <div className={classes.rootTwo}>
 
-        <img 
-        className={classes.jblSpeaker}
-        id="speaker-image"
-        src={JBL} />
+        <img
+          className={classes.jblSpeaker}
+          id="speaker-image"
+          src={JBL} />
 
         <div style={{ marginLeft: '5em', marginTop: '8em' }}
           id="speaker"></div>
 
-        <div 
-        className={classes.plasmaorb}
+        <div
+          className={classes.plasmaorb}
           id="plasmaOrb"></div>
 
-        <div 
-        style={{ marginLeft: '10em', marginTop: '1em' }}
-          id="coin"></div>
+        <div
+          style={{ marginLeft: '10em', marginTop: '0.5em' }}
+          id="coin">
+
+          <img
+            className={classes.nzonedollar}
+            id="nzonedollar"
+            src={nzonedollar} />
+        </div>
 
 
       </div>
@@ -190,3 +204,11 @@ function HomePage() {
 };
 
 export default HomePage;
+function deg(arg0: number, deg: any): string | import("@material-ui/styles").PropsFunc<{}, string | undefined> | undefined {
+  throw new Error("Function not implemented.");
+}
+
+function rotate(arg0: number, deg: (arg0: number, deg: any) => string | import("@material-ui/styles").PropsFunc<{}, string | undefined> | undefined): string | import("@material-ui/styles").PropsFunc<{}, string | undefined> | undefined {
+  throw new Error("Function not implemented.");
+}
+

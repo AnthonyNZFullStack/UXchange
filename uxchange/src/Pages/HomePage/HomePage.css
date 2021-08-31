@@ -45,17 +45,17 @@
     }
 
     #coin {
-        width: 100px;
-        height: 100px;
+        width: 320px;
+        height: 320px;
         background-color: #FFCC00;
         border-radius: 50%;
         position: static;
-        top: 40em;
+        top: 30em;
     }
 
     #plasmaOrb {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         background-color: #FFCC00;
         border-radius: 50%;
         position: static;
@@ -63,4 +63,25 @@
 
     #speaker-image{
         height: 250px;
+        animation: speaker 0.1s infinite alternate;
+    }
+    @keyframes speaker {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    #nzonedollar{
+        position: sticky;
+        right: 40em;
+        height: 100px;
+        transition: all 2s ease-in-out;
+    }
+
+    #nzonedollar:hover{
+        transform: rotate(360deg);
     }
