@@ -2,7 +2,7 @@ import React from "react";
 import { SOCIAL_MEDIA } from "../../resources";
 import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
 import SocialIcon, { SocialIconProps } from "../SocialIcon/SocialIcon";
-import microsoftLogo from "../logos/microsoft_logo.svg";
+import uxchangeLogo from "../logos/uxchange_logo.svg";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,10 +25,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const MICROSOFT_LOGO = {
-  name: "Microsoft logo",
-  url: "https://www.microsoft.com/en-nz",
-  logo: microsoftLogo,
+const UXCHANGE_LOGO = {
+  name: "UXCHANGE logo",
+  url: "",
+  logo: uxchangeLogo,
 };
 
 const Footer = () => {
@@ -44,7 +44,7 @@ const Footer = () => {
         spacing={4}
       >
         <Grid item xs={4}>
-          <SocialIcon {...MICROSOFT_LOGO} />
+          <SocialIcon {...UXCHANGE_LOGO} />
           {`UXCHANGE, 2021. Copyright © All rights reserved`}
         </Grid>
         <Grid item xs={6}>

@@ -8,6 +8,9 @@ import { Container } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
 import DoneButton from "../../Components/Buttons/DoneButton";
 import { Grid } from "@material-ui/core";
+import "./HomePage.css";
+import UxchangeLogo from "../Logo/UxchangeLogo";
+import JBL from "../Images/JBL.png";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -55,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
 
     rootTwo: {
-      background: '#E0F4FF',
+      background: 'rgba((0,1,36,1) 50%)',
       height: '60em',
       width: '50%',
       position: 'absolute',
@@ -75,10 +78,33 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '50em',
         width: '100%',
       },
+    },
+
+    plasmaorb: {
+      [theme.breakpoints.between('lg', 'xl')]: {
+        marginLeft: '40em'
+      },
+      [theme.breakpoints.between('sm', 'md')]: {
+        marginLeft: '20em'
+      },
+
+      [theme.breakpoints.between('xs', 'sm')]: {
+        marginLeft: '35em'
+      },
+    },
+
+    jblSpeaker: {
+      // position: 'fixed',
+      // top: '7em',
+      // right: '30em',
+      float: 'left',
+      marginTop: '5em',
+      filter: 'drop-shadow(10px 18px 10px #240202)',
     }
 
   })
 );
+
 
 function HomePage() {
   const classes = useStyles();
@@ -93,7 +119,7 @@ function HomePage() {
 
 
           <Typography variant="h4"
-            style={{ marginTop: '8em' }}
+            style={{ marginTop: '6em' }}
             className={classes.fontWhite}> You can
             <Typography className={classes.fontBold} variant="h3" component="span"> SELL</Typography>
           </Typography>
@@ -111,28 +137,51 @@ function HomePage() {
             your item(s) at
           </Typography>
 
+          <Grid style={{ width: '100%' }}>
+            <div style={{ marginTop: '3em', marginLeft: '30em', position: 'sticky' }}
+              id="circle"></div>
+            <div id="logo">
+              <UxchangeLogo />
+            </div>
+          </Grid>
+
           <Typography
             style={{ color: '#FFCC00', marginTop: '0.5em' }}
-            className={classes.fontBold} variant="h3">
+            className={classes.fontBold} variant="h2">
             UXCHANGE!
           </Typography>
 
 
         </Container>
 
-        <Grid>
+        {/* <Grid>
           <DoneButton />
         </Grid>
         <Grid>
           <DoneButton />
-        </Grid>
+        </Grid> */}
 
       </div>
 
       <div className={classes.rootTwo}>
-        <Typography variant="h6"
-          style={{ color: 'black', marginTop: '10em' }}>
-          Testing right side</Typography>
+
+        <img 
+        className={classes.jblSpeaker}
+        id="speaker-image"
+        src={JBL} />
+
+        <div style={{ marginLeft: '5em', marginTop: '8em' }}
+          id="speaker"></div>
+
+        <div 
+        className={classes.plasmaorb}
+          id="plasmaOrb"></div>
+
+        <div 
+        style={{ marginLeft: '10em', marginTop: '1em' }}
+          id="coin"></div>
+
+
       </div>
 
 
