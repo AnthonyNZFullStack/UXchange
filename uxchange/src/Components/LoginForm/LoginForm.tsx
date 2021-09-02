@@ -89,7 +89,7 @@ function LoginForm() {
                 className={classes.root}>
 
                 <Typography variant='h4' gutterBottom
-                    style={{ margin: '1.5em 0' }}
+                    style={{ marginTop: '1em' }}
                 > Login</Typography>
 
                 <Grid container spacing={1}>

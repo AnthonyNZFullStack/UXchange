@@ -1,0 +1,7 @@
+#hovering{
+    color: red;
+}
+
+#hovering:hover{
+    fill: red;
+}

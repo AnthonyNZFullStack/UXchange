@@ -12,6 +12,9 @@ import "./HomePage.css";
 import UxchangeLogo from "../Logo/UxchangeLogo";
 import JBL from "../Images/JBL.png";
 import nzonedollar from "../Images/nzonedollar.png";
+import plasmaorb from "../Images/plasmaorb.png";
+import view from "../Images/view.png";
+import HomePageButton from "../../Components/Buttons/HomePageButton";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -36,22 +39,16 @@ const useStyles = makeStyles((theme: Theme) =>
         left: '0',
         height: '70em',
         width: '100%',
-        marginTop: '1em'
+        marginTop: '1em',
       },
     },
     market: {
       color: 'rgba(0,1,36,1)',
-      marginTop: '5em'
+      marginTop: '5em',
     },
 
     fontBold: {
-      // fontWeight: 'bold',
       color: 'white'
-      // background: '#FFCC00',
-      // borderRadius: '1em',
-      // marginRight: '3em',
-      // padding: '0.01em 0.5em',
-      // paddingRight: '1em'
     },
 
     fontWhite: {
@@ -76,38 +73,39 @@ const useStyles = makeStyles((theme: Theme) =>
         position: 'absolute',
         top: '60em',
         left: '0',
-        height: '50em',
+        height: '60em',
         width: '100%',
       },
     },
 
-    plasmaorb: {
-      [theme.breakpoints.between('lg', 'xl')]: {
-        marginLeft: '40em'
-      },
-      [theme.breakpoints.between('sm', 'md')]: {
-        marginLeft: '30em'
-      },
+    // plasmaorb: {
+    //   [theme.breakpoints.up('md')]: {
+    //     marginLeft: '50em'
+    //   },
+    //   [theme.breakpoints.between('sm', 'md')]: {
+    //     marginLeft: '30em'
+    //   },
+    //   [theme.breakpoints.between('xs', 'sm')]: {
+    //     marginLeft: '35em',
+    //   },
+    //   [theme.breakpoints.only('xs')]: {
+    //     height: '100px'
+    //   },
+    // },
 
-      [theme.breakpoints.between('xs', 'sm')]: {
-        marginLeft: '35em'
-      },
-    },
 
-    jblSpeaker: {
-      // position: 'fixed',
-      // top: '7em',
-      // right: '30em',
-      float: 'left',
-      marginTop: '5em',
-      filter: 'drop-shadow(10px 18px 10px #240202)',
-    },
+    // nzonedollar: {
+    //   float: 'left',
+    //   marginLeft: '3em',
+    //   marginTop: '3em',
+    //   filter: 'drop-shadow(-12px 10px 10px #240202)',
+    // },
 
-    nzonedollar: {
-      float: 'left',
-      marginLeft:'4em',
-      marginTop: '3em',
-      filter: 'drop-shadow(-12px 10px 10px #240202)',
+    uxchangelogo: {
+      height: '200px',
+      '&:hover': {
+        color: 'white',
+      }
     },
 
   })
@@ -142,20 +140,21 @@ function HomePage() {
           <Typography
             style={{ marginTop: '0.2em' }}
             variant="h4" className={classes.fontWhite}>
-            your item(s) at
+            any item(s) at
           </Typography>
 
           <Grid style={{ width: '100%' }}>
-            <div style={{ marginTop: '3em', marginLeft: '30em', position: 'sticky' }}
-              id="circle"></div>
+
+            {/* <img id="uxchangelogo" className={classes.uxchangelogo} src={Uxchangelogo} alt="uxchange logo"></img> */}
+
             <div id="logo">
               <UxchangeLogo />
             </div>
           </Grid>
 
           <Typography
-            style={{ color: '#FFCC00', marginTop: '0.5em' }}
-            className={classes.fontBold} variant="h2">
+            style={{ color: '#FFCC00', marginTop: '1em' }}
+            className={classes.fontBold} variant="h3">
             UXCHANGE!
           </Typography>
 
@@ -174,26 +173,59 @@ function HomePage() {
       <div className={classes.rootTwo}>
 
         <img
-          className={classes.jblSpeaker}
+          style={{ filter: 'drop-shadow(10px 10px 10px #240202)' }}
           id="speaker-image"
           src={JBL} />
 
-        <div style={{ marginLeft: '5em', marginTop: '8em' }}
-          id="speaker"></div>
+        <div id="circleOne"></div>
 
-        <div
+        <Typography
+          style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '3em', left: '4em', textAlign: 'left' }}
+          variant="h4">
+          " Doesn't sell? Now you can trade items! That sounds easy doesn't it? "</Typography>
+
+        <Typography style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '20em', right: '18.5em', textAlign: 'left' }}>
+          Options
+        </Typography>
+
+        <img
+          style={{ height: '400px', position: 'absolute', top: '25em', right: '0.3em' }}
+          className="view"
+          id="view"
+          src={view} />
+
+        <Grid style={{ position: 'absolute', marginTop: '4em', marginLeft: '-1em'  }}>
+          <HomePageButton />
+        </Grid>
+
+        {/* <div
           className={classes.plasmaorb}
-          id="plasmaOrb"></div>
+          id="circleSecond">
 
-        <div
-          style={{ marginLeft: '10em', marginTop: '0.5em' }}
-          id="coin">
+          <Typography
+            style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '8.5em', right: '8em' }}
+            variant="h3"
+          > Experience change</Typography>
+
+          <img
+            style={{ filter: 'drop-shadow(10px 3px 7px #240202)', marginLeft: '-5em' }}
+            id="plasmaOrb"
+            src={plasmaorb} />
+
+        </div> */}
+
+        {/* <div id="circleThird">
+
+          <Typography
+            style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '14em', left: '5em' }}
+            variant="h3"
+          > Join with us now!</Typography>
 
           <img
             className={classes.nzonedollar}
             id="nzonedollar"
             src={nzonedollar} />
-        </div>
+        </div> */}
 
 
       </div>
@@ -204,11 +236,4 @@ function HomePage() {
 };
 
 export default HomePage;
-function deg(arg0: number, deg: any): string | import("@material-ui/styles").PropsFunc<{}, string | undefined> | undefined {
-  throw new Error("Function not implemented.");
-}
-
-function rotate(arg0: number, deg: (arg0: number, deg: any) => string | import("@material-ui/styles").PropsFunc<{}, string | undefined> | undefined): string | import("@material-ui/styles").PropsFunc<{}, string | undefined> | undefined {
-  throw new Error("Function not implemented.");
-}
 

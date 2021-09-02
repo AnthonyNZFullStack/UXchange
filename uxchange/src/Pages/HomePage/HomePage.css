@@ -20,11 +20,13 @@
             transform: translateY(-10px);
         }
     } */
+ 
 
     #logo {
-        animation: action 0.7s infinite alternate;
-    }
-    @keyframes action {
+        padding-top: 5em;
+        animation: logo 2s infinite alternate;
+    } 
+    @keyframes logo {
         0% {
             transform: translateY(0);
         }
@@ -35,35 +37,19 @@
     }
 
 
-    #speaker {
-        width: 200px;
-        height: 200px;
+    #circleOne {
+        width: 300px;
+        height: 300px;
         background-color: #FFCC00;
         border-radius: 50%;
-        position: static;
-        top: 40em;
-    }
-
-    #coin {
-        width: 320px;
-        height: 320px;
-        background-color: #FFCC00;
-        border-radius: 50%;
-        position: static;
-        top: 30em;
-    }
-
-    #plasmaOrb {
-        width: 250px;
-        height: 250px;
-        background-color: #FFCC00;
-        border-radius: 50%;
-        position: static;
+        margin-top: 20em;
     }
 
     #speaker-image{
-        height: 250px;
-        animation: speaker 0.1s infinite alternate;
+        float: left;
+        margin-top: 18em;
+        height: 300px;
+        animation: speaker 0.2s infinite alternate;
     }
     @keyframes speaker {
         0% {
@@ -71,13 +57,93 @@
         }
 
         100% {
-            transform: translateY(-10px);
+            transform: translateY(-3px);
         }
     }
 
-    #nzonedollar{
+    /* .view{
+        height: 300px;
         position: sticky;
-        right: 40em;
+        top: 10em;
+        left: 10em;
+
+    } */
+
+    #circleSecond {
+        width: 200px;
+        height: 200px;
+        background-color: #FFCC00;
+        border-radius: 50%;
+        float: right;
+    }
+
+    #plasmaOrb{
+        height: 280px;
+    }
+
+    #circleThird {
+        width: 320px;
+        height: 320px;
+        background-color: #FFCC00;
+        border-radius: 50%;
+        float: left;
+    }
+
+    @media only screen and (max-width: 375px) {
+        /* For desktop: */
+        #circleOne {
+            width: 150px;
+            height: 150px;
+            background-color: #FFCC00;
+            border-radius: 50%;
+            position: static;
+            
+        }
+    
+        #speaker-image{
+            float: left;
+            margin-top: 8em;
+            margin-left: 4em;
+            height: 150px;
+            animation: speaker 0.2s infinite alternate;
+        }
+        @keyframes speaker {
+            0% {
+                transform: translateY(0);
+            }
+    
+            100% {
+                transform: translateY(-3px);
+            }
+        }
+      }
+
+    @media only screen and (max-width: 375px) {
+        /* For desktop: */
+        #circleSecond {
+            width: 120px;
+            height: 120px;
+            background-color: #FFCC00;
+            border-radius: 50%;
+            float: right;
+            margin-top: 5em;
+        }
+      }
+      
+
+    @media only screen and (max-width: 375px) {
+        /* For desktop: */
+        #circleThird {
+            width:150px;
+            height: 150px;
+            background-color: #FFCC00;
+            border-radius: 50%;
+            float: left;
+            margin-top: 8em;
+        }
+      }
+
+    #nzonedollar{
         height: 100px;
         transition: all 2s ease-in-out;
     }
