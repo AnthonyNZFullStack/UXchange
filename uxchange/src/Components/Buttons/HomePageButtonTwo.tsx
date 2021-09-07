@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Button } from '@material-ui/core'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -13,6 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: '#fff0d6',
             background: 'rgba(0,1,36,1)',
             borderRadius: '1em',
+            marginTop: '1em',
             padding: '0.5em 4em',
             width: '40%',
             letterSpacing:'2px',
@@ -24,14 +24,14 @@ const useStyles = makeStyles((theme: Theme) =>
                 width: '100%',
             },
             [theme.breakpoints.only('sm')]: {
+                padding: '0.5em 2em',
+                width: '60%',
+            },
+            [theme.breakpoints.between('sm', 'md')]: {
                 padding: '0.5em 4em',
                 width: '60%',
             },
             [theme.breakpoints.only('md')]: {
-                padding: '0.5em 4em',
-                width: '80%',
-            },
-            [theme.breakpoints.between('sm', 'md')]: {
                 padding: '0.5em 4em',
                 width: '60%',
             },
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 fontWeight: 'bold',
                 padding: '1em 4em',
                 [theme.breakpoints.only('xs')]: {
-                    padding: '0.5em 2em',
+                    padding: '0.5em 4em',
                     width: '100%',
                 },
                 [theme.breakpoints.only('sm')]: {
@@ -76,20 +76,19 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-function HomePageButton() {
+function HomePageButtonTwo() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
             <Button className={classes.root}
-            style={{ marginTop: '3em' }}
                 variant='contained' size='large' type="submit">
-                <Typography style={{fontWeight:'bold'}}>Exchange now!</Typography>
+                How do we operate?
             </Button>
 
         </React.Fragment >
     );
 };
 
-export default HomePageButton;
+export default HomePageButtonTwo;

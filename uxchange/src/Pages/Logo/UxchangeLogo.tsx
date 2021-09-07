@@ -6,7 +6,7 @@ function UxchangeLogo() {
 		<svg
 		id="hovering"
 		className="hovering"
-		width="300px"
+		width="500px"
 			height="100px"
 			viewBox="0 0 844.39 534.41"
 			fill="#FFCC00"

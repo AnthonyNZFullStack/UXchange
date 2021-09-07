@@ -15,6 +15,12 @@ import nzonedollar from "../Images/nzonedollar.png";
 import plasmaorb from "../Images/plasmaorb.png";
 import view from "../Images/view.png";
 import HomePageButton from "../../Components/Buttons/HomePageButton";
+import HomePageButtonTwo from "../../Components/Buttons/HomePageButtonTwo";
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import UxchangeLogoFinal from "../Logo/UxchangeLogoFinal";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -48,19 +54,25 @@ const useStyles = makeStyles((theme: Theme) =>
     },
 
     fontBold: {
-      color: 'white'
+      color: '#fff0d6',
+    },
+
+    fontSize: {
+      [theme.breakpoints.only('xs')]: {
+        fontSize: '3.8em',
+      },
     },
 
     fontWhite: {
-      color: 'white',
+      color: '#fff0d6',
     },
 
     rootTwo: {
-      background: 'rgba(0,1,36,1)',
-      height: '60em',
+      background: '#000124',
+      height: '65em',
       width: '50%',
       position: 'absolute',
-      top: '3em',
+      top: '0em',
       right: '0em',
       [theme.breakpoints.only('sm')]: {
         height: '65em',
@@ -108,6 +120,64 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
 
+    circleOne: {
+      width: '320px',
+      height: '320px',
+      background: '#FFCC00',
+      borderRadius: '50%',
+      marginTop: '4em',
+      margin: 'auto',
+    },
+
+    speaker: {
+      position: 'absolute',
+      top: '44%',
+      left: '15%',
+      filter: 'drop-shadow(10px 10px 10px #240202)',
+      height: '300px',
+    },
+
+    topPage: {
+      marginTop: '8em',
+      color: '#fff0d6',
+      [theme.breakpoints.down('xs')]: {
+        marginTop: '3em',
+        fontSize: '20px',
+      },
+    },
+
+    linkIcon: {
+      fontSize: '2em',
+      paddingTop: '0.3em',
+      color: '#ffcc00', 
+    },
+
+    steps:{
+      textShadow: '2px 1px black',
+      color: '#fff0d6', 
+      fontWeight: 'bold', 
+      background: '#000124',
+      border:'0.2em #ffcc00 solid', 
+      borderRadius: '1em', 
+      padding: '0.8em 1em', 
+      margin: 'auto', 
+      marginTop: '4em',
+
+      [theme.breakpoints.only('xl')]:{
+        fontSize:'0.9em',
+        width: '50%', 
+      },
+
+      [theme.breakpoints.only('lg')]:{
+        fontSize:'0.9em',
+        width: '70%', 
+      },
+      [theme.breakpoints.between('sm', 'md')]:{
+        fontSize:'0.8em',
+        width:'75%'
+      },
+    }
+
   })
 );
 
@@ -125,7 +195,7 @@ function HomePage() {
 
 
           <Typography variant="h4"
-            style={{ marginTop: '6em' }}
+            style={{ marginTop: '5em' }}
             className={classes.fontWhite}> You can
             <Typography className={classes.fontBold} variant="h3" component="span"> SELL</Typography>
           </Typography>
@@ -143,60 +213,104 @@ function HomePage() {
             any item(s) at
           </Typography>
 
+          <Typography
+            style={{ color: '#FFCC00', marginTop: '0.2em' }}
+            className={classes.fontSize} variant="h2">
+            UXCHANGE!
+          </Typography>
+
           <Grid style={{ width: '100%' }}>
 
             {/* <img id="uxchangelogo" className={classes.uxchangelogo} src={Uxchangelogo} alt="uxchange logo"></img> */}
 
             <div id="logo">
-              <UxchangeLogo />
+              <UxchangeLogoFinal />
             </div>
           </Grid>
 
-          <Typography
-            style={{ color: '#FFCC00', marginTop: '1em' }}
-            className={classes.fontBold} variant="h3">
-            UXCHANGE!
-          </Typography>
+          <Grid>
+            <HomePageButton />
+          </Grid>
+
+          <Grid>
+            <HomePageButtonTwo />
+          </Grid>
 
 
         </Container>
-
-        {/* <Grid>
-          <DoneButton />
-        </Grid>
-        <Grid>
-          <DoneButton />
-        </Grid> */}
 
       </div>
 
       <div className={classes.rootTwo}>
 
-        <img
-          style={{ filter: 'drop-shadow(10px 10px 10px #240202)' }}
-          id="speaker-image"
-          src={JBL} />
+        <Container>
 
-        <div id="circleOne"></div>
+          <Grid>
 
-        <Typography
-          style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '3em', left: '4em', textAlign: 'left' }}
-          variant="h4">
-          " Doesn't sell? Now you can trade items! That sounds easy doesn't it? "</Typography>
+            <Typography
+              className={classes.topPage}
+              variant="h5">
+              " A few simple steps to start your exchange."
+            </Typography>
 
-        <Typography style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '20em', right: '18.5em', textAlign: 'left' }}>
+            {/* <Typography
+                style={{ marginTop: '1em', color: 'black', fontWeight: 'bold', background: '#FFCC00', borderRadius: '1em', padding: '0.5em 1em', width: '50%', margin: 'auto', }}
+                variant="body1">
+                Create account <ArrowRightIcon /> Post your item | Sell or Trade.</Typography>
+              </Typography> */}
+
+            <Grid container direction="row" alignItems="center" justifyContent="center" 
+            className={classes.steps}>
+              <Grid item style={{ fontSize: '1.2em', marginRight: '0.5em', }}>
+                Create Account
+              </Grid>
+              <Grid item>
+                <DoubleArrowIcon className={classes.linkIcon} />
+              </Grid>
+              <Grid item>
+              </Grid>
+              <Grid item style={{ fontSize: '1.2em', marginRight: '0.5em', marginLeft: '0.5em' }}>
+                Post your Item(s)
+              </Grid>
+              <Grid item>
+                <DoubleArrowIcon className={classes.linkIcon} />
+              </Grid>
+              <Grid item>
+              </Grid>
+              <Grid item style={{ fontSize: '1.2em', marginLeft: '0.5em' }}>
+                Sell or Trade
+              </Grid>
+            </Grid>
+
+          </Grid>
+
+          <Grid container>
+            <img
+              className={classes.speaker}
+              id="speaker-image"
+              src={JBL} />
+
+            <div className={classes.circleOne} id="circleOne"></div>
+
+            {/* <img
+            style={{ height: '400px', position: 'absolute', top: '18em', right: '8em' }}
+            className="view"
+            id="view"
+            src={view} /> */}
+
+          </Grid>
+
+          {/* <Typography style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '15em', right: '13em', textAlign: 'left' }}>
           Options
-        </Typography>
+        </Typography> */}
 
-        <img
-          style={{ height: '400px', position: 'absolute', top: '25em', right: '0.3em' }}
-          className="view"
-          id="view"
-          src={view} />
+          <Typography
+            className="rotate"
+            style={{ color: '#FFCC00', fontWeight: 'bold', margin: 'auto', marginTop: '1.5em' }}
+            variant="h5">
+            " That sounds easy doesn't it? "</Typography>
 
-        <Grid style={{ position: 'absolute', marginTop: '4em', marginLeft: '-1em'  }}>
-          <HomePageButton />
-        </Grid>
+        </Container>
 
         {/* <div
           className={classes.plasmaorb}
