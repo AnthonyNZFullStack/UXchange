@@ -9,9 +9,10 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
+            background: 'rgba(0,1,36,1)',
             color: '#FFCC00',
-            background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
             borderRadius: '1em',
+            border: '0.1em #ffcc00 solid',
             marginTop: '2em',
             marginBottom: '1em',
             padding: '0.5em 8em',

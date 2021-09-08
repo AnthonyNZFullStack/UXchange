@@ -3,8 +3,8 @@ import "./uxchangelogofinal.css";
 function UxchangeLogoFinal() {
     return (
         <svg
-            width="300px"
-            height="300px"
+            width="250px"
+            height="250px"
             viewBox="0 0 1280 1024"
             fill="#FFCC00"
             xmlns="http://www.w3.org/2000/svg">

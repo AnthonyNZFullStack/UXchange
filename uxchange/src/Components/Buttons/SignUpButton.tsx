@@ -10,13 +10,19 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             color: '#FFCC00',
-            background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
+            background: 'rgba(0,1,36,1)',
             borderRadius: '1em',
+            border:'0.1em #ffcc00 solid',
             marginTop: '2em',
             marginBottom: '1em',
             padding: '0.5em 8em',
             [theme.breakpoints.down('xs')]: {
                 padding: '0.5em 5em',
+            },
+            '&:hover':{
+                background:'#ffcc00',
+                color: 'rgba(0,1,36,1)',
+                fontWeight:'bold'
             },
         },
         iconstyle: {

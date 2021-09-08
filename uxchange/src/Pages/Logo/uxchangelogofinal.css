@@ -1,5 +1,10 @@
 .st0{fill:#FFCC00;}
+
 .st1{opacity:0.5;fill:none;stroke:#000000;stroke-width:11;stroke-miterlimit:10;}
+
 .st2{opacity:0.57;}
-.st3{fill:#FFFFFF;}
+
+.st3{fill:rgba(0,1,36,1); opacity:90%;}
+.st3:hover{fill:rgba(0,1,36,1);opacity:100%;}
+
 .st4{fill:none;stroke:#F7931E;stroke-width:20;stroke-miterlimit:10;}

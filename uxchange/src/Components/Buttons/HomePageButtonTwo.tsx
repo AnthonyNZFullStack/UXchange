@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
             width: '40%',
             letterSpacing:'2px',
             textTransform: 'capitalize',
-            border: '2px #FFCC00 dotted',
+            border: '2px #FFCC00 solid',
             fontWeight: 'bold',
             [theme.breakpoints.only('xs')]: {
                 padding: '0.5em 2em',

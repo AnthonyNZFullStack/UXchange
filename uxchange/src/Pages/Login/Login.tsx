@@ -11,11 +11,27 @@ import LoginForm from "../../Components/LoginForm/LoginForm";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     pageContent: {
-      margin: theme.spacing(5),
+      marginTop: '11em',
+      margin: 'auto',
       padding: theme.spacing(3),
-      backgroundColor: '#E0F4FF',
+      backgroundColor: 'rgba(0,1,36,1)',
+      width: '40%',
+      height: '650px',
       // width: '30vw',
       // height: '50vh',
+      [theme.breakpoints.down('xl')]: {
+        width: '50%'
+    },
+    [theme.breakpoints.down('md')]: {
+        width: '70%'
+    },
+    [theme.breakpoints.down('sm')]: {
+        width: '80%',
+    },
+    [theme.breakpoints.only('xs')]: {
+        width: '90%',
+        marginTop: '5.5em',
+    },
     },
 
   })
@@ -27,9 +43,8 @@ function Login() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper 
-      style={{ marginTop:'20em' }}
-      className={classes.pageContent}>
+      <Paper
+        className={classes.pageContent}>
 
         <LoginForm />
 

@@ -3,7 +3,8 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
-import { TextField, Grid, Typography } from '@material-ui/core'
+import { TextField, Grid, Typography } from '@material-ui/core';
+import ContactsIcon from '@material-ui/icons/Contacts';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -12,13 +13,13 @@ const useStyles = makeStyles((theme: Theme) =>
                 backgroundColor: 'white',
 
                 [theme.breakpoints.down('xl')]: {
-                    width: '30%'
+                    width: '50%'
                 },
                 [theme.breakpoints.only('md')]: {
-                    width: '40%'
+                    width: '70%'
                 },
                 [theme.breakpoints.down('sm')]: {
-                    width: '60%',
+                    width: '80%',
                 },
                 [theme.breakpoints.only('xs')]: {
                     width: '100%',
@@ -40,30 +41,40 @@ function SignUpForm() {
 
             <form className={classes.root}>
 
-                <Typography variant='h4' gutterBottom
-                style={{margin: '1.5em 0'}}
-                > Create account</Typography>
+                <Grid>
+                    <ContactsIcon style={{ marginTop: '1em', color: '#ffcc00', fontSize: '5em' }}></ContactsIcon>
+                </Grid>
 
-                <Grid container spacing={1}>
+                <Typography variant='h3' gutterBottom
+                    style={{ color: '#ffcc00', fontFamily: 'caveat' }}
+                > Create Account</Typography>
+
+                <Grid container spacing={2}>
                     <Grid item xs={12} md={12}>
                         <TextField
-                            variant="outlined"
-                            label="Full name"
+                            label="Full Name"
+                            variant="filled"
                             id="fullName"
                             name="fullName"
                             type="fullName" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="outlined" label="E-mail" />
+                        <TextField
+                            label="Full Name"
+                            variant="filled" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="outlined" label="Username" />
+                        <TextField 
+                        variant="filled" 
+                        label="Username" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Password" />
+                        <TextField 
+                        variant="filled" 
+                        label="Password" />
                     </Grid>
 
                 </Grid>

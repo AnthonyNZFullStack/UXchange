@@ -55,11 +55,21 @@ const useStyles = makeStyles((theme: Theme) =>
 
     fontBold: {
       color: '#fff0d6',
+      fontFamily: 'Caveat Brush',
     },
 
     fontSize: {
       [theme.breakpoints.only('xs')]: {
         fontSize: '3.8em',
+      },
+    },
+
+    fontWhiteOne: {
+      marginTop: '3.5em',
+      color: '#fff0d6',
+      [theme.breakpoints.only('xs')]: {
+        marginTop:'2em',
+        color: '#fff0d6',
       },
     },
 
@@ -85,7 +95,7 @@ const useStyles = makeStyles((theme: Theme) =>
         position: 'absolute',
         top: '60em',
         left: '0',
-        height: '60em',
+        height: '48em',
         width: '100%',
       },
     },
@@ -113,16 +123,16 @@ const useStyles = makeStyles((theme: Theme) =>
     //   filter: 'drop-shadow(-12px 10px 10px #240202)',
     // },
 
-    uxchangelogo: {
-      height: '200px',
-      '&:hover': {
-        color: 'white',
-      }
-    },
+    // uxchangelogo: {
+    //   height: '200px',
+    //   '&:hover': {
+    //     color: 'white',
+    //   }
+    // },
 
     circleOne: {
-      width: '320px',
-      height: '320px',
+      width: '350px',
+      height: '350px',
       background: '#FFCC00',
       borderRadius: '50%',
       marginTop: '4em',
@@ -131,50 +141,71 @@ const useStyles = makeStyles((theme: Theme) =>
 
     speaker: {
       position: 'absolute',
-      top: '44%',
+      top: '38%',
       left: '15%',
       filter: 'drop-shadow(10px 10px 10px #240202)',
       height: '300px',
+      [theme.breakpoints.only('xs')]: {
+        position: 'absolute',
+        top: '11%',
+        left: '10%',
+      },
     },
 
     topPage: {
-      marginTop: '8em',
+      fontFamily: 'Caveat Brush',
+      marginTop: '5em',
       color: '#fff0d6',
+      fontStyle:'italic',
       [theme.breakpoints.down('xs')]: {
-        marginTop: '3em',
+        marginTop: '1em',
         fontSize: '20px',
+        fontStyle:'italic',
+        fontFamily: 'Caveat Brush',
+      },
+    },
+
+    topPageTwo: {
+      color: '#fff0d6',
+      fontStyle:'italic',
+      fontFamily: 'Caveat Brush',
+      [theme.breakpoints.down('xs')]: {
+        marginTop: '2em',
+        fontSize: '15px',
+        fontStyle:'italic',
+        fontFamily: 'Caveat Brush',
       },
     },
 
     linkIcon: {
       fontSize: '2em',
       paddingTop: '0.3em',
-      color: '#ffcc00', 
+      color: '#ffcc00',
     },
 
-    steps:{
+    steps: {
       textShadow: '2px 1px black',
-      color: '#fff0d6', 
-      fontWeight: 'bold', 
+      color: '#fff0d6',
+      fontWeight: 'bold',
       background: '#000124',
-      border:'0.2em #ffcc00 solid', 
-      borderRadius: '1em', 
-      padding: '0.8em 1em', 
-      margin: 'auto', 
-      marginTop: '4em',
+      border: '0.2em #ffcc00 solid',
+      borderRadius: '1em',
+      padding: '0.8em 1em',
+      margin: 'auto',
+      marginTop: '6em',
 
-      [theme.breakpoints.only('xl')]:{
-        fontSize:'0.9em',
-        width: '50%', 
+      [theme.breakpoints.only('xl')]: {
+        fontSize: '0.9em',
+        width: '50%',
       },
 
-      [theme.breakpoints.only('lg')]:{
-        fontSize:'0.9em',
-        width: '70%', 
+      [theme.breakpoints.only('lg')]: {
+        fontSize: '0.9em',
+        width: '70%',
       },
-      [theme.breakpoints.between('sm', 'md')]:{
-        fontSize:'0.8em',
-        width:'75%'
+      [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '0.8em',
+        width: '60%'
       },
     }
 
@@ -195,15 +226,14 @@ function HomePage() {
 
 
           <Typography variant="h4"
-            style={{ marginTop: '5em' }}
-            className={classes.fontWhite}> You can
-            <Typography className={classes.fontBold} variant="h3" component="span"> SELL</Typography>
+            className={classes.fontWhiteOne}> You can
+            <Typography className={classes.fontBold} variant="h2" component="span"> SELL</Typography>
           </Typography>
 
           <Typography variant="h4"
             style={{ marginTop: '0.2em' }}
             className={classes.fontWhite}> or
-            <Typography className={classes.fontBold} variant="h3" component="span"
+            <Typography className={classes.fontBold} variant="h2" component="span"
             > TRADE</Typography>
           </Typography>
 
@@ -211,12 +241,6 @@ function HomePage() {
             style={{ marginTop: '0.2em' }}
             variant="h4" className={classes.fontWhite}>
             any item(s) at
-          </Typography>
-
-          <Typography
-            style={{ color: '#FFCC00', marginTop: '0.2em' }}
-            className={classes.fontSize} variant="h2">
-            UXCHANGE!
           </Typography>
 
           <Grid style={{ width: '100%' }}>
@@ -227,6 +251,12 @@ function HomePage() {
               <UxchangeLogoFinal />
             </div>
           </Grid>
+
+          <Typography
+            style={{ color: '#FFCC00', fontFamily: 'Caveat Brush', }}
+            className={classes.fontSize} variant="h2">
+            UXCHANGE!
+          </Typography>
 
           <Grid>
             <HomePageButton />
@@ -249,38 +279,20 @@ function HomePage() {
 
             <Typography
               className={classes.topPage}
-              variant="h5">
-              " A few simple steps to start your exchange."
+              variant="h4">
+              " A few simple steps to start your exchange.
             </Typography>
+
+            <Typography
+              className={classes.topPageTwo}
+              variant="h4">
+              That sounds easy doesn't it? "</Typography>
 
             {/* <Typography
                 style={{ marginTop: '1em', color: 'black', fontWeight: 'bold', background: '#FFCC00', borderRadius: '1em', padding: '0.5em 1em', width: '50%', margin: 'auto', }}
                 variant="body1">
                 Create account <ArrowRightIcon /> Post your item | Sell or Trade.</Typography>
               </Typography> */}
-
-            <Grid container direction="row" alignItems="center" justifyContent="center" 
-            className={classes.steps}>
-              <Grid item style={{ fontSize: '1.2em', marginRight: '0.5em', }}>
-                Create Account
-              </Grid>
-              <Grid item>
-                <DoubleArrowIcon className={classes.linkIcon} />
-              </Grid>
-              <Grid item>
-              </Grid>
-              <Grid item style={{ fontSize: '1.2em', marginRight: '0.5em', marginLeft: '0.5em' }}>
-                Post your Item(s)
-              </Grid>
-              <Grid item>
-                <DoubleArrowIcon className={classes.linkIcon} />
-              </Grid>
-              <Grid item>
-              </Grid>
-              <Grid item style={{ fontSize: '1.2em', marginLeft: '0.5em' }}>
-                Sell or Trade
-              </Grid>
-            </Grid>
 
           </Grid>
 
@@ -304,11 +316,29 @@ function HomePage() {
           Options
         </Typography> */}
 
-          <Typography
-            className="rotate"
-            style={{ color: '#FFCC00', fontWeight: 'bold', margin: 'auto', marginTop: '1.5em' }}
-            variant="h5">
-            " That sounds easy doesn't it? "</Typography>
+          <Grid container direction="row" alignItems="center" justifyContent="center"
+            className={classes.steps}>
+
+            <Grid item style={{ fontSize: '1.2em', marginRight: '0.5em', }}>
+              Create Account
+            </Grid>
+
+            <Grid item>
+              <DoubleArrowIcon className={classes.linkIcon} />
+            </Grid>
+
+            <Grid item style={{ fontSize: '1.2em', marginRight: '0.5em', marginLeft: '0.5em' }}>
+              Post your Item(s)
+            </Grid>
+
+            <Grid item>
+              <DoubleArrowIcon className={classes.linkIcon} />
+            </Grid>
+            
+            <Grid item style={{ fontSize: '1.2em', marginLeft: '0.5em' }}>
+              Sell or Trade
+            </Grid>
+          </Grid>
 
         </Container>
 

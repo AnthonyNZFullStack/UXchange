@@ -23,16 +23,16 @@
  
 
     #logo {
-        height: 150px;
-        animation: logo 3s infinite alternate;
+        height: 220px;
+        animation: logo 2s infinite alternate;
     } 
     @keyframes logo {
         0% {
-            transform: translateY(10px);
+            transform: translateY(0px);
         }
 
         100% {
-            transform: translateY(-60px);
+            transform: translateY(-20px);
         }
     }
 

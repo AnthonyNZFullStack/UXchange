@@ -10,6 +10,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import { Button } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 import { useState } from "react";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -19,13 +20,13 @@ const useStyles = makeStyles((theme: Theme) =>
                 backgroundColor: 'white',
 
                 [theme.breakpoints.down('xl')]: {
-                    width: '30%'
+                    width: '50%'
                 },
-                [theme.breakpoints.only('md')]: {
-                    width: '40%'
+                [theme.breakpoints.down('md')]: {
+                    width: '70%'
                 },
                 [theme.breakpoints.down('sm')]: {
-                    width: '60%',
+                    width: '80%',
                 },
                 [theme.breakpoints.only('xs')]: {
                     width: '100%',
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
             }
         },
         rootRadial: {
+            color:'white',
             '& .MuiFormGroup-root': {
                 backgroundColor: '#E0F4FF',
                 margin: 'auto',
@@ -40,15 +42,26 @@ const useStyles = makeStyles((theme: Theme) =>
             },
             '& .MuiFormControl-root': {
                 backgroundColor: '#E0F4FF',
-            }
+            },
         },
 
+        buttonRemember:{
+            color:'white',
+            '&:hover':{
+                color: '#FFCC00',
+            },
+        },
+        
+
         buttonRoot: {
+            color: 'rgba(0,212,255,1)',
             '& .MuiButton-label': {
-                color: 'rgba(0,212,255,1)',
                 textTransform: 'Capitalize',
                 alignItems: 'center'
-            }
+            },
+            '&:hover':{
+                color: '#FFCC00',
+            },
         },
 
     })
@@ -69,14 +82,14 @@ function LoginForm() {
         setUsernameError(false)
         setPasswordError(false)
 
-        if(username == '') {
+        if (username == '') {
             setUsernameError(true)
         }
-        if(password == '') {
+        if (password == '') {
             setPasswordError(true)
         }
         if (username && password) {
-            console.log({"username": username, "password": password})
+            console.log({ "username": username, "password": password })
         }
     }
 
@@ -88,19 +101,27 @@ function LoginForm() {
                 noValidate autoComplete="off" onSubmit={handleSubmit}
                 className={classes.root}>
 
-                <Typography variant='h4' gutterBottom
-                    style={{ marginTop: '1em' }}
-                > Login</Typography>
+                <Grid>
+                <AccountCircleIcon style={{marginTop:'1em', color:'#ffcc00', fontSize:'5em'}}></AccountCircleIcon>
+                </Grid>
+                
+                <Grid>
+                <Typography variant='h2' gutterBottom
+                    style={{ fontFamily:'caveat', color:'#ffcc00' }}> 
+                Login
+                </Typography>
+                </Grid>
 
-                <Grid container spacing={1}>
+                <Grid container spacing={2}>
+
                     <Grid item xs={12} md={12}>
                         <TextField
                             onChange={(e) => setUsername(e.target.value)}
-                            variant="outlined"
-                            label="Username"
                             id="Username"
                             name="Username"
                             type="text"
+                            label="Username" 
+                            variant="filled"
                             error={usernameError}
                         />
                     </Grid>
@@ -108,8 +129,11 @@ function LoginForm() {
                     <Grid item xs={12} md={12}>
                         <TextField
                             onChange={(e) => setPassword(e.target.value)}
-                            variant="outlined"
-                            label="Password"
+                            id="Password"
+                            name="Password"
+                            type="text"
+                            label="Password" 
+                            variant="filled"
                             error={passwordError}
                         />
                     </Grid>
@@ -117,7 +141,7 @@ function LoginForm() {
                 </Grid>
 
                 <Grid className={classes.rootRadial}>
-                    <FormControlLabel control={<Checkbox name="remeber me" />} label="Remember me" />
+                    <FormControlLabel className={classes.buttonRemember} control={<Checkbox name="remeber me" />} label="Remember me" />
                     <Button className={classes.buttonRoot}
                         style={{ backgroundColor: 'transparent', padding: '0 1em', display: 'inline-block' }}>
                         Forgot password?
@@ -128,11 +152,11 @@ function LoginForm() {
                 <LoginButton />
 
                 <Grid >
-                    <Typography variant='body2'> Not a member?
+                    <Typography variant='body2' style={{ color: 'white', }}> Not a member?
                         <Button className={classes.buttonRoot}
                             style={{ backgroundColor: 'transparent', padding: '0 1em', display: 'inline-block' }}
                             component={Link} to="/Sign Up">
-                            Create account
+                            Click here to create account
                         </Button>
                     </Typography>
                 </Grid>
