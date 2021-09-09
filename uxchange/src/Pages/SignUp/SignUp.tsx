@@ -18,7 +18,7 @@ import SignUpButton from "../../Components/Buttons/SignUpButton";
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         pageContent: {
-            marginTop: '7em',
+            marginTop: '6.5em',
             margin: 'auto',
             padding: theme.spacing(3),
             backgroundColor: 'rgba(0,1,36,1)',
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
         hoverButton: {
             background: 'rgba(0,1,36,1)',
-            color: 'white',
+            color: '#00d4ff',
             '&:hover': {
                 color: '#ffcc00',
             }

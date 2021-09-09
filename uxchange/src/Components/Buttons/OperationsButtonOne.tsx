@@ -9,34 +9,44 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            color: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
-            background: '#FFCC00',
+            color: '#fff0d6',
+            background: 'rgba(0,1,36,1)',
             borderRadius: '1em',
-            marginTop: '2em',
-            marginBottom: '1em',
-            padding: '1em 5em',
+            border: '0.1em #ffcc00 solid',
             fontWeight: 'bold',
-            [theme.breakpoints.between('xs', 'sm')]: {
-                padding: '0.5em 3em',
-                display: 'block'
-            },
-            [theme.breakpoints.between('sm', 'md')]: {
-                padding: '1em 3em',
-                width: '50%',
+        
+            [theme.breakpoints.only('xs')]: {
+                padding: '0.5em 6em',
+                width: '100%',
                 margin: 'auto',
                 marginTop: '2em'
             },
-            [theme.breakpoints.between('md', 'lg')]: {
-                padding: '1em 3em',
-                margin: '4em',
-                marginBottom: '0'
+            [theme.breakpoints.only('sm')]: {
+                padding: '0.5em 3em',
+                width: '80%',
+                margin: 'auto',
+                marginTop: '2em'
             },
-            [theme.breakpoints.between('lg', 'xl')]: {
-                padding: '1em 3em',
-                marginTop: '4em',
-                margin: '3em',
-
+            [theme.breakpoints.only('md')]: {
+                padding: '0.5em 3em',
+                marginBottom: '0',
+                width: '80%',
+                marginTop: '2em'
             },
+            [theme.breakpoints.only('lg')]: {
+                padding: '0.5em 3em',
+                marginTop: '3em',
+                width:'90%',
+            },
+            [theme.breakpoints.only('xl')]: {
+                padding: '0.5em 3em',
+                marginTop: '3em',
+                width:'90%',
+            },
+            '&:hover':{
+                color:'rgba(0,1,36,1)',
+                background: '#ffcc00'
+            }
         },
 
     })
@@ -51,7 +61,7 @@ function OperationsButtonOne() {
         <React.Fragment>
             <CssBaseline />
             <Button className={classes.root}
-                variant='contained' size='large' type="submit"
+                type="submit"
                 component={Link} to="/Sign Up">
                 Create account
             </Button>

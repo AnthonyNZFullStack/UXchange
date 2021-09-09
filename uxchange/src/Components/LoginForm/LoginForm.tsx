@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
 
         buttonRemember:{
-            color:'white',
+            color:'#00d4ff',
             '&:hover':{
                 color: '#FFCC00',
             },

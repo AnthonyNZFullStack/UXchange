@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
+import { Typography, Button, Grid } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import { Theme } from "@material-ui/core";
@@ -17,30 +17,71 @@ import OperationsButtonTwo from "../../Components/Buttons/OperationsButtonTwo";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
 
-    operationBox:{
+    operationBox: {
+      width: '60%',
+      margin: 'auto',
       [theme.breakpoints.down('xl')]: {
-        minHeight: '105vh',
+        height: '1100px',
       },
-      [theme.breakpoints.down('lg')]: {
-        minHeight: '105vh',
+      [theme.breakpoints.only('lg')]: {
+        height: '1150px',
       },
-      [theme.breakpoints.down('md')]: {
-        minHeight: '115vh',
+      [theme.breakpoints.only('md')]: {
+        height: '1100px',
+        width: '100%',
+        margin: 'auto',
       },
-      [theme.breakpoints.down('sm')]: {
-        minHeight: '120vh',
+      [theme.breakpoints.only('sm')]: {
+        height: '1250px',
+        width: '100%',
+        margin: 'auto',
+      },
+      [theme.breakpoints.only('xs')]: {
+        height: '1600px',
+        width: '100%',
+        margin: 'auto',
       },
     },
 
     root: {
-      background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
+      background: 'rgba(0,1,36,1)',
       marginTop: '7em',
-      borderRadius: '3em',
+      borderRadius: '1em',
       padding: '3em',
-      color: 'white',
+      color: '#fff0d6',
+      height: '968px',
       [theme.breakpoints.down('xl')]: {
-        color: 'white',
-      }
+        height: '980px',
+      },
+      [theme.breakpoints.only('lg')]: {
+        height: '1050px',
+      },
+      [theme.breakpoints.only('md')]: {
+        height: '1200px',
+        width: '100%',
+        margin: 'auto',
+      },
+      [theme.breakpoints.only('sm')]: {
+        height: '1300px',
+        width: '100%',
+        margin: 'auto',
+      },
+      [theme.breakpoints.only('xs')]: {
+        height: '1600px',
+        width: '100%',
+        margin: 'auto',
+      },
+    },
+
+
+    titleOperation: {
+      fontFamily: 'caveat',
+      color: '#ffcc00',
+      fontWeight: 'bold',
+      marginTop: '1em',
+      [theme.breakpoints.down('md')]: {
+        marginTop:'2em',
+      },
     },
     boxOne: {
       display: 'inline-block',
@@ -70,9 +111,35 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '1.5em',
       marginTop: '0.3em'
     },
-    fontSizes: {
-      fontSize: '2em',
+    titleOperationTwo: {
+      margin: 'auto',
+      marginTop: '2em',
+      fontFamily: 'caveat',
+      color: '#ffcc00',
+      fontWeight: 'bold',
+      [theme.breakpoints.down('lg')]: {
+        marginTop:'2.5em',
+        fontSize: '3em',
+      },
+      [theme.breakpoints.down('md')]: {
+        marginTop:'2em',
+        fontSize: '3em',
+      },
+      [theme.breakpoints.only('xs')]: {
+        fontSize: '2.5em',
+        marginBottom:'1em'
+      },
     },
+    buttonOperationOne: {
+      margin: 'auto',
+      width: '50%',
+    },
+    buttonOperationTwo: {
+      margin: 'auto',
+      width: '50%',
+    },
+
+
   })
 );
 
@@ -87,12 +154,12 @@ function Operations() {
 
         <Container className={classes.root} >
 
-          <Typography style={{ marginTop: '1em' }} variant="h3" gutterBottom>
+          <Typography className={classes.titleOperation} variant="h3" gutterBottom>
             How it works?
           </Typography>
 
           <Typography className={classes.paragraphOne} variant="body2" align="left">
-            Have you ever wanted to get rid of your unwanted items and it just doesn’t sell? UXchange has created
+            Have you ever wanted to get rid of your unwanted items and it just doesn’t sell? UXCHANGE has created
             a solution for you to trade your items if it doesn’t sell and that and its just a few steps away! So
             this is how it works:
           </Typography>
@@ -117,7 +184,7 @@ function Operations() {
           <Container className={classes.boxOne}>
             <Typography className={classes.paragraphTwo} variant="body2" align="center" >
               You can simply click the <DeleteIcon className={classes.iconStyling} /> delete icon, if you change your mind after posting your item online or if you have already made a transaction.
-              Make sure you are deleting the right one because once you delete the item, it is gone permanently.
+              Make sure you are deleting the right one because once you delete the item, it is permanent.
             </Typography>
           </Container>
 
@@ -128,12 +195,19 @@ function Operations() {
             </Typography>
           </Container>
 
-          <Typography className={classes.fontSizes} style={{ marginTop: '2em' }} variant="h3" gutterBottom>
+          <Typography className={classes.titleOperationTwo} variant="h4" gutterBottom>
             Ready to start your exchange?
           </Typography>
 
-          <OperationsButtonOne />
-          <OperationsButtonTwo />
+          <Grid item
+            className={classes.buttonOperationOne}>
+            <OperationsButtonOne />
+          </Grid>
+
+          <Grid item
+            className={classes.buttonOperationTwo}>
+            <OperationsButtonTwo />
+          </Grid>
 
         </Container>
 

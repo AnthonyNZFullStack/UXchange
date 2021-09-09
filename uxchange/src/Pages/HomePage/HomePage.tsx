@@ -14,7 +14,7 @@ import JBL from "../Images/JBL.png";
 import nzonedollar from "../Images/nzonedollar.png";
 import plasmaorb from "../Images/plasmaorb.png";
 import view from "../Images/view.png";
-import HomePageButton from "../../Components/Buttons/HomePageButton";
+import HomePageButton from "../../Components/Buttons/HomePageButtonOne";
 import HomePageButtonTwo from "../../Components/Buttons/HomePageButtonTwo";
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
