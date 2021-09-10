@@ -18,18 +18,18 @@ const useStyles = makeStyles((theme: Theme) =>
         pageContent: {
             margin: theme.spacing(10),
             padding: theme.spacing(3),
-            backgroundColor: 'white',
-            height: '85vh',
+            backgroundColor: 'rgba(0,1,36,1)',
             [theme.breakpoints.down('xl')]: {
                 width: '60%',
                 margin: 'auto',
-                marginTop: '10em'
+                marginTop: '6.8em',
+                height: '750px',
             },
             [theme.breakpoints.down('xs')]: {
-                width: '100%',
+                width: '90%',
                 margin: 'auto',
                 marginTop: '5em',
-                height: '130vh'
+                height: '660px'
             },
         },
 

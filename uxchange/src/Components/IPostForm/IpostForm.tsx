@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         titlePost: {
             color: '#ffcc00',
+            fontFamily: 'caveat brush',
             [theme.breakpoints.only('xs')]: {
                 width: '100%',
                 marginBottom: '1.5em',

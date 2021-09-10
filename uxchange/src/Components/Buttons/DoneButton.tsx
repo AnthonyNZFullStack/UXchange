@@ -9,15 +9,19 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            color: '#FFCC00',
+            color: '#fff0d6',
             background: 'rgba(0,1,36,1)',
             border:'0.1em #ffcc00 solid',
-            borderRadius: '1em',
+            borderRadius: '3em',
             marginTop: '2em',
-            padding: '0.5em 8em',
+            padding: '0.5em 6em',
             fontWeight: 'bold',
-            [theme.breakpoints.down('xs')]: {
-                padding: '0.5em 6em',
+            textTransform: 'capitalize',
+            [theme.breakpoints.only('xs')]: {
+                padding: '0.3em 5em',
+            },
+            [theme.breakpoints.up('sm')]: {
+                padding: '0.3em 5.5em',
             },
             '&:hover': {
                 background: '#FFCC00',

@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { TextField, Grid, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom';
+import EditIcon from '@material-ui/icons/Edit';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -14,18 +15,74 @@ const useStyles = makeStyles((theme: Theme) =>
                 backgroundColor: '#E0F4FF',
 
                 [theme.breakpoints.down('xl')]: {
-                    width: '30%',
+                    width: '50%',
+                },
+                [theme.breakpoints.down('xl')]: {
+                    width: '70%',
                 },
                 [theme.breakpoints.only('md')]: {
-                    width: '40%'
+                    width: '70%'
                 },
                 [theme.breakpoints.down('sm')]: {
-                    width: '60%',
+                    width: '80%',
                 },
                 [theme.breakpoints.only('xs')]: {
-                    width: '100%',
+                    width: '80%',
                 },
             }
+        },
+
+        titleEditIpost: {
+            marginTop: '1em',
+            color: '#ffcc00',
+            fontFamily: 'caveat brush',
+            [theme.breakpoints.only('xs')]: {
+                width: '100%',
+                marginBottom: '1.5em',
+                marginTop: '0.5em',
+                fontSize: '1.8em',
+            },
+            [theme.breakpoints.only('sm')]: {
+                marginTop: '1em',
+                marginBottom: '2em',
+            },
+            [theme.breakpoints.only('md')]: {
+                marginTop: '1em',
+                marginBottom: '2em',
+            },
+            [theme.breakpoints.only('lg')]: {
+                marginTop: '1em',
+                marginBottom: '2em',
+            },
+            [theme.breakpoints.only('xl')]: {
+                marginTop: '1em',
+                marginBottom: '2em',
+            },
+        },
+        iconStyle: {
+            fontSize: '3em',
+            color: '#ffcc00',
+            marginRight: '0.3em',
+            [theme.breakpoints.only('xs')]: {
+                fontSize: '2em',
+                marginBottom: '0.8em',
+            },
+            [theme.breakpoints.only('sm')]: {
+                fontSize: '2.5em',
+                marginBottom: '0.8em',
+            },
+            [theme.breakpoints.only('md')]: {
+                fontSize: '2.5em',
+                marginBottom: '0.8em',
+            },
+            [theme.breakpoints.only('lg')]: {
+                fontSize: '2.5em',
+                marginBottom: '0.8em',
+            },
+            [theme.breakpoints.only('xl')]: {
+                fontSize: '2.5em',
+                marginBottom: '0.8em',
+            },
         },
 
     })
@@ -43,14 +100,29 @@ function EditIpostForm() {
 
             <form className={classes.root}>
 
-                <Typography variant='h4' gutterBottom
-                style={{margin: '1.5em 0'}}
-                > Edit your Ipost</Typography>
+                <Grid container direction="row" justifyContent="center" alignItems="center">
+
+                    <Grid item>
+
+                        <EditIcon className={classes.iconStyle}></EditIcon>
+
+                    </Grid>
+
+                    <Grid item>
+
+                        <Typography variant='h4' gutterBottom
+                            className={classes.titleEditIpost}>
+                            Edit your Ipost
+                        </Typography>
+                    </Grid>
+
+                </Grid>
 
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={12}>
                         <TextField
-                            variant="outlined"
+                            variant="filled"
+                            size="small"
                             label="Full name"
                             id="fullName"
                             name="fullName"
@@ -58,23 +130,23 @@ function EditIpostForm() {
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="outlined" label="Image" />
+                        <TextField variant="filled" size="small" label="Image" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="outlined" label="Title" />
+                        <TextField variant="filled" size="small" label="Title" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Trade/Sell(price)" />
+                        <TextField variant="filled" size="small" label="Trade/Sell(price)" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Contacts" />
+                        <TextField variant="filled" size="small" label="Contacts" />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="outlined" label="Item description" />
+                        <TextField variant="filled" size="small" label="Item description" />
                     </Grid>
 
                 </Grid>

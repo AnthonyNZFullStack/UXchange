@@ -11,15 +11,17 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            color: '#FFCC00',
+            color: '#fff0d6',
             background: 'rgba(0,1,36,1)',
-            border:'0.1em #ffcc00 solid',
-            marginTop: '1em',
             marginBottom: '1em',
             padding: '0.5em 4.65em',
             fontWeight: 'bold',
+            textTransform: 'capitalize',
             [theme.breakpoints.down('xs')]: {
-                padding: '0.5em 2.65em',
+                padding: '0.3em 2.45em',
+            },
+            [theme.breakpoints.up('xs')]: {
+                padding: '0.5em 2.4em',
             },
             '&:hover': {
                 background: '#FFCC00',
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         iconstyle: {
             position: 'absolute',
-            left: '0.5em',
+            left: '0.1em',
         },
 
     })

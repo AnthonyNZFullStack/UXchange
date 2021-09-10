@@ -11,13 +11,16 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            color: '#FFCC00',
+            color: '#fff0d6',
             background: 'rgba(0,1,36,1)',
-            border:'0.1em #ffcc00 solid',
-            marginTop: '1em',
+            marginTop: '2em',
             padding: '0.5em 4.95em',
             fontWeight: 'bold',
+            textTransform: 'capitalize',
             [theme.breakpoints.down('xs')]: {
+                padding: '0.3em 2.95em',
+            },
+            [theme.breakpoints.up('xs')]: {
                 padding: '0.5em 2.95em',
             },
             '&:hover': {
