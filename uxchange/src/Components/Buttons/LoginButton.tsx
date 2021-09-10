@@ -16,6 +16,8 @@ const useStyles = makeStyles((theme: Theme) =>
             marginTop: '2em',
             marginBottom: '1em',
             padding: '0.5em 8em',
+            textTransform: 'capitalize',
+            fontWeight: 'bold',
             [theme.breakpoints.down('xs')]: {
                 padding: '0.5em 5em',
             },
@@ -24,6 +26,10 @@ const useStyles = makeStyles((theme: Theme) =>
                 color: 'rgba(0,1,36,1)',
                 fontWeight: 'bold'
             }
+        },
+        iconstyle: {
+            position: 'absolute',
+            right: '0.5em',
         },
 
     })
@@ -39,7 +45,7 @@ function LoginButton() {
             <CssBaseline />
             <Button className={classes.root}
                 variant='contained' size='large' type="submit">
-                Log in
+                Login<ArrowForwardIcon className={classes.iconstyle}></ArrowForwardIcon>
             </Button>
 
         </React.Fragment >

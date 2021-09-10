@@ -10,10 +10,12 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             color: '#FFCC00',
-            background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
+            background: 'rgba(0,1,36,1)',
+            border:'0.1em #ffcc00 solid',
             borderRadius: '1em',
             marginTop: '2em',
             padding: '0.5em 8em',
+            fontWeight: 'bold',
             [theme.breakpoints.down('xs')]: {
                 padding: '0.5em 6em',
             },

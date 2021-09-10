@@ -22,10 +22,18 @@ const useStyles = makeStyles((theme: Theme) =>
                     width: '80%',
                 },
                 [theme.breakpoints.only('xs')]: {
-                    width: '100%',
+                    width: '90%',
                 },
             }
         },
+        contactsIcon:{
+            marginTop: '1em', 
+            color: '#ffcc00', 
+            fontSize: '5em',
+            [theme.breakpoints.only('xs')]: {
+                marginTop: '0.5em', 
+            },
+        }
 
     })
 );
@@ -42,7 +50,7 @@ function SignUpForm() {
             <form className={classes.root}>
 
                 <Grid>
-                    <ContactsIcon style={{ marginTop: '1em', color: '#ffcc00', fontSize: '5em' }}></ContactsIcon>
+                    <ContactsIcon className={classes.contactsIcon}></ContactsIcon>
                 </Grid>
 
                 <Typography variant='h3' gutterBottom

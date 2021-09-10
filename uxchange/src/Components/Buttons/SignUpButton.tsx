@@ -16,6 +16,8 @@ const useStyles = makeStyles((theme: Theme) =>
             marginTop: '2em',
             marginBottom: '1em',
             padding: '0.5em 8em',
+            textTransform: 'capitalize',
+            fontWeight:'bold',
             [theme.breakpoints.down('xs')]: {
                 padding: '0.5em 5em',
             },

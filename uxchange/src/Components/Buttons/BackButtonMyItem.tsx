@@ -12,13 +12,14 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             color: '#FFCC00',
-            background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
-            borderRadius: '1em',
+            background: 'rgba(0,1,36,1)',
+            border:'0.1em #ffcc00 solid',
             marginTop: '1em',
             marginBottom: '1em',
-            padding: '0.5em 4.6em',
+            padding: '0.5em 4.65em',
+            fontWeight: 'bold',
             [theme.breakpoints.down('xs')]: {
-                padding: '0.5em 2.55em',
+                padding: '0.5em 2.65em',
             },
             '&:hover': {
                 background: '#FFCC00',

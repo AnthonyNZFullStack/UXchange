@@ -17,18 +17,32 @@ const useStyles = makeStyles((theme: Theme) =>
         pageContent: {
             margin: theme.spacing(5),
             padding: theme.spacing(3),
-            backgroundColor: 'white',
-            height: '85vh',
+            backgroundColor: 'rgba(0,1,36,1)',
+            color:'white',
+            height: '750px',
             [theme.breakpoints.down('xl')]: {
-                width: '60%',
+                width: '50%',
                 margin: 'auto',
-                marginTop: '10em'
+                marginTop: '6.8em'
             },
-            [theme.breakpoints.down('xs')]: {
-                width: '100%',
+            [theme.breakpoints.down('lg')]: {
+                width: '50%',
+                height: '770px',
+                marginTop: '6em'
+            },
+            [theme.breakpoints.down('md')]: {
+                width: '80%',
+                height: '770px'
+            },
+            [theme.breakpoints.down('sm')]: {
+                width: '80%',
+                height: '770px'
+            },
+            [theme.breakpoints.only('xs')]: {
+                width: '90%',
                 margin: 'auto',
                 marginTop: '5em',
-                height: '130vh'
+                height: '670px'
             },
         },
 
