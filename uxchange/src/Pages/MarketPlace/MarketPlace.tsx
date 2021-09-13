@@ -6,6 +6,7 @@ import createStyles from "@material-ui/core/styles/createStyles";
 import MarketItemCard from "../../Components/ItemCard/MarketItemCard";
 import { Link } from 'react-router-dom';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import IpostForm from "../../Components/IPostForm/IpostForm";
 
 
 
@@ -47,11 +48,15 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-function MarketPlace() {
+const MarketPlace: React.FC = () => {
   const classes = useStyles();
+  const [cards, setCards] = useState("");
+
+  const addNewCards: AddNewCards = newCards => {
+    setCards([...cards, {text: newCards}])
+  }
 
   return (
     <React.Fragment>
@@ -108,6 +113,8 @@ function MarketPlace() {
 
             </Grid>
           </div>
+
+          <IpostForm addNewCards={addNewCards} />
 
         </Container>
 

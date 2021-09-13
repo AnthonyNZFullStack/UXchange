@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Theme } from "@material-ui/core";
+import { Button, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { TextField, Grid, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom';
 import AddBoxIcon from '@material-ui/icons/AddBox';
+import { ChangeEvent } from "react";
+import { FormEvent } from "react";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -38,20 +40,20 @@ const useStyles = makeStyles((theme: Theme) =>
                 fontSize: '1.8em',
             },
             [theme.breakpoints.only('sm')]: {
-                marginTop:'1em',
-                marginBottom:'2em',
+                marginTop: '1em',
+                marginBottom: '2em',
             },
             [theme.breakpoints.only('md')]: {
-                marginTop:'1em',
-                marginBottom:'2em',
+                marginTop: '1em',
+                marginBottom: '2em',
             },
             [theme.breakpoints.only('lg')]: {
-                marginTop:'1em',
-                marginBottom:'2em',
+                marginTop: '1em',
+                marginBottom: '2em',
             },
             [theme.breakpoints.only('xl')]: {
-                marginTop:'1em',
-                marginBottom:'2em',
+                marginTop: '1em',
+                marginBottom: '2em',
             },
         },
         iconstyle: {
@@ -65,19 +67,19 @@ const useStyles = makeStyles((theme: Theme) =>
                 marginTop: '0.5em',
             },
             [theme.breakpoints.only('sm')]: {
-                fontSize:'3em',
+                fontSize: '3em',
                 marginBottom: '1.3em',
             },
             [theme.breakpoints.only('md')]: {
-                fontSize:'3em',
+                fontSize: '3em',
                 marginBottom: '1.3em',
             },
             [theme.breakpoints.only('lg')]: {
-                fontSize:'3em',
+                fontSize: '3em',
                 marginBottom: '1.3em',
             },
             [theme.breakpoints.only('xl')]: {
-                fontSize:'3em',
+                fontSize: '3em',
                 marginBottom: '1.3em',
             },
 
@@ -87,9 +89,24 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
+interface AddNewCardsprops{
+    addNewCards: AddNewCards;
+}
 
-function IpostForm() {
+
+export const IpostForm: React.FC<AddNewCardsprops> = ({ addNewCards }) => {
     const classes = useStyles();
+
+    const [newCards, setNewCards] = useState<string>("");
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setNewCards(e.target.value);
+    };
+
+    const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        addNewCards(newCards);
+    };
 
 
     return (
@@ -129,6 +146,8 @@ function IpostForm() {
                             name="fullName"
                             type="fullName"
                             size="small"
+                            value={newCards}
+                            onChange={handleChange}
                         />
                     </Grid>
 
@@ -153,6 +172,12 @@ function IpostForm() {
                     </Grid>
 
                 </Grid>
+
+                <Button className={classes.root}
+                onClick={handleSubmit}
+                    variant='contained' size='large' type="submit">
+                    Done
+                </Button>
 
             </form>
 
