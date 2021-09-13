@@ -24,9 +24,9 @@ const useStyles = makeStyles((theme: Theme) =>
                 padding: '0.5em 2.4em',
             },
             '&:hover': {
-                background: '#FFCC00',
-                color: 'rgba(0,1,36,1)',
-                fontWeight: 'bold'
+                background: 'rgba(0,1,36,1)',
+                color: '#FFCC00',
+                fontWeight: 'bold',
             }
         },
         iconstyle: {

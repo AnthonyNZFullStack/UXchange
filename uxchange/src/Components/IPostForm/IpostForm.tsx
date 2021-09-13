@@ -133,7 +133,7 @@ function IpostForm() {
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="filled" label="Image" size="small" />
+                        <TextField variant="filled" label="Image" size="small" type="file" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>

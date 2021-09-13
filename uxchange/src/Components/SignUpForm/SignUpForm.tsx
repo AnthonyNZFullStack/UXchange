@@ -69,7 +69,7 @@ function SignUpForm() {
 
                     <Grid item xs={12} md={12}>
                         <TextField
-                            label="Full Name"
+                            label="Email"
                             variant="filled" />
                     </Grid>
 

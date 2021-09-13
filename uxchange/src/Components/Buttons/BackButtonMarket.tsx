@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme: Theme) =>
                 padding: '0.5em 2.95em',
             },
             '&:hover': {
-                background: '#FFCC00',
-                color: 'rgba(0,1,36,1)',
+                background: 'rgba(0,1,36,1)',
+                color: '#FFCC00',
                 fontWeight: 'bold'
             }
         },

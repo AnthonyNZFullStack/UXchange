@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-function LoginButton() {
+function DoneButton() {
     const classes = useStyles();
 
     return (
@@ -50,4 +50,4 @@ function LoginButton() {
     );
 };
 
-export default LoginButton;
+export default DoneButton;

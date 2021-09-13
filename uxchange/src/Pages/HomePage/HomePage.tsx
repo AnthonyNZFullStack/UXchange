@@ -157,7 +157,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: '5em',
       color: '#fff0d6',
       fontStyle:'italic',
-      [theme.breakpoints.down('xs')]: {
+      [theme.breakpoints.only('xs')]: {
         marginTop: '1em',
         fontSize: '20px',
         fontStyle:'italic',
@@ -169,9 +169,8 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff0d6',
       fontStyle:'italic',
       fontFamily: 'Caveat Brush',
-      [theme.breakpoints.down('xs')]: {
-        marginTop: '2em',
-        fontSize: '15px',
+      [theme.breakpoints.only('xs')]: {
+        fontSize: '20px',
         fontStyle:'italic',
         fontFamily: 'Caveat Brush',
       },
