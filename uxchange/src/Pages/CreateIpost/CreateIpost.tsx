@@ -57,7 +57,7 @@ function CreateIpost() {
             <CssBaseline />
             <Paper className={classes.pageContent}>
 
-                {/* <IpostForm /> */}
+                <IpostForm />
                 <DoneButton />
                 <BackButton />
                 <BackButtonMyItem />

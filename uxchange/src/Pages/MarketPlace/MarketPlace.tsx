@@ -54,9 +54,9 @@ const MarketPlace: React.FC = () => {
   const classes = useStyles();
   const [cards, setCards] = useState("");
 
-  const addNewCards: AddNewCards = newCards => {
-    setCards([...cards, {text: newCards}])
-  }
+  // const addNewCards: AddNewCards = newCards => {
+  //   setCards([...cards, {text: newCards}])
+  // }
 
   return (
     <React.Fragment>
@@ -113,8 +113,8 @@ const MarketPlace: React.FC = () => {
 
             </Grid>
           </div>
-
-          <IpostForm addNewCards={addNewCards} />
+          
+          {/* <IpostForm addNewCards={addNewCards} /> */}
 
         </Container>
 

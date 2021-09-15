@@ -89,24 +89,31 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-interface AddNewCardsprops{
-    addNewCards: AddNewCards;
-}
+// interface AddNewCardsprops {
+//     addNewCards: AddNewCards;
+// }
 
 
-export const IpostForm: React.FC<AddNewCardsprops> = ({ addNewCards }) => {
+function IpostForm() {
     const classes = useStyles();
 
-    const [newCards, setNewCards] = useState<string>("");
+    // const [fullname, setFullname] = useState<string>("");
+    // const [image, setImage] = useState<string>("");
+    // const [title, setTitle] = useState<string>(""); 
+    // const [exchange, setExchange] = useState<string>("");
+    // const [contact, setContact] = useState<number>(0);
+    // const [description, setDescription] = useState<string>("");
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setNewCards(e.target.value);
-    };
+    // const [newCards, setNewCards] = useState("");
 
-    const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        addNewCards(newCards);
-    };
+    // const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setNewCards(e.target.value);
+    // };
+
+    // const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+    //     e.preventDefault();
+    //     addNewCards(newCards);
+    // };
 
 
     return (
@@ -146,35 +153,49 @@ export const IpostForm: React.FC<AddNewCardsprops> = ({ addNewCards }) => {
                             name="fullName"
                             type="fullName"
                             size="small"
-                            value={newCards}
-                            onChange={handleChange}
+                            // value={fullname}
+                            // onChange={(e) => setFullname(e.target.value)}
                         />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="filled" label="Image" size="small" type="file" />
+                        <TextField variant="filled" label="Image" size="small" type="file"
+                            // value={image}
+                            // onChange={(e) => setImage(e.target.value)} 
+                            />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="filled" label="Title" size="small" />
+                        <TextField variant="filled" label="Title" size="small"
+                            // value={title}
+                            // onChange={(e) => setTitle(e.target.value)} 
+                            />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="filled" label="Trade/Sell(price)" size="small" />
+                        <TextField variant="filled" label="Trade/Sell(price)" size="small"
+                            // value={exchange}
+                            // onChange={(e) => setExchange(e.target.value)} 
+                            />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="filled" label="Contacts" size="small" />
+                        <TextField variant="filled" label="Contacts" size="small"
+                        // value={contact} 
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
-                        <TextField variant="filled" label="Item description" size="small" />
+                        <TextField variant="filled" label="Item description" size="small"
+                        // value={description}
+                        // onChange={(e) => setDescription(e.target.value)} 
+                        />
                     </Grid>
 
                 </Grid>
 
                 <Button className={classes.root}
-                onClick={handleSubmit}
+                    // onClick={handleSubmit}
                     variant='contained' size='large' type="submit">
                     Done
                 </Button>

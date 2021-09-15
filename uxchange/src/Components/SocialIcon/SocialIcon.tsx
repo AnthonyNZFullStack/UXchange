@@ -11,7 +11,7 @@ export interface SocialIconProps {
 const SocialIcon: React.FC<SocialIconProps> = ({ name, url, logo }) => {
   return (
     <IconButton href={url}>
-      <img src={logo} id={logo} height="20px" alt={name} />
+      <img src={logo} id={logo} height="25px" alt={name} />
     </IconButton>
   );
 };

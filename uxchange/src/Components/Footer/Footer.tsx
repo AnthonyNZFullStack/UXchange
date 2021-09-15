@@ -10,11 +10,14 @@ const useStyles = makeStyles((theme: Theme) =>
       position: "fixed",
       bottom: 0,
       width: "100%",
-      height: 60,
+      height: '60px',
       textAlign: "center",
       fontSize: "12px",
       color: "white",
-      background: 'linear-gradient(90deg, rgba(0,1,36,1) 0%, rgba(9,75,121,1) 100%, rgba(0,212,255,1) 100%)',
+      background: 'rgba(9,75,121,1)',
+      [theme.breakpoints.only('xs')]: {
+        fontSize: '0.9em'
+      },
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -22,6 +25,15 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
     },
+    content:{
+      marginTop: '1em',
+      [theme.breakpoints.only('xs')]: {
+        display: 'flex',
+        justifyContent:'space-between',
+        height: '50%',
+        fontSize: '0.9em',
+      },
+    }
   })
 );
 
@@ -41,13 +53,16 @@ const Footer = () => {
         direction="row"
         justify="space-between"
         alignItems="flex-start"
-        spacing={4}
+        spacing={5}
       >
-        <Grid item xs={4}>
+        <Grid item xs={6} sm={6} className={classes.content}>
           <SocialIcon {...UXCHANGE_LOGO} />
-          {`UXCHANGE, 2021. Copyright © All rights reserved`}
+          {`UXCHANGE 2021`}
         </Grid>
-        <Grid item xs={6}>
+
+
+        <Grid item xs={6} sm={6} className={classes.content}>
+        {`Copyright © All rights reserved`}
           {SOCIAL_MEDIA.map((icon: SocialIconProps) => {
             return (
               <SocialIcon key={icon.name} {...icon} />
