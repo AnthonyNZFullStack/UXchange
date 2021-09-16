@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '300px',
       [theme.breakpoints.only('xs')]: {
         position: 'absolute',
-        top: '11%',
+        top: '10%',
         left: '10%',
       },
     },
@@ -158,8 +158,8 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff0d6',
       fontStyle:'italic',
       [theme.breakpoints.only('xs')]: {
-        marginTop: '1em',
-        fontSize: '20px',
+        marginTop: '0em',
+        fontSize: '25px',
         fontStyle:'italic',
         fontFamily: 'Caveat Brush',
       },
@@ -170,7 +170,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontStyle:'italic',
       fontFamily: 'Caveat Brush',
       [theme.breakpoints.only('xs')]: {
-        fontSize: '20px',
+        fontSize: '25px',
         fontStyle:'italic',
         fontFamily: 'Caveat Brush',
       },
@@ -191,7 +191,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: '1em',
       padding: '0.8em 1em',
       margin: 'auto',
-      marginTop: '6em',
+      marginTop: '4em',
 
       [theme.breakpoints.only('xl')]: {
         fontSize: '0.9em',
@@ -204,7 +204,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.between('sm', 'md')]: {
         fontSize: '0.8em',
-        width: '60%'
+        width: '70%'
       },
     }
 
