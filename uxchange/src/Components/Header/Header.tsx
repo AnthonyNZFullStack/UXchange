@@ -110,8 +110,8 @@ function Header() {
 
             <Button className={classes.uxchangeButton}
               component={Link} to="/Home">
-              <SocialIcon {...UXCHANGE_LOGO} />
-              <Typography className={classes.hange}>Hange</Typography>
+              {/* <SocialIcon {...UXCHANGE_LOGO} /> */}
+              <Typography className={classes.hange}>UXChange</Typography>
             </Button>
 
           </Typography>

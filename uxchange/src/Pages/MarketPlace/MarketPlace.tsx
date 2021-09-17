@@ -17,27 +17,44 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       padding: theme.spacing(12, 0, 6),
+      // width:'60%',
+      // margin:'auto',
       background: '#000124',
-      height: '600px',
-      [theme.breakpoints.only('xs')]: {
-        height: '600px',
-      },
+      height: '635px',
       [theme.breakpoints.only('lg')]: {
-        height: '550px',
+        height: '635px',
       },
       [theme.breakpoints.only('md')]: {
-        height: '580px',
+        height: '635px',
       },
       [theme.breakpoints.only('sm')]: {
-        height: '650px',
+        height: '700px',
+      },
+      [theme.breakpoints.only('xs')]: {
+        height: '620px',
       },
     },
     icon: {
       marginRight: '20px',
     },
     buttons: {
-      marginTop: '40px',
+      marginTop: '6em',
       marginBottom: '120px',
+      background: 'rgba(9,75,121,1)',
+      width: '50%',
+      margin: 'auto',
+      borderRadius: '1em',
+      padding: '0.95em',
+      [theme.breakpoints.only('xs')]: {
+        width: '100%',
+        margin: 'auto',
+        borderRadius: '1em',
+        padding: '0.95em',
+        marginBottom: '5em',
+      },
+      [theme.breakpoints.only('sm')]: {
+        marginBottom: '8m',
+      },
     },
     cardGrid: {
       padding: '20px 0'
@@ -54,6 +71,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     buttonOption: {
+      background: '#000124',
       border: '1px rgba(0, 0, 0, 0.87) solid',
       borderRadius: '3em',
       padding: '0.5em 3em',
@@ -69,23 +87,52 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff0d6',
       [theme.breakpoints.only('xs')]: {
         marginTop: '0.8em',
-        fontSize: '3em',
+        fontSize: '3.5em',
         marginBottom: '1em',
+      },
+      [theme.breakpoints.only('sm')]: {
+        marginTop: '0.8em',
+        fontSize: '4em',
+      },
+      [theme.breakpoints.only('md')]: {
+        marginTop: '1.2em',
+        fontSize: '4em',
       },
     },
     titleTwo: {
-      color: '#fff0d6',
-      fontFamily: 'caveat brush',
-      paddingBottom: '2.8em',
+      marginTop:'1em',
+      fontSize: '2em',
+      color: '#ffcc00',
+      fontFamily: 'caveat',
+      paddingBottom: '0',
+      marginBottom: '0',
       [theme.breakpoints.only('xs')]: {
         paddingBottom: '0',
+        marginBottom: '0',
+        fontSize: '1.5em',
+      },
+      [theme.breakpoints.only('sm')]: {
+        marginTop: '2em',
+      },
+      [theme.breakpoints.only('md')]: {
+        marginTop: '1.5em',
       },
     },
-    borderBottom: {
-      margin: 'auto',
-      width: '100%',
-      borderBottom: '5px rgba(9,75,121,1) dashed',
+    titleThree: {
+      fontSize: '2em',
+      color: '#ffcc00',
+      fontFamily: 'caveat',
+      marginBottom: '2em',
+      [theme.breakpoints.only('xs')]: {
+        paddingBottom: '0',
+        fontSize: '1.5em',
+      },
     },
+    // borderBottom: {
+    //   margin: 'auto',
+    //   width: '100%',
+    //   borderBottom: '5px rgba(9,75,121,1) dashed',
+    // },
   })
 );
 
@@ -181,21 +228,27 @@ const MarketPlace: React.FC = () => {
 
         <Container maxWidth="xl">
 
-          <div className={classes.borderBottom}>
+          {/* <div className={classes.borderBottom}> */}
 
-            <Typography
-              className={classes.title}
-              variant="h2" align="center" color="textPrimary" gutterBottom>
-              Welcome to the market place
-            </Typography>
+          <Typography
+            className={classes.title}
+            variant="h2" align="center" color="textPrimary" gutterBottom>
+            Welcome to the <span style={{ color: '#ffcc00', textTransform: 'capitalize', fontFamily: 'caveat brush' }}> market place ! </span>
+          </Typography>
 
-            <Typography
-              className={classes.titleTwo}
-              variant="h5" align="center" color="textSecondary" paragraph>
-              Where your search begins. Sell, trade and exchange.
-            </Typography>
+          <Typography
+            className={classes.titleTwo}
+            variant="h4" align="center" paragraph>
+            - Costs nothing, 100% FREE! to use
+          </Typography>
+          <Typography
+            className={classes.titleThree}
+            variant="h4" align="center" paragraph>
+            - Sell, trade and exchange.
+          </Typography>
 
-          </div>
+
+          {/* </div> */}
 
           <div className={classes.buttons}>
 
@@ -228,7 +281,7 @@ const MarketPlace: React.FC = () => {
                   className={classes.buttonOption}
                   style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}
                   component={Link} to="/Create Ipost">
-                  <AddCircleIcon style={{ marginRight: '0.5em' }}></AddCircleIcon> Create I-post
+                  <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
                 </Button>
               </Grid>
 

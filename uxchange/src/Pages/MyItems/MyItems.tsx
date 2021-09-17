@@ -85,6 +85,8 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+<span style={{ display:'block' }}> - Sell, trade and exchange. </span>
+
 const myItemCard = [
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
