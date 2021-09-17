@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       margin: '0 0',
-      padding: '0 0'
+      padding: '0 0',
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme: Theme) =>
     hange:{
       color: '#ffcc00', 
       fontFamily: 'caveat brush', 
-      fontSize: '28px',
-      marginTop: '0.1em',
+      fontSize: '30px',
+      marginTop: '0.17em',
       textTransform: 'uppercase',
       borderRadius: '3em',
     },

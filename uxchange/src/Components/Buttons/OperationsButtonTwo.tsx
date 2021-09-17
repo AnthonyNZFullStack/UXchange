@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
             fontWeight: 'bold',
 
             [theme.breakpoints.between('xs', 'sm')]: {
-                padding: '0.5em 6em',
+                padding: '0.5em 3em',
                 width: '100%',
                 margin: 'auto',
                 marginTop: '1em'

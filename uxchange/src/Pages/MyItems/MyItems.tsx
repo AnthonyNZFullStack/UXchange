@@ -7,6 +7,8 @@ import MyItemCard from "../../Components/ItemCard/MyItemCard";
 import { Link } from 'react-router-dom';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import Box from '@material-ui/core/Box';
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import ViewListIcon from '@material-ui/icons/ViewList';
 
 
 
@@ -15,13 +17,15 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       padding: theme.spacing(12, 0),
-      background: '#E0F4FF'
+      background: '#000124',
+      height: '600px',
     },
     icon: {
       marginRight: '20px',
     },
     buttons: {
-      marginTop: '40px'
+      marginTop: '40px',
+      marginBottom: '120px',
     },
     cardGrid: {
       padding: '20px 0'
@@ -37,11 +41,23 @@ const useStyles = makeStyles((theme: Theme) =>
     buttonOption: {
       borderRadius: '3em',
       padding: '0.5em 3em',
+      color: '#fff0d6',
       // border: '0.01em solid rgba(0,1,36,1)',
       '&:hover': {
         background: '#FFCC00',
+        color: 'rgba(0, 0, 0, 0.87)',
       },
     },
+    title: {
+      marginTop: '2em',
+      color: '#fff0d6',
+    },
+    titleTwo: {
+      marginBottom: '3em',
+      color: '#fff0d6',
+      fontFamily: 'caveat brush',
+    },
+
   })
 );
 
@@ -122,7 +138,7 @@ const myItemCard = [
 
 function MyItems() {
   const classes = useStyles();
-  
+
 
   return (
     < React.Fragment >
@@ -132,11 +148,14 @@ function MyItems() {
         <Container maxWidth="xl">
 
           <Typography
+            className={classes.title}
             variant="h2" align="center" color="textPrimary" gutterBottom>
-            My Item List
+            My Item(s) List
           </Typography>
 
-          <Typography variant="h5" align="center" color="textSecondary" paragraph
+          <Typography
+            className={classes.titleTwo}
+            variant="h5" align="center" color="textSecondary" paragraph
             style={{ paddingBottom: '2em' }}>
             Create your Ipost, update and delete
           </Typography>
@@ -146,29 +165,30 @@ function MyItems() {
             <Grid container spacing={2} justify="center">
               <Grid item>
 
-                <Button variant="outlined" color="primary"
+                <Button color="primary"
                   className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', color: 'black' }}
+                  style={{ fontWeight: 'bold', }}
                   component={Link} to="/Market Place">
-                  Market items
+                  <StorefrontIcon style={{ marginRight: '0.2em' }}></StorefrontIcon>Market items
                 </Button>
               </Grid>
 
               <Grid item>
-                <Button variant="outlined" color="primary"
+                <Button color="primary"
                   className={classes.buttonOption}
                   style={{
-                    background: '#FFCC00', color: 'black', fontWeight: 'bold'}}>
-                  See my item list
+                    background: '#FFCC00', color: 'rgba(0, 0, 0, 0.87)', fontWeight: 'bold'
+                  }}>
+                  <ViewListIcon style={{ marginRight: '0.2em' }}></ViewListIcon>My item list
                 </Button>
               </Grid>
 
               <Grid item>
-                <Button variant="outlined" color="primary"
+                <Button color="primary"
                   className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', color: 'black' }}
+                  style={{ fontWeight: 'bold', }}
                   component={Link} to="/Create Ipost">
-                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold', color: 'black' }}></AddCircleIcon> Create I-post
+                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold', }}></AddCircleIcon> Create I-post
                 </Button>
               </Grid>
 
@@ -191,9 +211,6 @@ function MyItems() {
         </Box>
 
       </div>
-
-
-
 
     </React.Fragment >
   );

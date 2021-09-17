@@ -16,25 +16,23 @@ import LockIcon from '@material-ui/icons/Lock';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MenuIcon from "@material-ui/icons/Menu";
+import ListIcon from '@material-ui/icons/List';
 
 const useStyles = makeStyles({
   list: {
     width: 250,
     height: '960px',
     background: '#000124',
-    // borderRight: '5px #000124 solid',
   },
   listText: {
     color: 'white',
+    marginTop: '1em',
     '&:hover': {
       color: '#ffcc00',
     },
   },
   listIcon: {
-    color: 'white',
-    '&:hover': {
-      color: '#ffcc00',
-    },
+    color: '#ffcc00',
   },
   fullList: {
     width: 'auto',
@@ -46,6 +44,7 @@ const useStyles = makeStyles({
   },
   menuIcon: {
     color: '#ffcc00',
+    fontSize: '2em',
   },
   titleLine: {
     background: 'rgba(9,75,121,1)',
@@ -60,7 +59,7 @@ export const Sidebar = () => {
     <div className={classes.list}>
 
       <ListItem className={classes.titleLine}>
-        <MenuIcon className={classes.menuIcon}></MenuIcon>
+        <ListIcon className={classes.menuIcon}></ListIcon>
         <Typography variant="h4" className={classes.menuFont}>Menu</Typography>
       </ListItem>
 
