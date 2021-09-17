@@ -19,16 +19,16 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(12, 0, 6),
       background: '#000124',
       height: '600px',
-      [theme.breakpoints.only('xs')]:{
+      [theme.breakpoints.only('xs')]: {
         height: '600px',
       },
-      [theme.breakpoints.only('lg')]:{
+      [theme.breakpoints.only('lg')]: {
         height: '550px',
       },
-      [theme.breakpoints.only('md')]:{
+      [theme.breakpoints.only('md')]: {
         height: '580px',
       },
-      [theme.breakpoints.only('sm')]:{
+      [theme.breakpoints.only('sm')]: {
         height: '650px',
       },
     },
@@ -67,22 +67,25 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       marginTop: '2em',
       color: '#fff0d6',
-      [theme.breakpoints.only('xs')]:{
-        marginTop: '1em',
+      [theme.breakpoints.only('xs')]: {
+        marginTop: '0.8em',
         fontSize: '3em',
-        marginBottom:'1em',
+        marginBottom: '1em',
       },
     },
     titleTwo: {
-      marginBottom: '3em',
       color: '#fff0d6',
       fontFamily: 'caveat brush',
-      paddingBottom: '2em',
-      [theme.breakpoints.only('xs')]:{
+      paddingBottom: '2.8em',
+      [theme.breakpoints.only('xs')]: {
         paddingBottom: '0',
       },
-    }
-
+    },
+    borderBottom: {
+      margin: 'auto',
+      width: '100%',
+      borderBottom: '5px rgba(9,75,121,1) dashed',
+    },
   })
 );
 
@@ -178,17 +181,21 @@ const MarketPlace: React.FC = () => {
 
         <Container maxWidth="xl">
 
-          <Typography
-            className={classes.title}
-            variant="h2" align="center" color="textPrimary" gutterBottom>
-            Welcome to the market place
-          </Typography>
+          <div className={classes.borderBottom}>
 
-          <Typography
-            className={classes.titleTwo}
-            variant="h5" align="center" color="textSecondary" paragraph>
-            Where your search begins. Sell, trade and exchange.
-          </Typography>
+            <Typography
+              className={classes.title}
+              variant="h2" align="center" color="textPrimary" gutterBottom>
+              Welcome to the market place
+            </Typography>
+
+            <Typography
+              className={classes.titleTwo}
+              variant="h5" align="center" color="textSecondary" paragraph>
+              Where your search begins. Sell, trade and exchange.
+            </Typography>
+
+          </div>
 
           <div className={classes.buttons}>
 

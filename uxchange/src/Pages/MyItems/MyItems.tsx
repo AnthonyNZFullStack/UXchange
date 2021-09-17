@@ -19,6 +19,18 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(12, 0),
       background: '#000124',
       height: '600px',
+      [theme.breakpoints.only('xs')]: {
+        height: '600px',
+      },
+      [theme.breakpoints.only('lg')]: {
+        height: '550px',
+      },
+      [theme.breakpoints.only('md')]: {
+        height: '580px',
+      },
+      [theme.breakpoints.only('sm')]: {
+        height: '650px',
+      },
     },
     icon: {
       marginRight: '20px',
@@ -51,13 +63,25 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       marginTop: '2em',
       color: '#fff0d6',
+      [theme.breakpoints.only('xs')]: {
+        marginTop: '1em',
+        fontSize: '3em',
+        marginBottom: '1em',
+      },
     },
     titleTwo: {
-      marginBottom: '3em',
+      paddingBottom: '2.8em',
       color: '#fff0d6',
       fontFamily: 'caveat brush',
+      [theme.breakpoints.only('xs')]: {
+        paddingBottom: '0',
+      },
     },
-
+    borderBottom: {
+      margin: 'auto',
+      width: '100%',
+      borderBottom: '5px rgba(9,75,121,1) dashed',
+    },
   })
 );
 
@@ -147,18 +171,22 @@ function MyItems() {
       <div className={classes.container}>
         <Container maxWidth="xl">
 
-          <Typography
-            className={classes.title}
-            variant="h2" align="center" color="textPrimary" gutterBottom>
-            My Item(s) List
-          </Typography>
 
-          <Typography
-            className={classes.titleTwo}
-            variant="h5" align="center" color="textSecondary" paragraph
-            style={{ paddingBottom: '2em' }}>
-            Create your Ipost, update and delete
-          </Typography>
+          <div className={classes.borderBottom}>
+
+            <Typography
+              className={classes.title}
+              variant="h2" align="center" color="textPrimary" gutterBottom>
+              My Item(s) List
+            </Typography>
+
+            <Typography
+              className={classes.titleTwo}
+              variant="h5" align="center" color="textSecondary" paragraph>
+              Create your Ipost, update and delete
+            </Typography>
+
+          </div>
 
           <div className={classes.buttons}>
 
