@@ -87,12 +87,12 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff0d6',
       [theme.breakpoints.only('xs')]: {
         marginTop: '0.8em',
-        fontSize: '3.5em',
+        fontSize: '3em',
         marginBottom: '1em',
       },
       [theme.breakpoints.only('sm')]: {
-        marginTop: '0.8em',
-        fontSize: '4em',
+        marginTop: '2em',
+        fontSize: '3em',
       },
       [theme.breakpoints.only('md')]: {
         marginTop: '1.2em',
@@ -239,7 +239,7 @@ const MarketPlace: React.FC = () => {
           <Typography
             className={classes.titleTwo}
             variant="h4" align="center" paragraph>
-            - Costs nothing, 100% FREE! to use
+            - Costs nothing, 100% FREE! to use.
           </Typography>
           <Typography
             className={classes.titleThree}

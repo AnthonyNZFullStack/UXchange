@@ -18,26 +18,43 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       padding: theme.spacing(12, 0),
       background: '#000124',
-      height: '600px',
-      [theme.breakpoints.only('xs')]: {
-        height: '600px',
-      },
+      height: '740px',
       [theme.breakpoints.only('lg')]: {
-        height: '550px',
+        height: '635px',
       },
       [theme.breakpoints.only('md')]: {
-        height: '580px',
+        height: '635px',
       },
       [theme.breakpoints.only('sm')]: {
-        height: '650px',
+        height: '700px',
+      },
+      [theme.breakpoints.only('xs')]: {
+        height: '620px',
       },
     },
     icon: {
       marginRight: '20px',
     },
     buttons: {
-      marginTop: '40px',
+      marginTop: '2em',
       marginBottom: '120px',
+      background: 'rgba(9,75,121,1)',
+      width: '50%',
+      margin: 'auto',
+      borderRadius: '1em',
+      padding: '0.95em',
+      [theme.breakpoints.only('xs')]: {
+        width: '100%',
+        margin: 'auto',
+        borderRadius: '1em',
+        padding: '0.95em',
+        marginBottom: '10em',
+        marginTop: '5em',
+      },
+      [theme.breakpoints.only('sm')]: {
+        marginBottom: '8m',
+      },
+      
     },
     cardGrid: {
       padding: '20px 0'
@@ -54,10 +71,12 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: '3em',
       padding: '0.5em 3em',
       color: '#fff0d6',
+      background: '#000124',
+      textTransform: 'capitalize',
       // border: '0.01em solid rgba(0,1,36,1)',
       '&:hover': {
         background: '#FFCC00',
-        color: 'rgba(0, 0, 0, 0.87)',
+        color: '#000124',
       },
     },
     title: {
@@ -68,24 +87,33 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: '3em',
         marginBottom: '1em',
       },
-    },
-    titleTwo: {
-      paddingBottom: '2.8em',
-      color: '#fff0d6',
-      fontFamily: 'caveat brush',
-      [theme.breakpoints.only('xs')]: {
-        paddingBottom: '0',
+      [theme.breakpoints.only('sm')]: {
+        marginTop: '2em',
+        fontSize: '3em',
+      },
+      [theme.breakpoints.only('md')]: {
+        marginTop: '1.2em',
+        fontSize: '4em',
       },
     },
-    borderBottom: {
-      margin: 'auto',
-      width: '100%',
-      borderBottom: '5px rgba(9,75,121,1) dashed',
+    titleTwo: {
+      marginTop:'1.3em',
+      paddingBottom: '2.8em',
+      color: '#ffcc00',
+      fontFamily: 'caveat',
+      fontSize: '2em',
+      [theme.breakpoints.only('xs')]: {
+        paddingBottom: '0',
+        fontSize: '1.5em',
+      },
     },
+    // borderBottom: {
+    //   margin: 'auto',
+    //   width: '100%',
+    //   borderBottom: '5px rgba(9,75,121,1) dashed',
+    // },
   })
 );
-
-<span style={{ display:'block' }}> - Sell, trade and exchange. </span>
 
 const myItemCard = [
   {
@@ -174,21 +202,21 @@ function MyItems() {
         <Container maxWidth="xl">
 
 
-          <div className={classes.borderBottom}>
+          {/* <div className={classes.borderBottom}> */}
 
             <Typography
               className={classes.title}
-              variant="h2" align="center" color="textPrimary" gutterBottom>
-              My Item(s) List
+              variant="h2" align="center" gutterBottom>
+              Welcome to <span style={{ color: '#ffcc00', textTransform: 'capitalize', fontFamily: 'caveat brush', }}> your Item(s) </span> list
             </Typography>
 
             <Typography
               className={classes.titleTwo}
               variant="h5" align="center" color="textSecondary" paragraph>
-              Create your Ipost, update and delete
+              Create your Ipost, Update and Delete.
             </Typography>
 
-          </div>
+          {/* </div> */}
 
           <div className={classes.buttons}>
 
@@ -197,7 +225,7 @@ function MyItems() {
 
                 <Button color="primary"
                   className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', }}
+                  style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}
                   component={Link} to="/Market Place">
                   <StorefrontIcon style={{ marginRight: '0.2em' }}></StorefrontIcon>Market items
                 </Button>
@@ -207,7 +235,7 @@ function MyItems() {
                 <Button color="primary"
                   className={classes.buttonOption}
                   style={{
-                    background: '#FFCC00', color: 'rgba(0, 0, 0, 0.87)', fontWeight: 'bold'
+                    background: '#FFCC00', color: 'rgba(0, 0, 0, 0.87)', fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid',
                   }}>
                   <ViewListIcon style={{ marginRight: '0.2em' }}></ViewListIcon>My item list
                 </Button>
@@ -216,9 +244,9 @@ function MyItems() {
               <Grid item>
                 <Button color="primary"
                   className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', }}
+                  style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}
                   component={Link} to="/Create Ipost">
-                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold', }}></AddCircleIcon> Create I-post
+                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold',  }}></AddCircleIcon> Create I-post
                 </Button>
               </Grid>
 

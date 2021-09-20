@@ -135,7 +135,7 @@ function IpostForm() {
                         <Typography
                             className={classes.titlePost}
                             variant='h4' gutterBottom>
-                            Post your Item(s)
+                            Post your Item
                         </Typography>
 
                     </Grid>
