@@ -9,6 +9,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import IpostForm from "../../Components/IPostForm/IpostForm";
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import ViewListIcon from '@material-ui/icons/ViewList';
+import { spacing } from '@material-ui/system';
 
 
 
@@ -170,8 +171,8 @@ const marketItemCard = [
   },
 
   {
-    image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '5) Second hand bike',
+    image: 'https://cdn.mos.cms.futurecdn.net/6XpZp6H95BBHfAWQcopDCG-970-80.jpg.webp',
+    title: 'Second hand bike',
     exchange: 'Trade',
     contacts: '022345543',
     description: 'Testing Testing testing',
@@ -179,7 +180,7 @@ const marketItemCard = [
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '6) Second hand bike',
+    title: 'Second hand bike',
     exchange: 'Trade',
     contacts: '022345543',
     description: 'Testing Testing testing',
@@ -187,7 +188,7 @@ const marketItemCard = [
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '7) Second hand bike',
+    title: 'Second hand bike',
     exchange: 'Trade',
     contacts: '022345543',
     description: 'Testing Testing testing',
@@ -195,7 +196,7 @@ const marketItemCard = [
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '8) Second hand bike',
+    title: 'Second hand bike',
     exchange: 'Trade',
     contacts: '022345543',
     description: 'Testing Testing testing',
@@ -203,7 +204,7 @@ const marketItemCard = [
 
   {
     image: 'https://waihekebikeshop.co.nz/wp-content/uploads/2020/05/cropped-gabe_7R32545_pdd002_2000.jpg',
-    title: '9) Second hand bike',
+    title: 'Second hand bike',
     exchange: 'Trade',
     contacts: '022345543',
     description: 'Testing Testing testing',
@@ -292,11 +293,11 @@ const MarketPlace: React.FC = () => {
 
         </Container>
 
-        <Box p={5} m={0}>
-          <Grid container spacing={10}>
+        <Box px={3} mt={-4} style={{background:'#E0F4FF',}}>
+          <Grid container spacing={3}>
             {marketItemCard.map((marketItemCard, i) => {
               return (
-                <Grid key={i} item xs={12} sm={6} md={4}>
+                <Grid key={i} item xs={12} sm={6} md={6} lg={3} >
                   <MarketItemCard {...marketItemCard} />
                 </Grid>
               );

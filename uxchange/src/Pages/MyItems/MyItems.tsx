@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       padding: theme.spacing(12, 0),
       background: '#000124',
-      height: '740px',
+      height: '635px',
       [theme.breakpoints.only('lg')]: {
         height: '635px',
       },
@@ -256,11 +256,11 @@ function MyItems() {
 
         </Container>
 
-        <Box p={5} m={0}>
-          <Grid container spacing={10}>
+        <Box px={3} mt={-4} style={{background:'#E0F4FF',}}>
+          <Grid container spacing={3}>
             {myItemCard.map((myItemCard, i) => {
               return (
-                <Grid key={i} item xs={12} sm={6} md={4}>
+                <Grid key={i} item xs={12} sm={6} md={6} lg={3} >
                   <MyItemCard {...myItemCard} />
                 </Grid>
               );
