@@ -14,20 +14,34 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         cardGrid: {
             padding: '0 0',
-            paddingTop:'2em'
+            paddingTop: '2em',
         },
         card: {
             display: 'flex',
             flexDirection: 'column',
-            background: 'rgba(9,75,121,1)'
+            // background: 'rgba(9,75,121,1)',
+            background: 'transparent',
         },
         cardMedia: {
-            marginTop: '1.5em',
             paddingTop: '70%',
-            width: '100%',
+            width: '98%',
             margin: 'auto',
-            borderRadius: '0.3em 0.3em 0em 0em',
+            // borderRadius: '0.3em 0.3em 0em 0em',
         },
+        exchangeContact: {
+            marginTop: '0.5em',
+            background: 'rgb(224, 244, 255)',
+            borderRadius: '1em 1em 0em 0em',
+            padding: '0.5em',
+            fontFamily: 'caveat',
+            width: '98%',
+            height:'50px',
+            margin: 'auto',
+            display:'flex',
+            justifyContent:'space-around',
+            color:'#404040',
+            // borderBottom:'1em #000124 solid',
+        }
     })
 );
 
@@ -63,10 +77,18 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
                                     {exchange}
                                 </Typography> */}
 
-                                <ListItem style={{background:'#E0F4FF', borderRadius:'0.5em', padding:'0.5em', fontFamily:'caveat',}}>
-                                    <SyncIcon /><ListItemText style={{marginLeft:'0.5em'}} primary={exchange}></ListItemText>
-                                    <ContactsIcon /><ListItemText style={{marginLeft:'0.5em'}} primary={contacts} />
+                                <ListItem className={classes.exchangeContact}>
+
+                                    <div style={{ display: 'flex' }}>
+                                        <SyncIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{exchange}</Typography>
+                                    </div>
+
+                                    <div style={{ display: 'flex' }}>
+                                        <ContactsIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{contacts}</Typography>
+                                    </div>
+
                                 </ListItem>
+
 
                                 {/* <ContactsIcon />
                                 <Typography
@@ -83,7 +105,7 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
                             />
 
 
-                            <Accordion style={{ fontWeight: 'bold', background:'#E0F4FF' }}>
+                            <Accordion style={{ fontWeight: 'bold', background: '#E0F4FF', width: '98%', margin: 'auto', borderRadius: '0em 0em 1em 1em',}}>
 
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -91,7 +113,7 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
                                     id="panel1a-header">
 
                                     <Typography
-                                        style={{ textAlign: 'left', padding: '0.5em', fontWeight: 'bold', color:'#000124', }}
+                                        style={{ margin:'auto', padding: '0.5em', fontWeight: 'bold', color:'#404040', }}
                                         gutterBottom variant="body1" >
                                         {title}
                                     </Typography>
