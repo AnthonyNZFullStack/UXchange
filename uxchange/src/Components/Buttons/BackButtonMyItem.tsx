@@ -46,12 +46,22 @@ function BackButtonMyItem() {
     return (
         <React.Fragment>
             <CssBaseline />
+
             <Grid>
-            <Button className={classes.root}
-                variant='contained' size='large' type="submit"
-                component={Link} to="/My Items">
-                Back to My <ViewListIcon style={{marginLeft:'0.2em', marginRight:'0.2em'}}></ViewListIcon> Items<ArrowBackIcon className={classes.iconstyle}><ViewListIcon /></ArrowBackIcon>
-            </Button>
+
+                <Button className={classes.root}
+                    variant='contained' size='large' type="submit" component={Link} to="/My Items">
+
+                    Back to My
+                    <ViewListIcon style={{ marginLeft: '0.2em', marginRight: '0.2em' }}>
+                    </ViewListIcon>
+                    
+                    Items
+                    <ArrowBackIcon className={classes.iconstyle}>
+                    </ArrowBackIcon>
+
+                </Button>
+
             </Grid>
 
         </React.Fragment >

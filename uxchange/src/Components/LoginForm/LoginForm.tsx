@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
             }
         },
         rootRadial: {
-            color:'white',
+            color: 'white',
             '& .MuiFormGroup-root': {
                 backgroundColor: '#E0F4FF',
                 margin: 'auto',
@@ -45,13 +45,13 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
 
-        buttonRemember:{
-            color:'#00d4ff',
-            '&:hover':{
+        buttonRemember: {
+            color: '#00d4ff',
+            '&:hover': {
                 color: '#FFCC00',
             },
         },
-        
+
 
         buttonRoot: {
             color: 'rgba(0,212,255,1)',
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 textTransform: 'Capitalize',
                 alignItems: 'center'
             },
-            '&:hover':{
+            '&:hover': {
                 color: '#FFCC00',
             },
         },
@@ -102,14 +102,14 @@ function LoginForm() {
                 className={classes.root}>
 
                 <Grid>
-                <AccountCircleIcon style={{marginTop:'1em', color:'#ffcc00', fontSize:'5em'}}></AccountCircleIcon>
+                    <AccountCircleIcon style={{ marginTop: '1em', color: '#ffcc00', fontSize: '5em' }}></AccountCircleIcon>
                 </Grid>
-                
+
                 <Grid>
-                <Typography variant='h2' gutterBottom
-                    style={{ fontFamily:'caveat', color:'#ffcc00' }}> 
-                Login
-                </Typography>
+                    <Typography variant='h2' gutterBottom
+                        style={{ fontFamily: 'caveat', color: '#ffcc00' }}>
+                        Login
+                    </Typography>
                 </Grid>
 
                 <Grid container spacing={2}>
@@ -120,7 +120,7 @@ function LoginForm() {
                             id="Username"
                             name="Username"
                             type="text"
-                            label="Username" 
+                            label="Username"
                             variant="filled"
                             error={usernameError}
                         />
@@ -132,7 +132,7 @@ function LoginForm() {
                             id="Password"
                             name="Password"
                             type="text"
-                            label="Password" 
+                            label="Password"
                             variant="filled"
                             error={passwordError}
                         />
@@ -141,24 +141,30 @@ function LoginForm() {
                 </Grid>
 
                 <Grid className={classes.rootRadial}>
+
                     <FormControlLabel className={classes.buttonRemember} control={<Checkbox name="remeber me" />} label="Remember me" />
-                    <Button className={classes.buttonRoot}
-                        style={{ backgroundColor: 'transparent', padding: '0 1em', display: 'inline-block' }}>
+
+                    <Button className={classes.buttonRoot} style={{ backgroundColor: 'transparent', padding: '0 1em', display: 'inline-block' }}>
                         Forgot password?
                     </Button>
+
                 </Grid>
 
 
                 <LoginButton />
 
                 <Grid >
-                    <Typography variant='body2' style={{ color: 'white', }}> Not a member?
+
+                    <Typography variant='body2' style={{ color: 'white', }}>
+                        Not a member?
                         <Button className={classes.buttonRoot}
                             style={{ backgroundColor: 'transparent', padding: '0 1em', display: 'inline-block' }}
                             component={Link} to="/Sign Up">
                             Click here to create account
                         </Button>
+
                     </Typography>
+
                 </Grid>
 
             </form>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Typography, Button, CssBaseline, Grid, Container } from "@material-ui/core";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       padding: theme.spacing(12, 0),
       background: '#000124',
-      width:'100%',
+      width: '100%',
       height: '635px',
       [theme.breakpoints.only('lg')]: {
         height: '635px',
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.only('sm')]: {
         marginBottom: '8m',
       },
-      
+
     },
     cardGrid: {
       padding: '20px 0'
@@ -74,7 +74,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#fff0d6',
       background: '#000124',
       textTransform: 'capitalize',
-      // border: '0.01em solid rgba(0,1,36,1)',
       '&:hover': {
         background: '#FFCC00',
         color: '#000124',
@@ -98,9 +97,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     titleTwo: {
-      marginTop:'1.3em',
+      marginTop: '1.3em',
       paddingBottom: '2.8em',
-      color:'rgba(0,212,255,1)',
+      color: 'rgba(0,212,255,1)',
       fontFamily: 'caveat',
       fontSize: '2em',
       [theme.breakpoints.only('xs')]: {
@@ -108,33 +107,26 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: '1.5em',
       },
     },
-    // borderBottom: {
-    //   margin: 'auto',
-    //   width: '100%',
-    //   borderBottom: '5px rgba(9,75,121,1) dashed',
-    // },
-    cardSection:{
-      marginTop:'-6em',
-      height:'1650px',
-      background:'#000124',
-      [theme.breakpoints.only('xl')]:{
-        height:'1650px',
+    cardSection: {
+      marginTop: '-6em',
+      height: '1650px',
+      background: '#000124',
+      [theme.breakpoints.only('xl')]: {
+        height: '1650px',
       },
-      [theme.breakpoints.only('lg')]:{
-        height:'1650px',
+      [theme.breakpoints.only('lg')]: {
+        height: '1650px',
       },
-      [theme.breakpoints.only('md')]:{
-        height:'3650px',
+      [theme.breakpoints.only('md')]: {
+        height: '3650px',
       },
-      [theme.breakpoints.only('sm')]:{
-        height:'3650px',
+      [theme.breakpoints.only('sm')]: {
+        height: '3650px',
       },
-      [theme.breakpoints.only('xs')]:{
-        height:'5300px',
-        marginTop:'-3em',
+      [theme.breakpoints.only('xs')]: {
+        height: '5300px',
+        marginTop: '-3em',
       },
-      // '& .MuiBox-root':{
-      // },
     },
   })
 );
@@ -191,55 +183,48 @@ function MyItems() {
       <CssBaseline />
 
       <div className={classes.container}>
+
         <Container maxWidth="xl">
 
+          <Typography className={classes.title} variant="h2" align="center" gutterBottom>
+            Welcome to
+            <span style={{ color: '#ffcc00', textTransform: 'capitalize', fontFamily: 'caveat brush', }}> your Item(s) </span> list
+          </Typography>
 
-          {/* <div className={classes.borderBottom}> */}
-
-            <Typography
-              className={classes.title}
-              variant="h2" align="center" gutterBottom>
-              Welcome to <span style={{ color: '#ffcc00', textTransform: 'capitalize', fontFamily: 'caveat brush', }}> your Item(s) </span> list
-            </Typography>
-
-            <Typography
-              className={classes.titleTwo}
-              variant="h5" align="center" color="textSecondary" paragraph>
-              Create your Ipost, Update and Delete.
-            </Typography>
-
-          {/* </div> */}
+          <Typography className={classes.titleTwo} variant="h5" align="center" color="textSecondary" paragraph>
+            Create your Ipost, Update and Delete.
+          </Typography>
 
           <div className={classes.buttons}>
 
             <Grid container spacing={2} justify="center">
+
               <Grid item>
 
-                <Button color="primary"
-                  className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}
-                  component={Link} to="/Market Place">
-                  <StorefrontIcon style={{ marginRight: '0.2em' }}></StorefrontIcon>Market items
+                <Button color="primary" className={classes.buttonOption} style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }} component={Link} to="/Market Place">
+                  <StorefrontIcon style={{ marginRight: '0.2em' }}></StorefrontIcon>
+                  Market items
                 </Button>
+
               </Grid>
 
               <Grid item>
-                <Button color="primary"
-                  className={classes.buttonOption}
-                  style={{
-                    background: '#FFCC00', color: 'rgba(0, 0, 0, 0.87)', fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid',
-                  }}>
-                  <ViewListIcon style={{ marginRight: '0.2em' }}></ViewListIcon>My item list
+
+                <Button color="primary" className={classes.buttonOption} style={{ background: '#FFCC00', color: 'rgba(0, 0, 0, 0.87)', fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}>
+                  <ViewListIcon style={{ marginRight: '0.2em' }}></ViewListIcon>
+                  My item list
                 </Button>
+
               </Grid>
 
               <Grid item>
-                <Button color="primary"
-                  className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}
-                  component={Link} to="/Create Ipost">
-                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold',  }}></AddCircleIcon> Create I-post
+
+                <Button color="primary" className={classes.buttonOption} style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }} component={Link} to="/Create Ipost">
+                  <AddCircleIcon style={{ marginRight: '0.2em', fontWeight: 'bold', }}></AddCircleIcon>
+                  Create I-post
+
                 </Button>
+
               </Grid>
 
             </Grid>
@@ -249,7 +234,9 @@ function MyItems() {
         </Container>
 
         <Box px={3} mt={-4} className={classes.cardSection}>
+
           <Grid container spacing={5}>
+
             {myItemCard.map((myItemCard, i) => {
               return (
                 <Grid key={i} item xs={12} sm={6} md={6} lg={3} >
@@ -257,7 +244,9 @@ function MyItems() {
                 </Grid>
               );
             })}
+
           </Grid>
+
         </Box>
 
       </div>

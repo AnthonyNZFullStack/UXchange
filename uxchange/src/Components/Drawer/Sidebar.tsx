@@ -1,21 +1,10 @@
-import React from "react";
-import {
-  Divider,
-  Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Link, List, ListItem, ListItemIcon, ListItemText, makeStyles, Typography, } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from '@material-ui/icons/Info';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import LockIcon from '@material-ui/icons/Lock';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import MenuIcon from "@material-ui/icons/Menu";
 import ListIcon from '@material-ui/icons/List';
 
 const useStyles = makeStyles({

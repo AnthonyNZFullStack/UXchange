@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Paper, Typography } from '@material-ui/core'
 import SignUpForm from "../../Components/SignUpForm/SignUpForm";
-import Buttons from "../../Components/Buttons/SignUpButton";
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
             width: '50%',
             [theme.breakpoints.down('xl')]: {
                 width: '60%',
-                height:'750px',
+                height: '750px',
             },
             [theme.breakpoints.only('md')]: {
                 width: '70%'
@@ -35,8 +34,8 @@ const useStyles = makeStyles((theme: Theme) =>
             },
             [theme.breakpoints.only('xs')]: {
                 width: '90%',
-                marginTop:'5em',
-                height:'670px',
+                marginTop: '5em',
+                height: '670px',
             },
         },
 
@@ -91,9 +90,7 @@ function SignUp() {
 
                         <RadioGroup aria-label="position" name="position" defaultValue="top" style={{ color: 'white', background: '#000124' }}>
 
-                            <FormControlLabel
-                                value="end"
-                                control={<Radio color="primary" />}
+                            <FormControlLabel value="end" control={<Radio color="primary" />}
                                 label={
                                     <Typography variant="body2"
                                         className={classes.hoverButton}>
@@ -104,19 +101,17 @@ function SignUp() {
                         </RadioGroup>
 
                     </FormControl>
+
                 </Grid>
 
                 <SignUpButton />
 
                 <Grid >
 
-                    <Typography variant='body2'
-                        style={{ color: 'white' }}>
+                    <Typography variant='body2' style={{ color: 'white' }}>
                         Already have an account?
 
-                        <Button className={classes.buttonRoot}
-                            style={{ backgroundColor: 'transparent', padding: '0 0', display: 'inline-block' }}
-                            component={Link} to="/Login">
+                        <Button className={classes.buttonRoot} style={{ backgroundColor: 'transparent', padding: '0 0', display: 'inline-block' }} component={Link} to="/Login">
                             Sign in
                         </Button>
 

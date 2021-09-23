@@ -44,9 +44,15 @@ function LoginButton() {
     return (
         <React.Fragment>
             <CssBaseline />
+
             <Button className={classes.root}
                 variant='contained' size='large' type="submit" component={Link} to="/Operations">
-                Login<ArrowForwardIcon className={classes.iconstyle}></ArrowForwardIcon>
+                    
+                Login
+
+                <ArrowForwardIcon className={classes.iconstyle}>
+                </ArrowForwardIcon>
+                
             </Button>
 
         </React.Fragment >

@@ -4,7 +4,6 @@ import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Button } from '@material-ui/core'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             marginTop: '1em',
             padding: '0.5em 4em',
             width: '40%',
-            letterSpacing:'1px',
+            letterSpacing: '1px',
             textTransform: 'capitalize',
             border: '2px #FFCC00 solid',
             fontWeight: 'bold',
@@ -83,10 +82,12 @@ function HomePageButtonTwo() {
     return (
         <React.Fragment>
             <CssBaseline />
+
             <Button className={classes.root}
-            component={Link} to="/Operations"
-                variant='contained' size='large' type="submit">
+                component={Link} to="/Operations" variant='contained' size='large' type="submit">
+
                 How do we operate?
+
             </Button>
 
         </React.Fragment >

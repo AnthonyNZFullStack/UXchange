@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import { AppBar, Drawer, IconButton, Toolbar } from "@material-ui/core";
 import { Button, Typography } from "@material-ui/core";
@@ -8,7 +8,6 @@ import createStyles from "@material-ui/core/styles/createStyles";
 import { Sidebar } from "../Drawer/Sidebar";
 import { Link } from 'react-router-dom';
 import uxchangeLogo from "../logos/uxchange_logo.svg";
-import SocialIcon from "../SocialIcon/SocialIcon";
 
 
 
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-      '&:hover':{
+      '&:hover': {
         color: '#ffcc00',
       }
     },
@@ -37,36 +36,31 @@ const useStyles = makeStyles((theme: Theme) =>
         padding: '0',
         background: 'none',
       },
-      // '&:hover':{
-      //   background:'#000124',
-      //   borderRadius: '3em',
-      //   padding: '0em 4em',
-      // },
     },
-    hange:{
-      color: '#ffcc00', 
-      fontFamily: 'caveat brush', 
+    hange: {
+      color: '#ffcc00',
+      fontFamily: 'caveat brush',
       fontSize: '30px',
       marginTop: '0.17em',
       textTransform: 'uppercase',
       borderRadius: '3em',
     },
-    loginButton:{
+    loginButton: {
       borderRadius: '3em',
       textTransform: 'capitalize',
       width: '10%',
       padding: '0.5em 4em',
-      color:'white',
-      [theme.breakpoints.only('xs')]:{
+      color: 'white',
+      [theme.breakpoints.only('xs')]: {
         padding: '0.3em 2em',
       },
-      '&:hover':{
-        background:'#000124',
+      '&:hover': {
+        background: '#000124',
         borderRadius: '3em',
         width: '10%',
         color: '#ffcc00',
         padding: '0.5em 4em',
-        [theme.breakpoints.only('xs')]:{
+        [theme.breakpoints.only('xs')]: {
           padding: '0.3em 2em',
         },
       },
@@ -99,9 +93,7 @@ function Header() {
             <MenuIcon />
 
             <Drawer anchor="left" open={sideBar} onClose={toggleSideBar}>
-
               <Sidebar />
-
             </Drawer>
 
           </IconButton>
@@ -117,7 +109,8 @@ function Header() {
           </Typography>
 
           <Button className={classes.loginButton}
-            component={Link} to="/Login">Login</Button>
+            component={Link} to="/Login">Login
+          </Button>
 
         </Toolbar>
 

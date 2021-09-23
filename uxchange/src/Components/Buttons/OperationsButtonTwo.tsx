@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme: Theme) =>
                 marginTop: '2em',
                 width: '90%',
             },
-            '&:hover':{
-                color:'rgba(0,1,36,1)',
+            '&:hover': {
+                color: 'rgba(0,1,36,1)',
                 background: '#ffcc00'
             }
         },
@@ -54,10 +54,12 @@ function OperationsButtonTwo() {
     return (
         <React.Fragment>
             <CssBaseline />
+
             <Button className={classes.root}
-                type="submit"
-                component={Link} to="/Market place">
+                type="submit" component={Link} to="/Market place">
+
                 Market Place
+
             </Button>
 
         </React.Fragment >

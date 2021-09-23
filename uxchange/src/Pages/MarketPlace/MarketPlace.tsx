@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import { Typography, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Container, Box } from "@material-ui/core";
+import React from "react";
+import { Typography, Button, CssBaseline, Grid, Container, Box } from "@material-ui/core";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import MarketItemCard from "../../Components/ItemCard/MarketItemCard";
 import { Link } from 'react-router-dom';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import IpostForm from "../../Components/IPostForm/IpostForm";
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import ViewListIcon from '@material-ui/icons/ViewList';
-import { spacing } from '@material-ui/system';
 
 
 
@@ -101,9 +99,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     titleTwo: {
-      marginTop:'1em',
+      marginTop: '1em',
       fontSize: '2em',
-      color:'rgba(0,212,255,1)',
+      color: 'rgba(0,212,255,1)',
       fontFamily: 'caveat',
       paddingBottom: '0',
       marginBottom: '0',
@@ -116,46 +114,39 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: '2em',
       },
       [theme.breakpoints.only('md')]: {
-        marginTop: '1.5em', 
+        marginTop: '1.5em',
       },
     },
     titleThree: {
       fontSize: '2em',
       fontFamily: 'caveat',
       marginBottom: '2em',
-      color:'rgba(0,212,255,1)',
+      color: 'rgba(0,212,255,1)',
       [theme.breakpoints.only('xs')]: {
         paddingBottom: '0',
         fontSize: '1.5em',
       },
     },
-    // borderBottom: {
-    //   margin: 'auto',
-    //   width: '100%',
-    //   borderBottom: '5px rgba(9,75,121,1) dashed',
-    // },
-    cardSection:{
-      marginTop:'-6em',
-      height:'1650px',
-      background:'#000124',
-      [theme.breakpoints.only('xl')]:{
-        height:'1650px',
+    cardSection: {
+      marginTop: '-6em',
+      height: '1650px',
+      background: '#000124',
+      [theme.breakpoints.only('xl')]: {
+        height: '1650px',
       },
-      [theme.breakpoints.only('lg')]:{
-        height:'1650px',
+      [theme.breakpoints.only('lg')]: {
+        height: '1650px',
       },
-      [theme.breakpoints.only('md')]:{
-        height:'3650px',
+      [theme.breakpoints.only('md')]: {
+        height: '3650px',
       },
-      [theme.breakpoints.only('sm')]:{
-        height:'3650px',
+      [theme.breakpoints.only('sm')]: {
+        height: '3650px',
       },
-      [theme.breakpoints.only('xs')]:{
-        height:'5300px',
-        marginTop:'-3em',
+      [theme.breakpoints.only('xs')]: {
+        height: '5300px',
+        marginTop: '-3em',
       },
-      // '& .MuiBox-root':{
-      // },
     },
 
   })
@@ -254,61 +245,49 @@ const MarketPlace: React.FC = () => {
 
         <Container maxWidth="xl">
 
-          {/* <div className={classes.borderBottom}> */}
-
-          <Typography
-            className={classes.title}
-            variant="h2" align="center" color="textPrimary" gutterBottom>
-            Welcome to the <span style={{ color: '#ffcc00', textTransform: 'capitalize', fontFamily: 'caveat brush' }}> market place ! </span>
+          <Typography className={classes.title} variant="h2" align="center" color="textPrimary" gutterBottom>
+            Welcome to the
+            <span style={{ color: '#ffcc00', textTransform: 'capitalize', fontFamily: 'caveat brush' }}> market place ! </span>
           </Typography>
 
-          <Typography
-            className={classes.titleTwo}
-            variant="h4" align="center" paragraph>
+          <Typography className={classes.titleTwo} variant="h4" align="center" paragraph>
             - Costs nothing, 100% FREE! to use.
           </Typography>
-          <Typography
-            className={classes.titleThree}
-            variant="h4" align="center" paragraph>
+
+          <Typography className={classes.titleThree} variant="h4" align="center" paragraph>
             - Sell, trade and exchange.
           </Typography>
-
-
-          {/* </div> */}
 
           <div className={classes.buttons}>
 
             <Grid container spacing={2} justify="center">
+
               <Grid item>
 
                 <Button
-                  className={classes.buttonOption}
-                  style={{
-                    background: '#FFCC00', color: '#000124',
-                    fontWeight: 'bold'
-                  }} color="primary">
-                  <StorefrontIcon style={{ marginRight: '0.2em' }}></StorefrontIcon>Market items
-                </Button>
-
-              </Grid>
-              <Grid item>
-
-                <Button
-                  className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }} color="primary"
-                  component={Link} to="/My Items">
-                  <ViewListIcon style={{ marginRight: '0.2em' }}></ViewListIcon>My item list
+                  className={classes.buttonOption} style={{ background: '#FFCC00', color: '#000124', fontWeight: 'bold' }} color="primary">
+                  <StorefrontIcon style={{ marginRight: '0.2em' }}></StorefrontIcon>
+                  Market items
                 </Button>
 
               </Grid>
 
               <Grid item>
-                <Button color="primary"
-                  className={classes.buttonOption}
-                  style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }}
-                  component={Link} to="/Create Ipost">
-                  <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon> Create I-post
+
+                <Button className={classes.buttonOption} style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }} color="primary" component={Link} to="/My Items">
+                  <ViewListIcon style={{ marginRight: '0.2em' }}></ViewListIcon>
+                  My item list
                 </Button>
+
+              </Grid>
+
+              <Grid item>
+
+                <Button color="primary" className={classes.buttonOption} style={{ fontWeight: 'bold', border: '1px rgba(0, 0, 0, 0.87) solid', }} component={Link} to="/Create Ipost">
+                  <AddCircleIcon style={{ marginRight: '0.2em' }}></AddCircleIcon>
+                  Create I-post
+                </Button>
+
               </Grid>
 
             </Grid>
@@ -319,7 +298,9 @@ const MarketPlace: React.FC = () => {
         </Container>
 
         <Box px={3} mt={-4} className={classes.cardSection}>
+
           <Grid container spacing={5}>
+
             {marketItemCard.map((marketItemCard, i) => {
               return (
                 <Grid key={i} item xs={12} sm={6} md={6} lg={3} >
@@ -327,7 +308,9 @@ const MarketPlace: React.FC = () => {
                 </Grid>
               );
             })}
+
           </Grid>
+
         </Box>
 
 

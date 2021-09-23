@@ -4,9 +4,9 @@ import "./uxchangelogo.css";
 function UxchangeLogo() {
 	return (
 		<svg
-		id="hovering"
-		className="hovering"
-		width="500px"
+			id="hovering"
+			className="hovering"
+			width="500px"
 			height="100px"
 			viewBox="0 0 844.39 534.41"
 			fill="#FFCC00"

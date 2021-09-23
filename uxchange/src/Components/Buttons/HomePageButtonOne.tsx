@@ -4,7 +4,6 @@ import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Button } from '@material-ui/core'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             borderRadius: '1em',
             padding: '0.5em 4em',
             width: '40%',
-            letterSpacing:'2px',
+            letterSpacing: '2px',
             textTransform: 'capitalize',
             border: '2px #FFCC00 solid',
             fontWeight: 'bold',
@@ -84,10 +83,14 @@ function HomePageButtonOne() {
     return (
         <React.Fragment>
             <CssBaseline />
+
             <Button className={classes.root}
-            component={Link} to="/Sign up"
-                variant='contained' size='large' type="submit">
-                <Typography style={{fontWeight:'bold'}}>Exchange now!</Typography>
+                component={Link} to="/Sign up" variant='contained' size='large' type="submit">
+
+                <Typography style={{ fontWeight: 'bold' }}>
+                    Exchange now!
+                </Typography>
+
             </Button>
 
         </React.Fragment >

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Button, Card, CardActions, CardContent, CssBaseline, Grid, Container, ListItem } from "@material-ui/core";
+import { Typography, Button, Card, CssBaseline, Grid, Container, ListItem } from "@material-ui/core";
 import CardMedia from '@material-ui/core/CardMedia';
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,10 +10,8 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import ContactsIcon from '@material-ui/icons/Contacts';
-import SyncIcon from '@material-ui/icons/Sync';
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 
 
@@ -52,33 +50,33 @@ const useStyles = makeStyles((theme: Theme) =>
             // borderBottom:'1em #000124 solid',
         },
         button: {
-            fontSize:'0.8em',
+            fontSize: '0.8em',
             color: '#e0f4ff',
-            background:'#000124',
-            border: 'thin #404040 solid', 
+            background: '#000124',
+            border: 'thin #404040 solid',
             borderRadius: '3em',
-            width:'50%',
-            '&:hover':{
-                background:'#000124',
+            width: '50%',
+            '&:hover': {
+                background: '#000124',
             },
         },
-        buttonLabel:{
-            textTransform: 'capitalize', 
-            fontFamily: 'caveat', 
-            fontSize: '1.6em', 
-            color: '#e0f4ff', 
-            paddingTop:'0.1em',
+        buttonLabel: {
+            textTransform: 'capitalize',
+            fontFamily: 'caveat',
+            fontSize: '1.6em',
+            color: '#e0f4ff',
+            paddingTop: '0.1em',
         },
-        editDelete:{
-            display: 'flex', 
-            justifyContent: 'flex-end', 
-            width: '98%', 
-            background: 'rgb(224, 244, 255)', 
-            margin: 'auto', 
-            height: '50px', 
+        editDelete: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+            width: '98%',
+            background: 'rgb(224, 244, 255)',
+            margin: 'auto',
+            height: '50px',
             borderRadius: '0em 0em 2em 2em',
-            padding: '0.5em 1em', 
-            paddingBottom:'1em',
+            padding: '0.5em 1em',
+            paddingBottom: '1em',
         },
     })
 );
@@ -107,12 +105,6 @@ function MyItemCard({ image, title, exchange, contacts, description }: Props) {
 
 
                         <Grid container>
-                            {/* <SyncIcon />
-                            <Typography
-                                style={{ fontSize: '0.8em', textAlign: 'justify', padding: '0.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '3em', fontWeight: 'bold', }}
-                                variant="body2" component="p" color="textSecondary">
-                                {exchange}
-                            </Typography> */}
 
                             <ListItem className={classes.exchangeContact}>
 
@@ -124,46 +116,18 @@ function MyItemCard({ image, title, exchange, contacts, description }: Props) {
                                     <ContactsIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{contacts}</Typography>
                                 </div>
 
-                                {/* <div style={{display:'flex'}}>
-
-                                        <button style={{padding: 'none', background: 'transparent', border: 'none' }}>
-                                            <CreateIcon />
-                                        </button>
-
-                                        <button style={{padding: 'none', background: 'transparent', border: 'none' }}>
-                                            <DeleteIcon />
-                                        </button>
-
-                                    </div> */}
-
                             </ListItem>
-
-
-                            {/* <ContactsIcon />
-                            <Typography
-                                style={{ textAlign: 'justify', padding: '0.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '3em', fontWeight: 'bold', }}
-                                variant="body2" component="p" >
-                                {contacts}
-                            </Typography> */}
 
                         </Grid>
 
-                        <CardMedia
-                            className={classes.cardMedia}
-                            image={image}
-                        />
+                        <CardMedia className={classes.cardMedia} image={image} />
 
 
                         <Accordion style={{ fontWeight: 'bold', background: '#E0F4FF', width: '98%', margin: 'auto', borderRadius: '0em 0em 0em 0em' }}>
 
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header">
+                            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
 
-                                <Typography
-                                    style={{ margin: 'auto', padding: '0.5em', fontWeight: 'bold', color: '#404040', }}
-                                    gutterBottom variant="body1" >
+                                <Typography style={{ margin: 'auto', padding: '0.5em', fontWeight: 'bold', color: '#404040', }} gutterBottom variant="body1" >
                                     {title}
                                 </Typography>
 
@@ -171,9 +135,7 @@ function MyItemCard({ image, title, exchange, contacts, description }: Props) {
 
                             <AccordionDetails>
 
-                                <Typography
-                                    style={{ textAlign: 'justify', padding: '0.5em' }}
-                                    variant="body2" component="p" color="textSecondary">
+                                <Typography style={{ textAlign: 'justify', padding: '0.5em' }} variant="body2" component="p" color="textSecondary">
                                     {description}
                                 </Typography>
 
@@ -186,20 +148,21 @@ function MyItemCard({ image, title, exchange, contacts, description }: Props) {
 
                     <div className={classes.editDelete}>
 
-                        <Button className={classes.button}
-                        style={{marginRight:'1.2em'}}
-                            type="submit"
-                            component={Link} to="/Edit Ipost">
+                        <Button className={classes.button} style={{ marginRight: '1.2em' }} type="submit" component={Link} to="/Edit Ipost">
+
                             <CreateIcon /> <Typography className={classes.buttonLabel}>Edit</Typography>
+
                         </Button>
 
                         <Button className={classes.button}>
+
                             <DeleteIcon /><Typography className={classes.buttonLabel} >Delete</Typography>
+
                         </Button>
 
                     </div>
-                </Grid>
 
+                </Grid>
 
             </Container>
 

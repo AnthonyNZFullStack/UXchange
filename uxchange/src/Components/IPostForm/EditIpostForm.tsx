@@ -1,11 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { TextField, Grid, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom';
 import EditIcon from '@material-ui/icons/Edit';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -114,23 +112,19 @@ function EditIpostForm() {
                             className={classes.titleEditIpost}>
                             Edit your Ipost
                         </Typography>
+
                     </Grid>
 
                 </Grid>
 
                 <Grid container spacing={1}>
+
                     <Grid item xs={12} md={12}>
-                        <TextField
-                            variant="filled"
-                            size="small"
-                            label="Full name"
-                            id="fullName"
-                            name="fullName"
-                            type="fullName" />
+                        <TextField variant="filled" size="small" label="Full name" id="fullName" type="fullName" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="filled" size="small" label="" type="file"  />
+                        <TextField variant="filled" size="small" label="" type="file" />
                     </Grid>
 
                     <Grid item xs={12} md={12}>

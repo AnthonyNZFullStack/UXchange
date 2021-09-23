@@ -5,20 +5,11 @@ import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Container } from "@material-ui/core";
-import { Paper } from "@material-ui/core";
-import DoneButton from "../../Components/Buttons/DoneButton";
 import { Grid } from "@material-ui/core";
 import "./HomePage.css";
-import UxchangeLogo from "../Logo/UxchangeLogo";
 import JBL from "../Images/JBL.png";
-import nzonedollar from "../Images/nzonedollar.png";
-import plasmaorb from "../Images/plasmaorb.png";
-import view from "../Images/view.png";
 import HomePageButton from "../../Components/Buttons/HomePageButtonOne";
 import HomePageButtonTwo from "../../Components/Buttons/HomePageButtonTwo";
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import UxchangeLogoFinal from "../Logo/UxchangeLogoFinal";
 
@@ -68,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: '3.5em',
       color: '#fff0d6',
       [theme.breakpoints.only('xs')]: {
-        marginTop:'2em',
+        marginTop: '2em',
         color: '#fff0d6',
       },
     },
@@ -100,36 +91,6 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
 
-    // plasmaorb: {
-    //   [theme.breakpoints.up('md')]: {
-    //     marginLeft: '50em'
-    //   },
-    //   [theme.breakpoints.between('sm', 'md')]: {
-    //     marginLeft: '30em'
-    //   },
-    //   [theme.breakpoints.between('xs', 'sm')]: {
-    //     marginLeft: '35em',
-    //   },
-    //   [theme.breakpoints.only('xs')]: {
-    //     height: '100px'
-    //   },
-    // },
-
-
-    // nzonedollar: {
-    //   float: 'left',
-    //   marginLeft: '3em',
-    //   marginTop: '3em',
-    //   filter: 'drop-shadow(-12px 10px 10px #240202)',
-    // },
-
-    // uxchangelogo: {
-    //   height: '200px',
-    //   '&:hover': {
-    //     color: 'white',
-    //   }
-    // },
-
     circleOne: {
       width: '350px',
       height: '350px',
@@ -156,22 +117,22 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'Caveat Brush',
       marginTop: '5em',
       color: '#fff0d6',
-      fontStyle:'italic',
+      fontStyle: 'italic',
       [theme.breakpoints.only('xs')]: {
         marginTop: '0em',
         fontSize: '25px',
-        fontStyle:'italic',
+        fontStyle: 'italic',
         fontFamily: 'Caveat Brush',
       },
     },
 
     topPageTwo: {
-      color:'rgba(0,212,255,1)',
-      fontStyle:'italic',
+      color: 'rgba(0,212,255,1)',
+      fontStyle: 'italic',
       fontFamily: 'Caveat Brush',
       [theme.breakpoints.only('xs')]: {
         fontSize: '25px',
-        fontStyle:'italic',
+        fontStyle: 'italic',
         fontFamily: 'Caveat Brush',
       },
     },
@@ -184,7 +145,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
     steps: {
       textShadow: '2px 1px black',
-      color:'rgba(0,212,255,1)',
+      color: 'rgba(0,212,255,1)',
       fontWeight: 'bold',
       background: '#000124',
       border: '0.2em #fff0d6 solid',
@@ -224,36 +185,32 @@ function HomePage() {
         <Container className={classes.market}>
 
 
-          <Typography variant="h4"
-            className={classes.fontWhiteOne}> You can
+          <Typography variant="h4" className={classes.fontWhiteOne}>
+            You can
             <Typography className={classes.fontBold} variant="h2" component="span"> SELL</Typography>
           </Typography>
 
-          <Typography variant="h4"
-            style={{ marginTop: '0.2em' }}
-            className={classes.fontWhite}> or
-            <Typography className={classes.fontBold} variant="h2" component="span"
-            > TRADE</Typography>
+          <Typography variant="h4" style={{ marginTop: '0.2em' }} className={classes.fontWhite}>
+            or
+            <Typography className={classes.fontBold} variant="h2" component="span">
+              TRADE
+            </Typography>
+
           </Typography>
 
-          <Typography
-            style={{ marginTop: '0.2em' }}
-            variant="h4" className={classes.fontWhite}>
+          <Typography style={{ marginTop: '0.2em' }} variant="h4" className={classes.fontWhite}>
             any item(s) at
           </Typography>
 
           <Grid style={{ width: '100%' }}>
 
-            {/* <img id="uxchangelogo" className={classes.uxchangelogo} src={Uxchangelogo} alt="uxchange logo"></img> */}
-
             <div id="logo">
               <UxchangeLogoFinal />
             </div>
+
           </Grid>
 
-          <Typography
-            style={{ color: '#FFCC00', fontFamily: 'Caveat Brush', }}
-            className={classes.fontSize} variant="h2">
+          <Typography style={{ color: '#FFCC00', fontFamily: 'Caveat Brush', }} className={classes.fontSize} variant="h2">
             UXCHANGE!
           </Typography>
 
@@ -282,16 +239,9 @@ function HomePage() {
               " Simply, a few steps to start your exchange.
             </Typography>
 
-            <Typography
-              className={classes.topPageTwo}
-              variant="h4">
-              That sounds easy doesn't it? "</Typography>
-
-            {/* <Typography
-                style={{ marginTop: '1em', color: 'black', fontWeight: 'bold', background: '#FFCC00', borderRadius: '1em', padding: '0.5em 1em', width: '50%', margin: 'auto', }}
-                variant="body1">
-                Create account <ArrowRightIcon /> Post your item | Sell or Trade.</Typography>
-              </Typography> */}
+            <Typography className={classes.topPageTwo} variant="h4">
+              That sounds easy doesn't it? "
+            </Typography>
 
           </Grid>
 
@@ -303,17 +253,7 @@ function HomePage() {
 
             <div className={classes.circleOne} id="circleOne"></div>
 
-            {/* <img
-            style={{ height: '400px', position: 'absolute', top: '18em', right: '8em' }}
-            className="view"
-            id="view"
-            src={view} /> */}
-
           </Grid>
-
-          {/* <Typography style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '15em', right: '13em', textAlign: 'left' }}>
-          Options
-        </Typography> */}
 
           <Grid container direction="row" alignItems="center" justifyContent="center"
             className={classes.steps}>
@@ -333,43 +273,13 @@ function HomePage() {
             <Grid item>
               <DoubleArrowIcon className={classes.linkIcon} />
             </Grid>
-            
+
             <Grid item style={{ fontSize: '1.2em', marginLeft: '0.5em' }}>
               Sell / Trade
             </Grid>
           </Grid>
 
         </Container>
-
-        {/* <div
-          className={classes.plasmaorb}
-          id="circleSecond">
-
-          <Typography
-            style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '8.5em', right: '8em' }}
-            variant="h3"
-          > Experience change</Typography>
-
-          <img
-            style={{ filter: 'drop-shadow(10px 3px 7px #240202)', marginLeft: '-5em' }}
-            id="plasmaOrb"
-            src={plasmaorb} />
-
-        </div> */}
-
-        {/* <div id="circleThird">
-
-          <Typography
-            style={{ color: 'white', maxWidth: '50%', position: 'absolute', top: '14em', left: '5em' }}
-            variant="h3"
-          > Join with us now!</Typography>
-
-          <img
-            className={classes.nzonedollar}
-            id="nzonedollar"
-            src={nzonedollar} />
-        </div> */}
-
 
       </div>
 

@@ -3,11 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
-import { Paper, Typography } from '@material-ui/core'
-import { Grid, Button } from '@material-ui/core'
-import { Link } from 'react-router-dom';
-import SignUpButton from "../../Components/Buttons/SignUpButton";
-import IpostForm from "../../Components/IPostForm/IpostForm";
+import { Paper } from '@material-ui/core'
 import DoneButton from "../../Components/Buttons/DoneButton";
 import BackButton from "../../Components/Buttons/BackButtonMarket";
 import BackButtonMyItem from "../../Components/Buttons/BackButtonMyItem";
@@ -43,8 +39,8 @@ function EditIpost() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Paper
-            className={classes.pageContent}>
+
+            <Paper className={classes.pageContent}>
 
                 <EditPostForm />
                 <DoneButton />

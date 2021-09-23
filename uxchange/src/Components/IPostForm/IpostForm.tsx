@@ -1,11 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Button, Theme } from "@material-ui/core";
+import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { TextField, Grid, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import { ChangeEvent } from "react";
 import { FormEvent } from "react";
@@ -132,9 +130,7 @@ function IpostForm() {
 
                     <Grid item>
 
-                        <Typography
-                            className={classes.titlePost}
-                            variant='h4' gutterBottom>
+                        <Typography className={classes.titlePost} variant='h4' gutterBottom>
                             Post your Item
                         </Typography>
 
@@ -146,37 +142,31 @@ function IpostForm() {
                     style={{ marginBottom: '1.5em' }}
                 >
                     <Grid item xs={12} md={12}>
-                        <TextField
-                            variant="filled"
-                            label="Full name"
-                            id="fullName"
-                            name="fullName"
-                            type="fullName"
-                            size="small"
-                            // value={fullname}
-                            // onChange={(e) => setFullname(e.target.value)}
+                        <TextField variant="filled" label="Full name" id="fullName" name="fullName" type="fullName" size="small"
+                        // value={fullname}
+                        // onChange={(e) => setFullname(e.target.value)}
                         />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
                         <TextField variant="filled" label="" size="small" type="file"
-                            // value={image}
-                            // onChange={(e) => setImage(e.target.value)} 
-                            />
+                        // value={image}
+                        // onChange={(e) => setImage(e.target.value)} 
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={12}>
                         <TextField variant="filled" label="Title" size="small"
-                            // value={title}
-                            // onChange={(e) => setTitle(e.target.value)} 
-                            />
+                        // value={title}
+                        // onChange={(e) => setTitle(e.target.value)} 
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
                         <TextField variant="filled" label="Trade/Sell(price)" size="small"
-                            // value={exchange}
-                            // onChange={(e) => setExchange(e.target.value)} 
-                            />
+                        // value={exchange}
+                        // onChange={(e) => setExchange(e.target.value)} 
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={12} >
@@ -193,12 +183,6 @@ function IpostForm() {
                     </Grid>
 
                 </Grid>
-
-                {/* <Button className={classes.root}
-                    // onClick={handleSubmit}
-                    variant='contained' size='large' type="submit">
-                    Done
-                </Button> */}
 
             </form>
 

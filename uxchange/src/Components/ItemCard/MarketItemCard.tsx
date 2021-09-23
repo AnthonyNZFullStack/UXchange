@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Typography, Button, Card, CardActions, CardContent, CssBaseline, Grid, Container, Accordion, AccordionSummary, AccordionDetails, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import React from "react";
+import { Typography, Card, CssBaseline, Grid, Container, Accordion, AccordionSummary, AccordionDetails, ListItem, } from "@material-ui/core";
 import CardMedia from '@material-ui/core/CardMedia';
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ContactsIcon from '@material-ui/icons/Contacts';
-import SyncIcon from '@material-ui/icons/Sync';
+import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 
 
 
@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: '0.5em',
             fontFamily: 'caveat',
             width: '98%',
-            height:'50px',
+            height: '50px',
             margin: 'auto',
-            display:'flex',
-            justifyContent:'space-around',
-            color:'#404040',
+            display: 'flex',
+            justifyContent: 'space-around',
+            color: '#404040',
             // borderBottom:'1em #000124 solid',
         },
     })
@@ -67,69 +67,61 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
 
                     <Card className={classes.card}>
 
-                            <Grid container>
-                                {/* <SyncIcon />
+                        <Grid container>
+                            {/* <SyncIcon />
                                 <Typography
                                     style={{ fontSize: '0.8em', textAlign: 'justify', padding: '0.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '3em', fontWeight: 'bold', }}
                                     variant="body2" component="p" color="textSecondary">
                                     {exchange}
                                 </Typography> */}
 
-                                <ListItem className={classes.exchangeContact}>
+                            <ListItem className={classes.exchangeContact}>
 
-                                    <div style={{ display: 'flex', }}>
-                                        <SyncIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{exchange}</Typography>
-                                    </div>
+                                <div style={{ display: 'flex', }}>
+                                    <SwapHorizIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{exchange}</Typography>
+                                </div>
 
-                                    <div style={{ display: 'flex' }}>
-                                        <ContactsIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{contacts}</Typography>
-                                    </div>
+                                <div style={{ display: 'flex' }}>
+                                    <ContactsIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{contacts}</Typography>
+                                </div>
 
-                                </ListItem>
+                            </ListItem>
 
 
-                                {/* <ContactsIcon />
+                            {/* <ContactsIcon />
                                 <Typography
                                     style={{ textAlign: 'justify', padding: '0.5em', background: 'rgb(255, 204, 0)', color: 'rgba(0,1,36,1)', borderRadius: '3em', fontWeight: 'bold', }}
                                     variant="body2" component="p" >
                                     {contacts}
                                 </Typography> */}
 
-                            </Grid>
+                        </Grid>
 
-                            <CardMedia
-                                className={classes.cardMedia}
-                                image={image}
-                            />
+                        <CardMedia className={classes.cardMedia} image={image} />
 
 
-                            <Accordion style={{ fontWeight: 'bold', background: '#E0F4FF', width: '98%', margin: 'auto', borderRadius: '0em 0em 2em 2em',}}>
+                        <Accordion style={{ fontWeight: 'bold', background: '#E0F4FF', width: '98%', margin: 'auto', borderRadius: '0em 0em 2em 2em', }}>
 
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header">
+                            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
 
-                                    <Typography
-                                        style={{ margin:'auto', padding: '0.5em', fontWeight: 'bold', color:'#404040', }}
-                                        gutterBottom variant="body1" >
-                                        {title}
-                                    </Typography>
+                                <Typography style={{ margin: 'auto', padding: '0.5em', fontWeight: 'bold', color: '#404040', }} gutterBottom variant="body1" >
+                                    {title}
+                                </Typography>
 
-                                </AccordionSummary>
+                            </AccordionSummary>
 
-                                <AccordionDetails>
+                            <AccordionDetails>
 
-                                    <Typography
-                                        style={{ textAlign: 'justify', padding: '0.5em' }}
-                                        variant="body2" component="p" color="textSecondary">
-                                        {description}
-                                    </Typography>
+                                <Typography style={{ textAlign: 'justify', padding: '0.5em' }} variant="body2" component="p" color="textSecondary">
+                                    {description}
+                                </Typography>
 
-                                </AccordionDetails>
+                            </AccordionDetails>
 
-                            </Accordion>
+                        </Accordion>
+
                     </Card>
+
                 </Grid>
 
 

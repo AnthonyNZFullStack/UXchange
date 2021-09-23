@@ -3,10 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
-import { Paper, Typography } from '@material-ui/core'
-import { Grid, Button } from '@material-ui/core'
-import { Link } from 'react-router-dom';
-import SignUpButton from "../../Components/Buttons/SignUpButton";
+import { Paper } from '@material-ui/core'
 import IpostForm from "../../Components/IPostForm/IpostForm";
 import DoneButton from "../../Components/Buttons/DoneButton";
 import BackButton from "../../Components/Buttons/BackButtonMarket";
@@ -18,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             margin: theme.spacing(5),
             padding: theme.spacing(3),
             backgroundColor: 'rgba(0,1,36,1)',
-            color:'white',
+            color: 'white',
             height: '750px',
             [theme.breakpoints.down('xl')]: {
                 width: '50%',
@@ -55,6 +52,7 @@ function CreateIpost() {
     return (
         <React.Fragment>
             <CssBaseline />
+
             <Paper className={classes.pageContent}>
 
                 <IpostForm />

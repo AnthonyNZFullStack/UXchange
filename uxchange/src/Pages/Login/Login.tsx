@@ -3,7 +3,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
-import { Paper, Typography } from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 import LoginForm from "../../Components/LoginForm/LoginForm";
 
 
@@ -21,17 +21,17 @@ const useStyles = makeStyles((theme: Theme) =>
       // height: '50vh',
       [theme.breakpoints.down('xl')]: {
         width: '50%'
-    },
-    [theme.breakpoints.down('md')]: {
+      },
+      [theme.breakpoints.down('md')]: {
         width: '70%'
-    },
-    [theme.breakpoints.down('sm')]: {
+      },
+      [theme.breakpoints.down('sm')]: {
         width: '80%',
-    },
-    [theme.breakpoints.only('xs')]: {
+      },
+      [theme.breakpoints.only('xs')]: {
         width: '90%',
         marginTop: '5.5em',
-    },
+      },
     },
 
   })
@@ -43,8 +43,8 @@ function Login() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper
-        className={classes.pageContent}>
+
+      <Paper className={classes.pageContent}>
 
         <LoginForm />
 
