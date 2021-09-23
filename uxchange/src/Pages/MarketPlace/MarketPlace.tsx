@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme: Theme) =>
     titleTwo: {
       marginTop:'1em',
       fontSize: '2em',
-      color: '#ffcc00',
+      color:'rgba(0,212,255,1)',
       fontFamily: 'caveat',
       paddingBottom: '0',
       marginBottom: '0',
@@ -121,9 +121,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     titleThree: {
       fontSize: '2em',
-      color: '#ffcc00',
       fontFamily: 'caveat',
       marginBottom: '2em',
+      color:'rgba(0,212,255,1)',
       [theme.breakpoints.only('xs')]: {
         paddingBottom: '0',
         fontSize: '1.5em',
@@ -135,6 +135,7 @@ const useStyles = makeStyles((theme: Theme) =>
     //   borderBottom: '5px rgba(9,75,121,1) dashed',
     // },
     cardSection:{
+      marginTop:'-6em',
       height:'1650px',
       background:'#000124',
       [theme.breakpoints.only('xl')]:{
@@ -151,6 +152,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.only('xs')]:{
         height:'5300px',
+        marginTop:'-3em',
       },
       // '& .MuiBox-root':{
       // },
@@ -317,7 +319,7 @@ const MarketPlace: React.FC = () => {
         </Container>
 
         <Box px={3} mt={-4} className={classes.cardSection}>
-          <Grid container spacing={3}>
+          <Grid container spacing={5}>
             {marketItemCard.map((marketItemCard, i) => {
               return (
                 <Grid key={i} item xs={12} sm={6} md={6} lg={3} >

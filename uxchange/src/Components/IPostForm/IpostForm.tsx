@@ -159,7 +159,7 @@ function IpostForm() {
                     </Grid>
 
                     <Grid item xs={12} md={12}>
-                        <TextField variant="filled" label="Image" size="small" type="file"
+                        <TextField variant="filled" label="" size="small" type="file"
                             // value={image}
                             // onChange={(e) => setImage(e.target.value)} 
                             />
@@ -194,11 +194,11 @@ function IpostForm() {
 
                 </Grid>
 
-                <Button className={classes.root}
+                {/* <Button className={classes.root}
                     // onClick={handleSubmit}
                     variant='contained' size='large' type="submit">
                     Done
-                </Button>
+                </Button> */}
 
             </form>
 

@@ -166,7 +166,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
 
     topPageTwo: {
-      color: '#fff0d6',
+      color:'rgba(0,212,255,1)',
       fontStyle:'italic',
       fontFamily: 'Caveat Brush',
       [theme.breakpoints.only('xs')]: {
@@ -179,15 +179,15 @@ const useStyles = makeStyles((theme: Theme) =>
     linkIcon: {
       fontSize: '2em',
       paddingTop: '0.3em',
-      color: '#ffcc00',
+      color: '#fff0d6',
     },
 
     steps: {
       textShadow: '2px 1px black',
-      color: '#fff0d6',
+      color:'rgba(0,212,255,1)',
       fontWeight: 'bold',
       background: '#000124',
-      border: '0.2em #ffcc00 solid',
+      border: '0.2em #fff0d6 solid',
       borderRadius: '1em',
       padding: '0.8em 1em',
       margin: 'auto',
@@ -279,7 +279,7 @@ function HomePage() {
             <Typography
               className={classes.topPage}
               variant="h4">
-              " A few simple steps to start your exchange.
+              " Simply, a few steps to start your exchange.
             </Typography>
 
             <Typography
@@ -335,7 +335,7 @@ function HomePage() {
             </Grid>
             
             <Grid item style={{ fontSize: '1.2em', marginLeft: '0.5em' }}>
-              Sell or Trade
+              Sell / Trade
             </Grid>
           </Grid>
 

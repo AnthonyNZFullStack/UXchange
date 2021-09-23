@@ -7,6 +7,7 @@ import { Button } from '@material-ui/core'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Grid } from "@material-ui/core";
 import { Link } from 'react-router-dom';
+import ViewListIcon from '@material-ui/icons/ViewList';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -49,7 +50,7 @@ function BackButtonMyItem() {
             <Button className={classes.root}
                 variant='contained' size='large' type="submit"
                 component={Link} to="/My Items">
-                Back to My Items<ArrowBackIcon className={classes.iconstyle}></ArrowBackIcon>
+                Back to My <ViewListIcon style={{marginLeft:'0.2em', marginRight:'0.2em'}}></ViewListIcon> Items<ArrowBackIcon className={classes.iconstyle}><ViewListIcon /></ArrowBackIcon>
             </Button>
             </Grid>
 

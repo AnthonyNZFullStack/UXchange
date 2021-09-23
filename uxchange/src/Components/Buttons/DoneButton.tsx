@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import createStyles from "@material-ui/core/styles/createStyles";
 import { Button } from '@material-ui/core'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,8 +27,8 @@ const useStyles = makeStyles((theme: Theme) =>
             '&:hover': {
                 background: '#FFCC00',
                 color: 'rgba(0,1,36,1)',
-                fontWeight: 'bold'
-            }
+                fontWeight: 'bold',
+            },
         },
 
     })
@@ -42,7 +43,7 @@ function DoneButton() {
         <React.Fragment>
             <CssBaseline />
             <Button className={classes.root}
-                variant='contained' size='large' type="submit">
+                variant='contained' size='large' type="submit" component={Link} to="/My items">
                 Done
             </Button>
 

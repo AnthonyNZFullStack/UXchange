@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
         exchangeContact: {
             marginTop: '0.5em',
             background: 'rgb(224, 244, 255)',
-            borderRadius: '1em 1em 0em 0em',
+            borderRadius: '2em 2em 0em 0em',
             padding: '0.5em',
             fontFamily: 'caveat',
             width: '98%',
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent:'space-around',
             color:'#404040',
             // borderBottom:'1em #000124 solid',
-        }
+        },
     })
 );
 
@@ -67,8 +67,6 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
 
                     <Card className={classes.card}>
 
-                        <CardContent>
-
                             <Grid container>
                                 {/* <SyncIcon />
                                 <Typography
@@ -79,7 +77,7 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
 
                                 <ListItem className={classes.exchangeContact}>
 
-                                    <div style={{ display: 'flex' }}>
+                                    <div style={{ display: 'flex', }}>
                                         <SyncIcon /><Typography style={{ fontFamily: 'caveat', fontSize: '18px', fontWeight: 'bold' }}>{exchange}</Typography>
                                     </div>
 
@@ -105,7 +103,7 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
                             />
 
 
-                            <Accordion style={{ fontWeight: 'bold', background: '#E0F4FF', width: '98%', margin: 'auto', borderRadius: '0em 0em 1em 1em',}}>
+                            <Accordion style={{ fontWeight: 'bold', background: '#E0F4FF', width: '98%', margin: 'auto', borderRadius: '0em 0em 2em 2em',}}>
 
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -131,9 +129,6 @@ function MarketItemCard({ image, title, exchange, contacts, description }: Props
                                 </AccordionDetails>
 
                             </Accordion>
-
-                        </CardContent>
-
                     </Card>
                 </Grid>
 
