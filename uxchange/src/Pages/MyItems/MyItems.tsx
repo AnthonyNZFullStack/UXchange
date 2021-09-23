@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '700px',
       },
       [theme.breakpoints.only('xs')]: {
-        height: '760px',
+        height: '620px',
       },
     },
     icon: {
@@ -125,7 +125,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.only('xs')]: {
         height: '5300px',
-        marginTop: '-3em',
+        marginTop: '-6em',
       },
     },
   })

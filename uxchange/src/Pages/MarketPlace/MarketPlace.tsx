@@ -16,8 +16,6 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       padding: theme.spacing(12, 0, 6),
-      // width:'60%',
-      // margin:'auto',
       background: '#000124',
       height: '635px',
       [theme.breakpoints.only('lg')]: {
